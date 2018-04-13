@@ -1,448 +1,5870 @@
 var pokestop = [ //Source: https://www.pokemongomap.info/
-	{"namn": "Ballongvisp", "latitude": 55.710167, "longitude": 13.187168},
-	{"namn": "Lund Central Station Entrance", "latitude": 55.70543, "longitude": 13.187267},
-	{"namn": "Lunds Stadsvall", "latitude": 55.699458, "longitude": 13.199444},
-	{"namn": "Graffiti Booth", "latitude": 55.710004, "longitude": 13.24766},
-	{"namn": "Välkommen Till Lund Nöbbelöv", "latitude": 55.729779, "longitude": 13.177719},
-	{"namn": "Västerkyrkan", "latitude": 55.708289, "longitude": 13.181561},
-	{"namn": "Schackpjäs", "latitude": 55.740858, "longitude": 13.17167},
-	{"namn": "Sad Centipede and Hippo", "latitude": 55.722216, "longitude": 13.203597},
-	{"namn": "Pillar Shapes", "latitude": 55.706398, "longitude": 13.195743},
-	{"namn": "Bulls Silhouettes", "latitude": 55.726811, "longitude": 13.226502},
-	{"namn": "Rehabiliteringsträdgård", "latitude": 55.658331, "longitude": 13.089356},
-	{"namn": "Skulptur I Diabas", "latitude": 55.708207, "longitude": 13.198073},
-	{"namn": "Metal Leaf", "latitude": 55.713539, "longitude": 13.212637},
-	{"namn": "Lundatornet", "latitude": 55.707546, "longitude": 13.206119},
-	{"namn": "The Labyrinth", "latitude": 55.700483, "longitude": 13.187059},
-	{"namn": "Bosmalatorpet", "latitude": 55.705137, "longitude": 13.197951},
-	{"namn": "Olof", "latitude": 55.713997, "longitude": 13.194301},
-	{"namn": "Monster Store", "latitude": 55.696815, "longitude": 13.186102},
-	{"namn": "Fountain at Kristallen", "latitude": 55.708805, "longitude": 13.184709},
-	{"namn": "Ljungvalla IP", "latitude": 55.77583, "longitude": 13.08525},
-	{"namn": "Fontän Bakom Stadsbiblioteket", "latitude": 55.707209, "longitude": 13.190793},
-	{"namn": "Felled", "latitude": 55.703211, "longitude": 13.20348},
-	{"namn": "Ekobasgrytet", "latitude": 55.724101, "longitude": 13.190534},
-	{"namn": "Zebra - LTH Lunds Universitet", "latitude": 55.710364, "longitude": 13.203871},
-	{"namn": "S:t Peter's Kyrka", "latitude": 55.70664, "longitude": 13.192615},
-	{"namn": "Ventilation", "latitude": 55.715291, "longitude": 13.21233},
-	{"namn": "Lunds Fjärrvärmecentral", "latitude": 55.721961, "longitude": 13.153148},
-	{"namn": "Sköldpadda", "latitude": 55.700021, "longitude": 13.186846},
-	{"namn": "Green Maze", "latitude": 55.705212, "longitude": 13.196958},
-	{"namn": "Power Ring", "latitude": 55.692732, "longitude": 13.208574},
-	{"namn": "Gamla Barnsjukhuset The Old Children Hospital", "latitude": 55.707949, "longitude": 13.194372},
-	{"namn": "Mother and Child", "latitude": 55.711191, "longitude": 13.197475},
-	{"namn": "Syntax by Kirsten Ortwed", "latitude": 55.708871, "longitude": 13.198507},
-	{"namn": "Borgen", "latitude": 55.705207, "longitude": 13.19132},
-	{"namn": "Församlingen Ad Fontes", "latitude": 55.699473, "longitude": 13.191762},
-	{"namn": "Granathen", "latitude": 55.712681, "longitude": 13.203821},
-	{"namn": "Asymmetric Graphite", "latitude": 55.710226, "longitude": 13.2135},
-	{"namn": "Fäladshallen", "latitude": 55.724148, "longitude": 13.200019},
-	{"namn": "Åkarps Gamla Stationshus", "latitude": 55.655434, "longitude": 13.105851},
-	{"namn": "Mobile Pond", "latitude": 55.717985, "longitude": 13.227597},
-	{"namn": "Lunds Tekniska Högskola Kårhuset", "latitude": 55.712326, "longitude": 13.208553},
-	{"namn": "Ulrikedal Playground (Vegaparken)", "latitude": 55.698643, "longitude": 13.20589},
-	{"namn": "North Gate of the Medevial City of Lund", "latitude": 55.708978, "longitude": 13.192941},
-	{"namn": "Red Fountain", "latitude": 55.698426, "longitude": 13.182652},
-	{"namn": "Hammer Staircase", "latitude": 55.708584, "longitude": 13.193362},
-	{"namn": "Stor Stark", "latitude": 55.710722, "longitude": 13.210244},
-	{"namn": "V on the hill", "latitude": 55.712438, "longitude": 13.210444},
-	{"namn": "Båten", "latitude": 55.737533, "longitude": 13.177095},
-	{"namn": "Waving Elephant", "latitude": 55.712536, "longitude": 13.201023},
-	{"namn": "Living Ore", "latitude": 55.709748, "longitude": 13.205249},
-	{"namn": "Chair", "latitude": 55.696708, "longitude": 13.18649},
-	{"namn": "Planetstaden Playground", "latitude": 55.697775, "longitude": 13.212784},
-	{"namn": "Runsten från Vikingatiden", "latitude": 55.666042, "longitude": 13.140951},
-	{"namn": "Lunds Stadsgräns", "latitude": 55.676873, "longitude": 13.229019},
-	{"namn": "Fountain", "latitude": 55.71532, "longitude": 13.191906},
-	{"namn": "Huset", "latitude": 55.715873, "longitude": 13.177213},
-	{"namn": "Shape's 3D Glyph", "latitude": 55.712491, "longitude": 13.209593},
-	{"namn": "10th Century West Gate into Lund", "latitude": 55.703787, "longitude": 13.185317},
-	{"namn": "Student Literature", "latitude": 55.720776, "longitude": 13.166217},
-	{"namn": "Lundagård Tavla", "latitude": 55.70614, "longitude": 13.193843},
-	{"namn": "Western Gate Of Jakriborg", "latitude": 55.675228, "longitude": 13.13388},
-	{"namn": "Runslingans Bool Bana", "latitude": 55.692885, "longitude": 13.246315},
-	{"namn": "Check your Dog Statue on Porfyrvagen", "latitude": 55.694535, "longitude": 13.221199},
-	{"namn": "Bridge Over Troubled Water", "latitude": 55.724493, "longitude": 13.191916},
-	{"namn": "Abstract Plaza", "latitude": 55.694128, "longitude": 13.191817},
-	{"namn": "Park Clock", "latitude": 55.69987, "longitude": 13.188949},
-	{"namn": "Church of the Latter Day Saints - Lund", "latitude": 55.720369, "longitude": 13.171311},
-	{"namn": "Lunds Nation Student Dorm", "latitude": 55.700804, "longitude": 13.201627},
-	{"namn": "Mini Grotta", "latitude": 55.724108, "longitude": 13.178365},
-	{"namn": "AF Borgen", "latitude": 55.705433, "longitude": 13.195445},
-	{"namn": "Hängmatta", "latitude": 55.712913, "longitude": 13.164757},
-	{"namn": "The Gate of Jakriborg", "latitude": 55.673991, "longitude": 13.135728},
-	{"namn": "Brunnshögs Kojskog", "latitude": 55.718551, "longitude": 13.23795},
-	{"namn": "Tegnérhuset", "latitude": 55.704205, "longitude": 13.191227},
-	{"namn": "Juridicum", "latitude": 55.705081, "longitude": 13.191602},
-	{"namn": "City Silhouette.", "latitude": 55.720404, "longitude": 13.1944},
-	{"namn": "Folkparken", "latitude": 55.704525, "longitude": 13.166535},
-	{"namn": "Carl Linnæus Statue", "latitude": 55.706527, "longitude": 13.192126},
-	{"namn": "Boat for Sand", "latitude": 55.731384, "longitude": 13.173219},
-	{"namn": "Fysicum Fountain", "latitude": 55.710556, "longitude": 13.203498},
-	{"namn": "Uggla På Spaning", "latitude": 55.698941, "longitude": 13.198053},
-	{"namn": "Woody Waves", "latitude": 55.704802, "longitude": 13.155138},
-	{"namn": "Blue Clock", "latitude": 55.708132, "longitude": 13.185989},
-	{"namn": "Lunds Örn På Hörnan", "latitude": 55.703217, "longitude": 13.192474},
-	{"namn": "Hallowed Altar", "latitude": 55.733145, "longitude": 13.181833},
-	{"namn": "F", "latitude": 55.710968, "longitude": 13.206805},
-	{"namn": "Glasskulptur", "latitude": 55.700008, "longitude": 13.202098},
-	{"namn": "Tåget I Stadsparken", "latitude": 55.699458, "longitude": 13.18699},
-	{"namn": "Klosterkyrkan", "latitude": 55.704234, "longitude": 13.18587},
-	{"namn": "Knotted Tree", "latitude": 55.713333, "longitude": 13.212605},
-	{"namn": "Squirrel", "latitude": 55.700934, "longitude": 13.198454},
-	{"namn": "Otto Lindblad", "latitude": 55.70491, "longitude": 13.19452},
-	{"namn": "Lost at Sea", "latitude": 55.707789, "longitude": 13.231064},
-	{"namn": "North Cemetery Bell Tower", "latitude": 55.715865, "longitude": 13.191606},
-	{"namn": "Flormanska Stiftelsen", "latitude": 55.703236, "longitude": 13.196196},
-	{"namn": "Garage Art", "latitude": 55.698513, "longitude": 13.180821},
-	{"namn": "Botaniska Kartan", "latitude": 55.704195, "longitude": 13.204931},
-	{"namn": "Walls #3 on John Ericssons vag", "latitude": 55.71214, "longitude": 13.209348},
-	{"namn": "Metalltupp", "latitude": 55.657753, "longitude": 13.0869},
-	{"namn": "Flower Shield", "latitude": 55.705846, "longitude": 13.198631},
-	{"namn": "Abstract Geometry", "latitude": 55.69506, "longitude": 13.2419},
-	{"namn": "Earth", "latitude": 55.693855, "longitude": 13.224808},
-	{"namn": "Lomma Zoo", "latitude": 55.683335, "longitude": 13.105408},
-	{"namn": "Alzheimerföreningens Slott", "latitude": 55.710132, "longitude": 13.191669},
-	{"namn": "Alfalaval Lund", "latitude": 55.721821, "longitude": 13.157913},
-	{"namn": "Bear Statue", "latitude": 55.723532, "longitude": 13.215577},
-	{"namn": "Fågelhyddan", "latitude": 55.724303, "longitude": 13.198222},
-	{"namn": "Gambrinus", "latitude": 55.704013, "longitude": 13.189161},
-	{"namn": "S:T Stefans", "latitude": 55.698907, "longitude": 13.19075},
-	{"namn": "Borg", "latitude": 55.702711, "longitude": 13.190366},
-	{"namn": "Allhelgonaklostret", "latitude": 55.709694, "longitude": 13.197279},
-	{"namn": "Tak", "latitude": 55.729691, "longitude": 13.192896},
-	{"namn": "Castel El Play", "latitude": 55.720752, "longitude": 13.181481},
-	{"namn": "Colored light art.", "latitude": 55.721753, "longitude": 13.203438},
-	{"namn": "Constantly Changing Wall Art", "latitude": 55.703039, "longitude": 13.186976},
-	{"namn": "Tree dragon", "latitude": 55.729381, "longitude": 13.173789},
-	{"namn": "Word of the Lord - Statue", "latitude": 55.703773, "longitude": 13.193488},
-	{"namn": "Det Lilla Stora Lusthuset", "latitude": 55.701463, "longitude": 13.188712},
-	{"namn": "Lackalänga Minneskapell", "latitude": 55.776897, "longitude": 13.111609},
-	{"namn": "Naturreservat", "latitude": 55.706835, "longitude": 13.15366},
-	{"namn": "Blaeddran", "latitude": 55.691275, "longitude": 13.173936},
-	{"namn": "Dragons", "latitude": 55.700282, "longitude": 13.199165},
-	{"namn": "The Tunnel", "latitude": 55.704778, "longitude": 13.197292},
-	{"namn": "Vattenhallen", "latitude": 55.711955, "longitude": 13.211533},
-	{"namn": "Fontän Vid Kyrkan", "latitude": 55.704314, "longitude": 13.185673},
-	{"namn": "Monument I Stenimitation", "latitude": 55.697095, "longitude": 13.184847},
-	{"namn": "Totem Pole", "latitude": 55.72898, "longitude": 13.173703},
-	{"namn": "Lunds stads gräns", "latitude": 55.71626, "longitude": 13.159559},
-	{"namn": "Giant Play Park Nya Linero", "latitude": 55.701786, "longitude": 13.252217},
-	{"namn": "En Krok", "latitude": 55.703407, "longitude": 13.177364},
-	{"namn": "Museum of History", "latitude": 55.704383, "longitude": 13.194744},
-	{"namn": "St Jakobs Kyrka", "latitude": 55.704933, "longitude": 13.189596},
-	{"namn": "Stones in Land", "latitude": 55.703023, "longitude": 13.218227},
-	{"namn": "Blue Wave", "latitude": 55.696303, "longitude": 13.174427},
-	{"namn": "Lion Gate", "latitude": 55.708175, "longitude": 13.18772},
-	{"namn": "SLU", "latitude": 55.657796, "longitude": 13.082284},
-	{"namn": "Welcome Sign", "latitude": 55.722468, "longitude": 13.202146},
-	{"namn": "Högevallsbadet", "latitude": 55.70044, "longitude": 13.183771},
-	{"namn": "Höjdådalen", "latitude": 55.698361, "longitude": 13.157816},
-	{"namn": "Owl", "latitude": 55.705781, "longitude": 13.196076},
-	{"namn": "Little Garden", "latitude": 55.700943, "longitude": 13.19579},
-	{"namn": "Ideon Seagull", "latitude": 55.714299, "longitude": 13.214554},
-	{"namn": "Blue Playpark", "latitude": 55.713081, "longitude": 13.227199},
-	{"namn": "Lunds Universitetssjukhus Info", "latitude": 55.710293, "longitude": 13.196874},
-	{"namn": "Hedda Andersson Student House", "latitude": 55.711122, "longitude": 13.189058},
-	{"namn": "Children Playing", "latitude": 55.70419, "longitude": 13.18752},
-	{"namn": "Mamma med barn", "latitude": 55.651677, "longitude": 13.109152},
-	{"namn": "Gullåkra Natur- Och Rekreationsområde", "latitude": 55.655823, "longitude": 13.216583},
-	{"namn": "Gymnastikhus på Hvilan", "latitude": 55.651038, "longitude": 13.115777},
-	{"namn": "Quercus", "latitude": 55.702867, "longitude": 13.202501},
-	{"namn": "Cirkelns Expansion", "latitude": 55.708197, "longitude": 13.197233},
-	{"namn": "Välkommen Till Kävlinge Kommun", "latitude": 55.771216, "longitude": 13.082446},
-	{"namn": "Tennis Court of Madness", "latitude": 55.727294, "longitude": 13.204196},
-	{"namn": "nova monilith", "latitude": 55.712731, "longitude": 13.157321},
-	{"namn": "Climbing Adventure", "latitude": 55.698696, "longitude": 13.201802},
-	{"namn": "Bingo", "latitude": 55.721807, "longitude": 13.179613},
-	{"namn": "Roby Lund", "latitude": 55.689194, "longitude": 13.237884},
-	{"namn": "The Old Gate", "latitude": 55.710893, "longitude": 13.193093},
-	{"namn": "St. Lars Park", "latitude": 55.681679, "longitude": 13.177077},
-	{"namn": "Battleship", "latitude": 55.729578, "longitude": 13.205746},
-	{"namn": "Åkarps Bibliotek", "latitude": 55.656361, "longitude": 13.110826},
-	{"namn": "House in a House", "latitude": 55.711545, "longitude": 13.201373},
-	{"namn": "Husbåt Park", "latitude": 55.721682, "longitude": 13.163153},
-	{"namn": "Pavillion at City Libary", "latitude": 55.707165, "longitude": 13.191473},
-	{"namn": "Murarvägens Lekplats", "latitude": 55.652433, "longitude": 13.20813},
-	{"namn": "MAX IV", "latitude": 55.72623, "longitude": 13.235539},
-	{"namn": "The Well of Faith", "latitude": 55.703989, "longitude": 13.195772},
-	{"namn": "Harald BT", "latitude": 55.716656, "longitude": 13.226626},
-	{"namn": "Lund Trainstation", "latitude": 55.705066, "longitude": 13.187394},
-	{"namn": "Skåne Siluett", "latitude": 55.711085, "longitude": 13.168554},
-	{"namn": "Trädgårdslundens Lekplats", "latitude": 55.672343, "longitude": 13.153507},
-	{"namn": "Samvetet", "latitude": 55.706821, "longitude": 13.194128},
-	{"namn": "Mini Castle", "latitude": 55.704906, "longitude": 13.203531},
-	{"namn": "Stångby Library", "latitude": 55.750997, "longitude": 13.196503},
-	{"namn": "Crest On Bricks", "latitude": 55.707689, "longitude": 13.187741},
-	{"namn": "KG Colorful Playground", "latitude": 55.693106, "longitude": 13.180895},
-	{"namn": "Elephant and Crocodile", "latitude": 55.721729, "longitude": 13.208563},
-	{"namn": "Gigant Spinner", "latitude": 55.70122, "longitude": 13.179001},
-	{"namn": "Classicum", "latitude": 55.706964, "longitude": 13.198857},
-	{"namn": "Flicka Med Fruktfat", "latitude": 55.724238, "longitude": 13.177447},
-	{"namn": "Faculty Of Biology", "latitude": 55.713376, "longitude": 13.207956},
-	{"namn": "Hexagon", "latitude": 55.71716, "longitude": 13.193546},
-	{"namn": "Wallflower", "latitude": 55.730266, "longitude": 13.20308},
-	{"namn": "Tree Face", "latitude": 55.724434, "longitude": 13.188393},
-	{"namn": "Stenar På Stolpar", "latitude": 55.700106, "longitude": 13.184387},
-	{"namn": "Entre Till Stadsparken", "latitude": 55.701222, "longitude": 13.185797},
-	{"namn": "Big Shiny Metal Thingy", "latitude": 55.717116, "longitude": 13.200082},
-	{"namn": "Windy Boomerang", "latitude": 55.711468, "longitude": 13.210564},
-	{"namn": "Planets in the Ground", "latitude": 55.695901, "longitude": 13.196017},
-	{"namn": "Venus Bike Trap", "latitude": 55.710758, "longitude": 13.207347},
-	{"namn": "Skarpskyttemålet", "latitude": 55.724455, "longitude": 13.189494},
-	{"namn": "Concrete Turbine", "latitude": 55.699954, "longitude": 13.187916},
-	{"namn": "A locomotive", "latitude": 55.723617, "longitude": 13.158328},
-	{"namn": "Stora Valvet", "latitude": 55.70856, "longitude": 13.195185},
-	{"namn": "Lindhaga Klocka", "latitude": 55.653192, "longitude": 13.111714},
-	{"namn": "Åkarps Station", "latitude": 55.657841, "longitude": 13.10891},
-	{"namn": "Glass Bowl", "latitude": 55.718396, "longitude": 13.228488},
-	{"namn": "Slutet För Tuna Slott", "latitude": 55.707408, "longitude": 13.210619},
-	{"namn": "Folkhogskolan Hvilan", "latitude": 55.65063, "longitude": 13.115877},
-	{"namn": "Hjärups Församlingsgård", "latitude": 55.668707, "longitude": 13.139786},
-	{"namn": "Micklagård", "latitude": 55.708796, "longitude": 13.181177},
-	{"namn": "Joh. Henr. Thomanders Studenthem", "latitude": 55.707233, "longitude": 13.196566},
-	{"namn": "Svampar", "latitude": 55.701876, "longitude": 13.210073},
-	{"namn": "Radiation Therapy Building", "latitude": 55.710784, "longitude": 13.195539},
-	{"namn": "StonyArt", "latitude": 55.70567, "longitude": 13.158792},
-	{"namn": "S:t Olof Chapel", "latitude": 55.715917, "longitude": 13.190137},
-	{"namn": "Home of Hjalmar Gullberg", "latitude": 55.702406, "longitude": 13.187822},
-	{"namn": "Röd Liggande Stege", "latitude": 55.651982, "longitude": 13.213693},
-	{"namn": "Bridge", "latitude": 55.738425, "longitude": 13.156922},
-	{"namn": "S:ta Maria Magle", "latitude": 55.702743, "longitude": 13.199205},
-	{"namn": "Rymdfält Av Frid", "latitude": 55.702583, "longitude": 13.193178},
-	{"namn": "Vindruvedörren", "latitude": 55.711001, "longitude": 13.19188},
-	{"namn": "Wibbly Wobbly Lines Undergroun", "latitude": 55.717208, "longitude": 13.207443},
-	{"namn": "Växtkraft", "latitude": 55.687749, "longitude": 13.193976},
-	{"namn": "Draped Concrete Wall", "latitude": 55.698637, "longitude": 13.190509},
-	{"namn": "Stora Råby Kyrka", "latitude": 55.685832, "longitude": 13.224941},
-	{"namn": "Staffanstorp Raceway", "latitude": 55.656057, "longitude": 13.222792},
-	{"namn": "Lunds Bryggeri", "latitude": 55.711316, "longitude": 13.191515},
-	{"namn": "Info Mechanic", "latitude": 55.710481, "longitude": 13.204978},
-	{"namn": "Sparbanken Skåne Arena", "latitude": 55.6971, "longitude": 13.180114},
-	{"namn": "Gymnasieskolan Vipan", "latitude": 55.702212, "longitude": 13.221214},
-	{"namn": "Giant Beer", "latitude": 55.71303, "longitude": 13.2108},
-	{"namn": "Angry Bord Bin", "latitude": 55.709885, "longitude": 13.167854},
-	{"namn": "Sven Nilsson", "latitude": 55.705444, "longitude": 13.193155},
-	{"namn": "Fish Fountain and Lamp", "latitude": 55.703265, "longitude": 13.190273},
-	{"namn": "Ladugårdsmarksstråket", "latitude": 55.72987, "longitude": 13.213678},
-	{"namn": "Wooden Boat (Delfi)", "latitude": 55.723769, "longitude": 13.211001},
-	{"namn": "Black Diabase Triangle", "latitude": 55.713805, "longitude": 13.178606},
-	{"namn": "The Black Shield", "latitude": 55.724345, "longitude": 13.195013},
-	{"namn": "Tonsättarstenen", "latitude": 55.653253, "longitude": 13.111035},
-	{"namn": "Wooden Boat (Magistratsvägen)", "latitude": 55.722023, "longitude": 13.205287},
-	{"namn": "Wooden Squirrel", "latitude": 55.686299, "longitude": 13.175972},
-	{"namn": "Kompassen", "latitude": 55.714108, "longitude": 13.20021},
-	{"namn": "Solgubbe", "latitude": 55.703165, "longitude": 13.188693},
-	{"namn": "Verba Volant Scripta Manet", "latitude": 55.708505, "longitude": 13.199697},
-	{"namn": "Lekplats Trekanter", "latitude": 55.651554, "longitude": 13.202571},
-	{"namn": "EOS", "latitude": 55.703494, "longitude": 13.194961},
-	{"namn": "Eagle of Stone", "latitude": 55.703328, "longitude": 13.202986},
-	{"namn": "S:T Trinitatis", "latitude": 55.702081, "longitude": 13.191823},
-	{"namn": "Stencirkel", "latitude": 55.678857, "longitude": 13.0921},
-	{"namn": "Scientist-Cell Confession Dialogue", "latitude": 55.712202, "longitude": 13.201728},
-	{"namn": "Stenpartiet", "latitude": 55.704055, "longitude": 13.202573},
-	{"namn": "Home of August Strindberg", "latitude": 55.702107, "longitude": 13.19007},
-	{"namn": "Gympark", "latitude": 55.69942, "longitude": 13.244599},
-	{"namn": "Psykiatrisk Klinik", "latitude": 55.717534, "longitude": 13.190027},
-	{"namn": "Tre Blå Korvar På Pinne", "latitude": 55.71764, "longitude": 13.228637},
-	{"namn": "Trädboll", "latitude": 55.702529, "longitude": 13.201474},
-	{"namn": "Radioactive Storage", "latitude": 55.706618, "longitude": 13.19906},
-	{"namn": "Joy of Movement", "latitude": 55.708929, "longitude": 13.201565},
-	{"namn": "Axis of Time", "latitude": 55.715466, "longitude": 13.214801},
-	{"namn": "Lunds Stads Gräns", "latitude": 55.706624, "longitude": 13.260449},
-	{"namn": "Sliding Stones", "latitude": 55.713286, "longitude": 13.211651},
-	{"namn": "Fyrklöverns Trädgård Main Entrance", "latitude": 55.721549, "longitude": 13.218984},
-	{"namn": "Circle King", "latitude": 55.718823, "longitude": 13.193375},
-	{"namn": "C A Agardh", "latitude": 55.70195, "longitude": 13.201664},
-	{"namn": "Saluhallen", "latitude": 55.701723, "longitude": 13.195048},
-	{"namn": "Gullåkra information board", "latitude": 55.653717, "longitude": 13.201965},
-	{"namn": "Statue Ulrikedal", "latitude": 55.697938, "longitude": 13.204952},
-	{"namn": "Lund Fairtraide City", "latitude": 55.718077, "longitude": 13.21078},
-	{"namn": "Wrangel", "latitude": 55.706672, "longitude": 13.199819},
-	{"namn": "Sälen", "latitude": 55.709177, "longitude": 13.243905},
-	{"namn": "Playing Beneath the Road", "latitude": 55.719489, "longitude": 13.20912},
-	{"namn": "Hästen", "latitude": 55.689586, "longitude": 13.198139},
-	{"namn": "Vällingklockan", "latitude": 55.656777, "longitude": 13.085016},
-	{"namn": "Ling Monument", "latitude": 55.700019, "longitude": 13.185177},
-	{"namn": "Stone Sculpture", "latitude": 55.703866, "longitude": 13.188164},
-	{"namn": "Lettered Black Wall", "latitude": 55.707325, "longitude": 13.197279},
-	{"namn": "Bilprovningen Monolith in Lund", "latitude": 55.692976, "longitude": 13.220015},
-	{"namn": "Möllegården infotavla", "latitude": 55.65007, "longitude": 13.111997},
-	{"namn": "Giant Slide", "latitude": 55.72942, "longitude": 13.216528},
-	{"namn": "The Faculty of Science", "latitude": 55.711571, "longitude": 13.204861},
-	{"namn": "Knästorp Kyrka", "latitude": 55.675789, "longitude": 13.199785},
-	{"namn": "Lund Lighthouse", "latitude": 55.716444, "longitude": 13.151259},
-	{"namn": "Jacques Borelius", "latitude": 55.707043, "longitude": 13.195876},
-	{"namn": "Infoplate Lund", "latitude": 55.689699, "longitude": 13.187605},
-	{"namn": "Päronlekan", "latitude": 55.693712, "longitude": 13.203346},
-	{"namn": "Norra Fäladsstigen", "latitude": 55.723825, "longitude": 13.21041},
-	{"namn": "Diving Pods on Land", "latitude": 55.722221, "longitude": 13.212947},
-	{"namn": "Angel Monument", "latitude": 55.714365, "longitude": 13.190515},
-	{"namn": "Fountain at Helgeands church", "latitude": 55.693649, "longitude": 13.179212},
-	{"namn": "Urnan", "latitude": 55.70247, "longitude": 13.203957},
-	{"namn": "Sven Ingvar", "latitude": 55.711515, "longitude": 13.19831},
-	{"namn": "Axel", "latitude": 55.7132, "longitude": 13.193717},
-	{"namn": "Rune Stone", "latitude": 55.704472, "longitude": 13.19609},
-	{"namn": "Ernst Wigforss Fountain", "latitude": 55.7059, "longitude": 13.15877},
-	{"namn": "Asklönn", "latitude": 55.704961, "longitude": 13.204272},
-	{"namn": "Variations of a Theme", "latitude": 55.713868, "longitude": 13.209287},
-	{"namn": "Fountain Lamp", "latitude": 55.702909, "longitude": 13.193116},
-	{"namn": "Forest Duck", "latitude": 55.691796, "longitude": 13.171},
-	{"namn": "Relief Konst På Vägg", "latitude": 55.704127, "longitude": 13.189938},
-	{"namn": "Tufsen", "latitude": 55.70036, "longitude": 13.185951},
-	{"namn": "Golden Thread", "latitude": 55.712652, "longitude": 13.200491},
-	{"namn": "Broken Wall", "latitude": 55.711066, "longitude": 13.1745},
-	{"namn": "Yellow Cat", "latitude": 55.704346, "longitude": 13.154131},
-	{"namn": "Glass Art", "latitude": 55.711217, "longitude": 13.195673},
-	{"namn": "Golden Triad Structure", "latitude": 55.712542, "longitude": 13.202991},
-	{"namn": "A walk in the park", "latitude": 55.699641, "longitude": 13.184892},
-	{"namn": "Viking Nation", "latitude": 55.710154, "longitude": 13.207566},
-	{"namn": "Dahlgren", "latitude": 55.701791, "longitude": 13.180959},
-	{"namn": "Round Playground", "latitude": 55.709102, "longitude": 13.174774},
-	{"namn": "Flower 1912", "latitude": 55.706048, "longitude": 13.197062},
-	{"namn": "Botulfsplatsen", "latitude": 55.701846, "longitude": 13.193936},
-	{"namn": "Plommonvägen Fountain", "latitude": 55.693329, "longitude": 13.196722},
-	{"namn": "Baby On A Turtle", "latitude": 55.718303, "longitude": 13.185075},
-	{"namn": "Sculpture", "latitude": 55.702056, "longitude": 13.191108},
-	{"namn": "Enter the Rainbow", "latitude": 55.718727, "longitude": 13.185202},
-	{"namn": "Thousand years Grove", "latitude": 55.709535, "longitude": 13.24661},
-	{"namn": "Walk By Höje Å", "latitude": 55.688986, "longitude": 13.167596},
-	{"namn": "Underground Painting", "latitude": 55.720775, "longitude": 13.174845},
-	{"namn": "Tree Lion Hare", "latitude": 55.701412, "longitude": 13.195672},
-	{"namn": "Birdwatching Tower", "latitude": 55.698767, "longitude": 13.157257},
-	{"namn": "Margot Hedeman Solspegel", "latitude": 55.706582, "longitude": 13.189092},
-	{"namn": "Villa Sunna", "latitude": 55.700265, "longitude": 13.210537},
-	{"namn": "Tullkammare", "latitude": 55.707156, "longitude": 13.1873},
-	{"namn": "Penna", "latitude": 55.703274, "longitude": 13.191037},
-	{"namn": "Magic Glider", "latitude": 55.701634, "longitude": 13.240346},
-	{"namn": "Se-saw Att Brynjegränd", "latitude": 55.698269, "longitude": 13.237177},
-	{"namn": "Höjdpunkten Bus Stop", "latitude": 55.715766, "longitude": 13.228474},
-	{"namn": "röd och blå", "latitude": 55.714347, "longitude": 13.21556},
-	{"namn": "Playpark", "latitude": 55.70005, "longitude": 13.249106},
-	{"namn": "Equmeniakyrkan", "latitude": 55.775318, "longitude": 13.098547},
-	{"namn": "Hidden Fountain", "latitude": 55.718937, "longitude": 13.187427},
-	{"namn": "Info Alnarp", "latitude": 55.659436, "longitude": 13.08817},
-	{"namn": "Bulten", "latitude": 55.709697, "longitude": 13.209719},
-	{"namn": "Birds.", "latitude": 55.720705, "longitude": 13.188591},
-	{"namn": "Sun Clock", "latitude": 55.710532, "longitude": 13.187828},
-	{"namn": "A Little Slide", "latitude": 55.705594, "longitude": 13.156595},
-	{"namn": "ING-Monument", "latitude": 55.712816, "longitude": 13.210175},
-	{"namn": "J.G. Agardh", "latitude": 55.705314, "longitude": 13.203153},
-	{"namn": "Singlade Slant", "latitude": 55.692629, "longitude": 13.173678},
-	{"namn": "Football Fields", "latitude": 55.668391, "longitude": 13.154302},
-	{"namn": "Playfort", "latitude": 55.714954, "longitude": 13.177379},
-	{"namn": "Botaniska Trädgården Lund", "latitude": 55.704711, "longitude": 13.202542},
-	{"namn": "City Art", "latitude": 55.701064, "longitude": 13.190872},
-	{"namn": "Eos the Rose Fingered", "latitude": 55.707316, "longitude": 13.188439},
-	{"namn": "Sumpcypress", "latitude": 55.70375, "longitude": 13.203809},
-	{"namn": "A Hoop", "latitude": 55.721953, "longitude": 13.206586},
-	{"namn": "Torns Ryttarförening", "latitude": 55.741305, "longitude": 13.184408},
-	{"namn": "Scout Lily", "latitude": 55.730606, "longitude": 13.204118},
-	{"namn": "Hacke Wants You", "latitude": 55.711364, "longitude": 13.210046},
-	{"namn": "Pale Tree", "latitude": 55.721083, "longitude": 13.188338},
-	{"namn": "Råby Lunds Utegym", "latitude": 55.688179, "longitude": 13.229673},
-	{"namn": "Gravplats", "latitude": 55.712317, "longitude": 13.193275},
-	{"namn": "Birdman Sculpture", "latitude": 55.705416, "longitude": 13.212166},
-	{"namn": "Hillfontänen", "latitude": 55.70281, "longitude": 13.196451},
-	{"namn": "Dalamoose", "latitude": 55.709407, "longitude": 13.215071},
-	{"namn": "Portal to the North", "latitude": 55.717849, "longitude": 13.16762},
-	{"namn": "Ostrolocvs", "latitude": 55.704518, "longitude": 13.19808},
-	{"namn": "Lekplatsen på gränden", "latitude": 55.726018, "longitude": 13.203936},
-	{"namn": "Lusthus", "latitude": 55.729574, "longitude": 13.168224},
-	{"namn": "S:t Lars Cemetery", "latitude": 55.682133, "longitude": 13.169035},
-	{"namn": "Sankt Hans kyrka.", "latitude": 55.723319, "longitude": 13.204222},
-	{"namn": "Color house", "latitude": 55.71982, "longitude": 13.188815},
-	{"namn": "Crystal Portal", "latitude": 55.708695, "longitude": 13.185464},
-	{"namn": "Metal house With Holes", "latitude": 55.710371, "longitude": 13.194896},
-	{"namn": "Tower of Time", "latitude": 55.724113, "longitude": 13.202381},
-	{"namn": "Champagne Fountain", "latitude": 55.709855, "longitude": 13.195136},
-	{"namn": "Ding Dong", "latitude": 55.724194, "longitude": 13.197705},
-	{"namn": "Rymdlekplatsen", "latitude": 55.667559, "longitude": 13.142772},
-	{"namn": "Stadshuset", "latitude": 55.70445, "longitude": 13.192487},
-	{"namn": "Brunnshögs mölla", "latitude": 55.730883, "longitude": 13.244238},
-	{"namn": "Kanontorn", "latitude": 55.750757, "longitude": 13.205939},
-	{"namn": "Fire", "latitude": 55.693538, "longitude": 13.225675},
-	{"namn": "Fontänbanan", "latitude": 55.714478, "longitude": 13.230564},
-	{"namn": "St. Laurentii Kyrka", "latitude": 55.695591, "longitude": 13.20088},
-	{"namn": "Tornhallen", "latitude": 55.751472, "longitude": 13.195649},
-	{"namn": "Lund Hospital", "latitude": 55.711721, "longitude": 13.197816},
-	{"namn": "Tennis Court", "latitude": 55.725173, "longitude": 13.216802},
-	{"namn": "Karusell", "latitude": 55.725897, "longitude": 13.177038},
-	{"namn": "Agardh", "latitude": 55.705548, "longitude": 13.201027},
-	{"namn": "Jaktlaget & Hubertus", "latitude": 55.728849, "longitude": 13.177057},
-	{"namn": "Magic Rocks", "latitude": 55.715457, "longitude": 13.210033},
-	{"namn": "Nr 2 Med Tunga", "latitude": 55.707533, "longitude": 13.189489},
-	{"namn": "Fenced In", "latitude": 55.721643, "longitude": 13.201034},
-	{"namn": "Magdalena Clock Tower", "latitude": 55.712908, "longitude": 13.236883},
-	{"namn": "Stångby Station", "latitude": 55.750279, "longitude": 13.199757},
-	{"namn": "Systematiska Kvarteret", "latitude": 55.704592, "longitude": 13.204098},
-	{"namn": "Träd Och Buskar", "latitude": 55.704328, "longitude": 13.203318},
-	{"namn": "Liberiet", "latitude": 55.703684, "longitude": 13.194066},
-	{"namn": "Outdoor Gym", "latitude": 55.654672, "longitude": 13.207176},
-	{"namn": "Key Fountain", "latitude": 55.714316, "longitude": 13.208473},
-	{"namn": "Runstenen i Stadsparken", "latitude": 55.697835, "longitude": 13.185345},
-	{"namn": "Stone Formation", "latitude": 55.723203, "longitude": 13.201684},
-	{"namn": "Tire from U.S. B 29", "latitude": 55.652926, "longitude": 13.236099},
-	{"namn": "News Board", "latitude": 55.723776, "longitude": 13.194277},
-	{"namn": "Kemicentrum", "latitude": 55.716512, "longitude": 13.209932},
-	{"namn": "Fontain in the park", "latitude": 55.672922, "longitude": 13.143555},
-	{"namn": "Esaias Tegner", "latitude": 55.704677, "longitude": 13.195314},
-	{"namn": "Kraka", "latitude": 55.707866, "longitude": 13.182087},
-	{"namn": "Hus Mus", "latitude": 55.699273, "longitude": 13.185989},
-	{"namn": "Röd Kana", "latitude": 55.74836, "longitude": 13.200671},
-	{"namn": "Lusthuset", "latitude": 55.701299, "longitude": 13.210009},
-	{"namn": "North Cemetery Big Cross", "latitude": 55.715225, "longitude": 13.194575},
-	{"namn": "Leaf Mural", "latitude": 55.711079, "longitude": 13.170875},
-	{"namn": "Furulunds Gamla Stationshus", "latitude": 55.775049, "longitude": 13.096451},
-	{"namn": "Playpark Linero", "latitude": 55.702543, "longitude": 13.246552},
-	{"namn": "Little Houses", "latitude": 55.719623, "longitude": 13.192923},
-	{"namn": "Seminariets Klocka", "latitude": 55.712745, "longitude": 13.198817},
-	{"namn": "JRB Art", "latitude": 55.705383, "longitude": 13.183903},
-	{"namn": "Pillar of Books", "latitude": 55.690876, "longitude": 13.217796},
-	{"namn": "Plugged Cannon", "latitude": 55.7178, "longitude": 13.207819},
-	{"namn": "Lackalängaravinen", "latitude": 55.775489, "longitude": 13.109454},
-	{"namn": "Astronomy Tower", "latitude": 55.711787, "longitude": 13.203986},
-	{"namn": "Blomstrand", "latitude": 55.70227, "longitude": 13.202811},
-	{"namn": "Arc of Bricks", "latitude": 55.713677, "longitude": 13.21113},
-	{"namn": "St. Stefan Stones", "latitude": 55.732055, "longitude": 13.181551},
-	{"namn": "The not so Changing Wall", "latitude": 55.691213, "longitude": 13.163015},
-	{"namn": "Time at the Center", "latitude": 55.701847, "longitude": 13.192762},
-	{"namn": "Plague Burial Ground", "latitude": 55.71694, "longitude": 13.180632},
-	{"namn": "Nöbbelövs Mosse", "latitude": 55.730111, "longitude": 13.154735},
-	{"namn": "Machineries", "latitude": 55.709112, "longitude": 13.209551},
-	{"namn": "North Cemetary fountain", "latitude": 55.716038, "longitude": 13.189373},
-	{"namn": "Apotekaren", "latitude": 55.703779, "longitude": 13.192482},
-	{"namn": "Båt På Nöbbelövsgården", "latitude": 55.732, "longitude": 13.165069},
-	{"namn": "Anders Jahan Retzius", "latitude": 55.705504, "longitude": 13.19376},
-	{"namn": "Large Cross", "latitude": 55.713693, "longitude": 13.192428},
-	{"namn": "The Purple Sculpture", "latitude": 55.724333, "longitude": 13.205183},
-	{"namn": "Dragon", "latitude": 55.709516, "longitude": 13.194448},
-	{"namn": "Hole #10", "latitude": 55.705116, "longitude": 13.219346},
-	{"namn": "Landstigningsplats", "latitude": 55.702045, "longitude": 13.143365},
-	{"namn": "Källby", "latitude": 55.690062, "longitude": 13.168051},
-	{"namn": "Treklotsplatsen", "latitude": 55.751892, "longitude": 13.188161},
-	{"namn": "Söderlyckan Skateboardpark", "latitude": 55.69605, "longitude": 13.187028},
-	{"namn": "Let's Dance", "latitude": 55.702665, "longitude": 13.197752},
-	{"namn": "Playground Gazebo", "latitude": 55.707536, "longitude": 13.211044},
-	{"namn": "Hela Halvcirkeln", "latitude": 55.519867, "longitude": 13.22515599999997},
-	{"namn": "Erlandsdals Lekpark", "latitude": 55.519639, "longitude": 13.226423999999952},
-	{"namn": "Välkommen till Svedala", "latitude": 55.51657999999999, "longitude": 13.228937999999971},
-	{"namn": "Cementary Structure", "latitude": 55.514271, "longitude": 13.221130000000016},
-	{"namn": "Sinnesrolunden", "latitude": 55.51381599999999, "longitude": 13.222024000000033},
-	{"namn": "Sittande flicka", "latitude": 55.511779, "longitude": 13.21898699999997},
-	{"namn": "Familjegrupp", "latitude": 55.511444, "longitude": 13.21910200000002},
-	{"namn": "Dammlyckans Lekplats", "latitude": 55.510981, "longitude": 13.226177000000007},
-	{"namn": "Svedalagårdens Idrottsplats", "latitude": 55.513859, "longitude": 13.22986800000001},
-	{"namn": "Sporthall", "latitude": 55.513649, "longitude": 13.23191399999996},
-	{"namn": "Marbäcks Lekplats", "latitude": 55.512395, "longitude": 13.246257000000014},
-	{"namn": "Svedala Stadspark", "latitude": 55.511367, "longitude": 13.240256999999929},
-	{"namn": "Floraparken", "latitude": 55.510374, "longitude": 13.235953999999992},
-	{"namn": "Svedala bibliotek", "latitude": 55.50960499999999, "longitude": 13.238165999999978},
-	{"namn": "Svedala Folketshus", "latitude": 55.508552, "longitude": 13.240197999999964},
-	{"namn": "Badflickan", "latitude": 55.507739, "longitude": 13.24180899999999},
-	{"namn": "Hjulrullaren", "latitude": 55.50747799999999, "longitude": 13.233747999999991},
-	{"namn": "Svedala Trainstation", "latitude": 55.50706499999999, "longitude": 13.232258999999999},
-	{"namn": "Aggarps Mölla", "latitude": 55.493584, "longitude": 13.2386500},
-	{"namn": "Gränsgatans lekplats", "latitude": 55.506724, "longitude": 13.2516270}
+[
+ {
+   "namn": "Ägyptische Symbolik",
+   "latitude": 50.775473,
+   "longitude": 6.081568
+ },
+ {
+   "namn": "Älteste Turnhalle des Rheinlands",
+   "latitude": 50.7698,
+   "longitude": 6.073033
+ },
+ {
+   "namn": "Öcher Heuschreck Durchbruch",
+   "latitude": 50.782624,
+   "longitude": 6.093901
+ },
+ {
+   "namn": "Öcher Schängche - Stadtpuppenbühne",
+   "latitude": 50.772535,
+   "longitude": 6.079185
+ },
+ {
+   "namn": "Überreste der Stadtmauer",
+   "latitude": 50.778171,
+   "longitude": 6.086416
+ },
+ {
+   "namn": "Übersichtsplan Melaten",
+   "latitude": 50.778743,
+   "longitude": 6.050577
+ },
+ {
+   "namn": " Aachen - Jesus Christ Born",
+   "latitude": 50.774476,
+   "longitude": 6.080086
+ },
+ {
+   "namn": "1906 Fassade",
+   "latitude": 50.779047,
+   "longitude": 6.101463
+ },
+ {
+   "namn": "3 Kinder",
+   "latitude": 50.779071,
+   "longitude": 6.103545
+ },
+ {
+   "namn": "365",
+   "latitude": 50.763306,
+   "longitude": 6.082497
+ },
+ {
+   "namn": "3lp Wandeling",
+   "latitude": 50.76161,
+   "longitude": 6.018181
+ },
+ {
+   "namn": "4 Schafe",
+   "latitude": 50.767587,
+   "longitude": 6.040099
+ },
+ {
+   "namn": "4 Steel Pillars ",
+   "latitude": 50.767502,
+   "longitude": 6.072569
+ },
+ {
+   "namn": "5 Pferde ",
+   "latitude": 50.768353,
+   "longitude": 6.091302
+ },
+ {
+   "namn": "5 Säulen",
+   "latitude": 50.770251,
+   "longitude": 6.117036
+ },
+ {
+   "namn": "6 Edelstahlsäulen",
+   "latitude": 50.782486,
+   "longitude": 6.097758
+ },
+ {
+   "namn": "AMV Arion",
+   "latitude": 50.776226,
+   "longitude": 6.076116
+ },
+ {
+   "namn": "AVZ  der RWTH",
+   "latitude": 50.779204,
+   "longitude": 6.062758
+ },
+ {
+   "namn": "Aachen (Aix La Chapelle)",
+   "latitude": 50.774785,
+   "longitude": 6.083876
+ },
+ {
+   "namn": "Aachen -  Justitia Et Pax 1708 1941 1954.",
+   "latitude": 50.77532,
+   "longitude": 6.082775
+ },
+ {
+   "namn": "Aachen - Antonius",
+   "latitude": 50.774513,
+   "longitude": 6.082558
+ },
+ {
+   "namn": "Aachen - Tierpark",
+   "latitude": 50.764288,
+   "longitude": 6.115432
+ },
+ {
+   "namn": "Aachen Arkaden",
+   "latitude": 50.770281,
+   "longitude": 6.117698
+ },
+ {
+   "namn": "Aachen Cathedral",
+   "latitude": 50.775319,
+   "longitude": 6.083883
+ },
+ {
+   "namn": "Aachen Hauptbahnhof",
+   "latitude": 50.768217,
+   "longitude": 6.090749
+ },
+ {
+   "namn": "Aachen Hbf Nebengebäude",
+   "latitude": 50.766359,
+   "longitude": 6.087502
+ },
+ {
+   "namn": "Aachen Im Wunderland",
+   "latitude": 50.775482,
+   "longitude": 6.124539
+ },
+ {
+   "namn": "Aachen Kennedy Park",
+   "latitude": 50.773678,
+   "longitude": 6.11661
+ },
+ {
+   "namn": "Aachen Münchener Hauptgebäude",
+   "latitude": 50.771592,
+   "longitude": 6.089131
+ },
+ {
+   "namn": "Aachen Münchener Versicherung",
+   "latitude": 50.770422,
+   "longitude": 6.086096
+ },
+ {
+   "namn": "Aachen Nord Zeigt Farbe",
+   "latitude": 50.778029,
+   "longitude": 6.105767
+ },
+ {
+   "namn": "Aachen Schanz Station",
+   "latitude": 50.770115,
+   "longitude": 6.073905
+ },
+ {
+   "namn": "Aachen Zoo",
+   "latitude": 50.764053,
+   "longitude": 6.115717
+ },
+ {
+   "namn": "Aachen in Farbe",
+   "latitude": 50.780801,
+   "longitude": 6.108804
+ },
+ {
+   "namn": "Aachen um 1580",
+   "latitude": 50.775236,
+   "longitude": 6.074002
+ },
+ {
+   "namn": "Aachen-Laurensberger Tennis-Club 2",
+   "latitude": 50.793617,
+   "longitude": 6.066081
+ },
+ {
+   "namn": "Aachener Alpen",
+   "latitude": 50.767854,
+   "longitude": 6.098223
+ },
+ {
+   "namn": "Aachener Bürger Bräu",
+   "latitude": 50.767954,
+   "longitude": 6.073076
+ },
+ {
+   "namn": "Aachener Bio Kuh",
+   "latitude": 50.780491,
+   "longitude": 6.088179
+ },
+ {
+   "namn": "Aachener Brauhaus Hintereingang",
+   "latitude": 50.773468,
+   "longitude": 6.086192
+ },
+ {
+   "namn": "Aachener Fenster mit Blick auf St. Foillan",
+   "latitude": 50.775795,
+   "longitude": 6.085709
+ },
+ {
+   "namn": "Aachener Karate-Club",
+   "latitude": 50.777899,
+   "longitude": 6.097873
+ },
+ {
+   "namn": "Aachener Liedertafel",
+   "latitude": 50.779731,
+   "longitude": 6.094679
+ },
+ {
+   "namn": "Aachener Nachrichten",
+   "latitude": 50.771251,
+   "longitude": 6.090254
+ },
+ {
+   "namn": "Aachener Ritter",
+   "latitude": 50.776032,
+   "longitude": 6.090796
+ },
+ {
+   "namn": "Aachener Siedlergeschichte",
+   "latitude": 50.774407,
+   "longitude": 6.08606
+ },
+ {
+   "namn": "Aachener Tafel",
+   "latitude": 50.7765,
+   "longitude": 6.092249
+ },
+ {
+   "namn": "Aachens Kurpark",
+   "latitude": 50.780796,
+   "longitude": 6.093012
+ },
+ {
+   "namn": "Abenteuer Spielplatz am Lousberg",
+   "latitude": 50.785945,
+   "longitude": 6.083609
+ },
+ {
+   "namn": "Abenteuerspielplatz Forst",
+   "latitude": 50.763332,
+   "longitude": 6.140835
+ },
+ {
+   "namn": "Abenteuerspielplatz",
+   "latitude": 50.78594,
+   "longitude": 6.073791
+ },
+ {
+   "namn": "Abstrakte Kunst Am Institut Für Keramische Komponenten",
+   "latitude": 50.786053,
+   "longitude": 6.076644
+ },
+ {
+   "namn": "Abt Gregor Von Kalabrien",
+   "latitude": 50.763723,
+   "longitude": 6.093927
+ },
+ {
+   "namn": "Abteikirche St. Johann Baptist",
+   "latitude": 50.762801,
+   "longitude": 6.093157
+ },
+ {
+   "namn": "Abteiornament",
+   "latitude": 50.76316,
+   "longitude": 6.092651
+ },
+ {
+   "namn": "Achtung Kinder! ",
+   "latitude": 50.796749,
+   "longitude": 6.061189
+ },
+ {
+   "namn": "Achtung Kinder",
+   "latitude": 50.797239,
+   "longitude": 6.06001
+ },
+ {
+   "namn": "Adler ",
+   "latitude": 50.773754,
+   "longitude": 6.074191
+ },
+ {
+   "namn": "Adler Statue ",
+   "latitude": 50.762902,
+   "longitude": 6.117402
+ },
+ {
+   "namn": "Adventgemeinde",
+   "latitude": 50.772403,
+   "longitude": 6.107342
+ },
+ {
+   "namn": "Aixcentric",
+   "latitude": 50.78176,
+   "longitude": 6.079434
+ },
+ {
+   "namn": "Aixlibris Antiquariat",
+   "latitude": 50.779695,
+   "longitude": 6.081151
+ },
+ {
+   "namn": "Akademische Eule",
+   "latitude": 50.78244,
+   "longitude": 6.076335
+ },
+ {
+   "namn": "Aktien Spinnerei",
+   "latitude": 50.771319,
+   "longitude": 6.107415
+ },
+ {
+   "namn": "Alania Aachener Burschenschaft",
+   "latitude": 50.785917,
+   "longitude": 6.092539
+ },
+ {
+   "namn": "Alexianerkloster",
+   "latitude": 50.772202,
+   "longitude": 6.081885
+ },
+ {
+   "namn": "Alfred von Reumont Denkmal",
+   "latitude": 50.782021,
+   "longitude": 6.079192
+ },
+ {
+   "namn": "Algorith",
+   "latitude": 50.797906,
+   "longitude": 6.084063
+ },
+ {
+   "namn": "Allégorie De La Femme ",
+   "latitude": 50.769253,
+   "longitude": 6.10651
+ },
+ {
+   "namn": "Alle Kirschsorten Deutschlands",
+   "latitude": 50.781176,
+   "longitude": 6.052784
+ },
+ {
+   "namn": "Altbau Mit Zwiebelturm",
+   "latitude": 50.775493,
+   "longitude": 6.092106
+ },
+ {
+   "namn": "Altbau mit Stuckfassade",
+   "latitude": 50.761718,
+   "longitude": 6.089103
+ },
+ {
+   "namn": "Altbau mit Stuckfassade",
+   "latitude": 50.772831,
+   "longitude": 6.110024
+ },
+ {
+   "namn": "Alte Inschrift",
+   "latitude": 50.772026,
+   "longitude": 6.100194
+ },
+ {
+   "namn": "Alte Lore ",
+   "latitude": 50.768654,
+   "longitude": 6.12989
+ },
+ {
+   "namn": "Alte Papiermühle",
+   "latitude": 50.772286,
+   "longitude": 6.102182
+ },
+ {
+   "namn": "Alte Pforte",
+   "latitude": 50.771313,
+   "longitude": 6.09422
+ },
+ {
+   "namn": "Alte Ruine Schönforst ",
+   "latitude": 50.763693,
+   "longitude": 6.13404
+ },
+ {
+   "namn": "Alte Schanzbefestigung 17.Jh.",
+   "latitude": 50.781869,
+   "longitude": 6.077887
+ },
+ {
+   "namn": "Alte Straßenlaterne, Burtscheid",
+   "latitude": 50.76239,
+   "longitude": 6.092123
+ },
+ {
+   "namn": "Alte Tuchfabrik",
+   "latitude": 50.776419,
+   "longitude": 6.097187
+ },
+ {
+   "namn": "Alte Wagenräder, Soers",
+   "latitude": 50.796366,
+   "longitude": 6.084684
+ },
+ {
+   "namn": "Alte Zugachse",
+   "latitude": 50.763993,
+   "longitude": 6.080098
+ },
+ {
+   "namn": "Alte Zugachse",
+   "latitude": 50.772264,
+   "longitude": 6.061109
+ },
+ {
+   "namn": "Alte Zugachse",
+   "latitude": 50.785968,
+   "longitude": 6.111203
+ },
+ {
+   "namn": "Alter AEG-Trennschalter",
+   "latitude": 50.770995,
+   "longitude": 6.0972
+ },
+ {
+   "namn": "Alter Bahnhof Vaals",
+   "latitude": 50.776045,
+   "longitude": 6.018297
+ },
+ {
+   "namn": "Alter Erker Von 1895",
+   "latitude": 50.770188,
+   "longitude": 6.108351
+ },
+ {
+   "namn": "Alter Förderwagen RAG",
+   "latitude": 50.776948,
+   "longitude": 6.067538
+ },
+ {
+   "namn": "Alter Filmprojektor",
+   "latitude": 50.790116,
+   "longitude": 6.063432
+ },
+ {
+   "namn": "Alter Mühlenstein, Nähe BBS",
+   "latitude": 50.771364,
+   "longitude": 6.060664
+ },
+ {
+   "namn": "Alter Mühlstein",
+   "latitude": 50.763568,
+   "longitude": 6.093117
+ },
+ {
+   "namn": "Alter Pavillon",
+   "latitude": 50.788363,
+   "longitude": 6.07969
+ },
+ {
+   "namn": "Alter Pflug",
+   "latitude": 50.793164,
+   "longitude": 6.084896
+ },
+ {
+   "namn": "Alter Posthof",
+   "latitude": 50.771736,
+   "longitude": 6.086213
+ },
+ {
+   "namn": "Altes Bürgermeisteramt",
+   "latitude": 50.76845,
+   "longitude": 6.121758
+ },
+ {
+   "namn": "Altes Casino",
+   "latitude": 50.772012,
+   "longitude": 6.021092
+ },
+ {
+   "namn": "Altes Feuerhaus",
+   "latitude": 50.770485,
+   "longitude": 6.018566
+ },
+ {
+   "namn": "Altes Grenzhaus",
+   "latitude": 50.768876,
+   "longitude": 6.02319
+ },
+ {
+   "namn": "Altes Haus mit Verzierung",
+   "latitude": 50.774082,
+   "longitude": 6.101798
+ },
+ {
+   "namn": "Altes Hauswappen",
+   "latitude": 50.770987,
+   "longitude": 6.060243
+ },
+ {
+   "namn": "Altes Kasino",
+   "latitude": 50.766118,
+   "longitude": 6.090759
+ },
+ {
+   "namn": "Altes Kurhaus",
+   "latitude": 50.776942,
+   "longitude": 6.089105
+ },
+ {
+   "namn": "Altes Mauerwerk",
+   "latitude": 50.770477,
+   "longitude": 6.015232
+ },
+ {
+   "namn": "Altes Schwungrad",
+   "latitude": 50.791494,
+   "longitude": 6.06475
+ },
+ {
+   "namn": "Altes Steinstück Mit Wappen",
+   "latitude": 50.775161,
+   "longitude": 6.087879
+ },
+ {
+   "namn": "Altes Tor",
+   "latitude": 50.76152,
+   "longitude": 6.080687
+ },
+ {
+   "namn": "Altes Tor",
+   "latitude": 50.763206,
+   "longitude": 6.093599
+ },
+ {
+   "namn": "Altes Torhaus",
+   "latitude": 50.762849,
+   "longitude": 6.078609
+ },
+ {
+   "namn": "Altes Vogelhaus",
+   "latitude": 50.787523,
+   "longitude": 6.071199
+ },
+ {
+   "namn": "Altes Wassertretbecken am Lousberg",
+   "latitude": 50.785194,
+   "longitude": 6.083737
+ },
+ {
+   "namn": "Altes grünes Haus",
+   "latitude": 50.768853,
+   "longitude": 6.082199
+ },
+ {
+   "namn": "Aluminium Motorrad",
+   "latitude": 50.78068,
+   "longitude": 6.0735
+ },
+ {
+   "namn": "Am Knipp",
+   "latitude": 50.77897,
+   "longitude": 6.084506
+ },
+ {
+   "namn": "Amerika",
+   "latitude": 50.760758,
+   "longitude": 6.086511
+ },
+ {
+   "namn": "Angstraum - Pocketpark Matthiashofstraße",
+   "latitude": 50.771236,
+   "longitude": 6.082627
+ },
+ {
+   "namn": "Anna-Sittarz-Platz",
+   "latitude": 50.775316,
+   "longitude": 6.07532
+ },
+ {
+   "namn": "Annakirche",
+   "latitude": 50.773238,
+   "longitude": 6.080996
+ },
+ {
+   "namn": "Anno 1904",
+   "latitude": 50.775973,
+   "longitude": 6.078502
+ },
+ {
+   "namn": "Antiquitäten Lüttgens",
+   "latitude": 50.786044,
+   "longitude": 6.100864
+ },
+ {
+   "namn": "Antonius von Padua",
+   "latitude": 50.770711,
+   "longitude": 6.014715
+ },
+ {
+   "namn": "Apollo Stein",
+   "latitude": 50.762951,
+   "longitude": 6.091932
+ },
+ {
+   "namn": "Archäologisches  Fenster",
+   "latitude": 50.774899,
+   "longitude": 6.086523
+ },
+ {
+   "namn": "Archäologisches Fenster Rathaus",
+   "latitude": 50.776171,
+   "longitude": 6.084135
+ },
+ {
+   "namn": "Archäologisches Fenster",
+   "latitude": 50.775064,
+   "longitude": 6.081083
+ },
+ {
+   "namn": "Architektur Abteilung Baumhaus ",
+   "latitude": 50.777136,
+   "longitude": 6.076359
+ },
+ {
+   "namn": "Architektur-Modell Semi 90",
+   "latitude": 50.779597,
+   "longitude": 6.076931
+ },
+ {
+   "namn": "Architekturabteilung",
+   "latitude": 50.777291,
+   "longitude": 6.077068
+ },
+ {
+   "namn": "Arnold Schüll Haus",
+   "latitude": 50.772855,
+   "longitude": 6.110482
+ },
+ {
+   "namn": "Artenreich",
+   "latitude": 50.779873,
+   "longitude": 6.145874
+ },
+ {
+   "namn": "Astronomie Einhorn",
+   "latitude": 50.775354,
+   "longitude": 6.049054
+ },
+ {
+   "namn": "Athene und Hera",
+   "latitude": 50.770338,
+   "longitude": 6.070016
+ },
+ {
+   "namn": "Audimax RWTH Aachen",
+   "latitude": 50.780213,
+   "longitude": 6.075938
+ },
+ {
+   "namn": "Auto Street Art",
+   "latitude": 50.774772,
+   "longitude": 6.123385
+ },
+ {
+   "namn": "Autonomes Zentrum Aachen",
+   "latitude": 50.768235,
+   "longitude": 6.092949
+ },
+ {
+   "namn": "Bären-Apotheke",
+   "latitude": 50.768964,
+   "longitude": 6.055632
+ },
+ {
+   "namn": "Bärenhof ",
+   "latitude": 50.775525,
+   "longitude": 6.075618
+ },
+ {
+   "namn": "Büchervogel",
+   "latitude": 50.774989,
+   "longitude": 6.108625
+ },
+ {
+   "namn": "Bücherwurmfutter",
+   "latitude": 50.778382,
+   "longitude": 6.08288
+ },
+ {
+   "namn": "Bürgerzentrum St. Fronleichnam",
+   "latitude": 50.77424,
+   "longitude": 6.114162
+ },
+ {
+   "namn": "Büro Park ",
+   "latitude": 50.790912,
+   "longitude": 6.063243
+ },
+ {
+   "namn": "Büste von Luise ",
+   "latitude": 50.767849,
+   "longitude": 6.076692
+ },
+ {
+   "namn": "Backstein Graffiti ",
+   "latitude": 50.765853,
+   "longitude": 6.097554
+ },
+ {
+   "namn": "Backsteinweg Info 3",
+   "latitude": 50.774538,
+   "longitude": 6.117594
+ },
+ {
+   "namn": "Bacon's Place",
+   "latitude": 50.765501,
+   "longitude": 6.104746
+ },
+ {
+   "namn": "Bahkauv",
+   "latitude": 50.775706,
+   "longitude": 6.086087
+ },
+ {
+   "namn": "Bahnhof Rothe Erde an den Gleisen",
+   "latitude": 50.769971,
+   "longitude": 6.116108
+ },
+ {
+   "namn": "Balkon Rathaus Vaals 1850",
+   "latitude": 50.770525,
+   "longitude": 6.019195
+ },
+ {
+   "namn": "Balkonkunst",
+   "latitude": 50.768771,
+   "longitude": 6.067856
+ },
+ {
+   "namn": "Ballerinas am Fenster",
+   "latitude": 50.782506,
+   "longitude": 6.083504
+ },
+ {
+   "namn": "Banana For Scale",
+   "latitude": 50.791174,
+   "longitude": 6.065307
+ },
+ {
+   "namn": "Bar Museo",
+   "latitude": 50.773299,
+   "longitude": 6.095804
+ },
+ {
+   "namn": "Barbarakirche und Skulptur",
+   "latitude": 50.777081,
+   "longitude": 6.135965
+ },
+ {
+   "namn": "Barber's Art",
+   "latitude": 50.77904,
+   "longitude": 6.090242
+ },
+ {
+   "namn": "Barmherziger Gib Ihnen",
+   "latitude": 50.790831,
+   "longitude": 6.081073
+ },
+ {
+   "namn": "Basaltsäulen",
+   "latitude": 50.770894,
+   "longitude": 6.052528
+ },
+ {
+   "namn": "Bastei Theater Aachen",
+   "latitude": 50.782377,
+   "longitude": 6.088393
+ },
+ {
+   "namn": "Baugebäude",
+   "latitude": 50.779652,
+   "longitude": 6.06815
+ },
+ {
+   "namn": "Baum der Studenten",
+   "latitude": 50.774798,
+   "longitude": 6.068407
+ },
+ {
+   "namn": "Baumkreuz Auf Stein",
+   "latitude": 50.770312,
+   "longitude": 6.050988
+ },
+ {
+   "namn": "Baumwolle",
+   "latitude": 50.774142,
+   "longitude": 6.072471
+ },
+ {
+   "namn": "Bauwagen Peter Lustig ",
+   "latitude": 50.794711,
+   "longitude": 6.059388
+ },
+ {
+   "namn": "Beach of Dreams",
+   "latitude": 50.787123,
+   "longitude": 6.072124
+ },
+ {
+   "namn": "Beast Sculpture",
+   "latitude": 50.773094,
+   "longitude": 6.088162
+ },
+ {
+   "namn": "Beautiful Building",
+   "latitude": 50.775698,
+   "longitude": 6.097418
+ },
+ {
+   "namn": "Bendplatz",
+   "latitude": 50.782695,
+   "longitude": 6.072065
+ },
+ {
+   "namn": "Benjamin Blümchen",
+   "latitude": 50.764699,
+   "longitude": 6.119765
+ },
+ {
+   "namn": "Bergbau Gebäude RWTH",
+   "latitude": 50.779038,
+   "longitude": 6.078557
+ },
+ {
+   "namn": "Berliner Mauer",
+   "latitude": 50.780767,
+   "longitude": 6.129537
+ },
+ {
+   "namn": "Bernhard-Walke Haus",
+   "latitude": 50.78064,
+   "longitude": 6.0662
+ },
+ {
+   "namn": "Best Wishes and Love to All in Aachen",
+   "latitude": 50.781123,
+   "longitude": 6.102325
+ },
+ {
+   "namn": "Betender Engel",
+   "latitude": 50.770678,
+   "longitude": 6.049281
+ },
+ {
+   "namn": "Betonkunst",
+   "latitude": 50.768494,
+   "longitude": 6.131014
+ },
+ {
+   "namn": "Bf Aachen-Rothe Erde",
+   "latitude": 50.770372,
+   "longitude": 6.116414
+ },
+ {
+   "namn": "Big Tire",
+   "latitude": 50.798047,
+   "longitude": 6.059666
+ },
+ {
+   "namn": "Bilal-Moschee",
+   "latitude": 50.779691,
+   "longitude": 6.071317
+ },
+ {
+   "namn": "Bilderpfad",
+   "latitude": 50.77579,
+   "longitude": 6.112711
+ },
+ {
+   "namn": "Bilderstock Zehnthofweg",
+   "latitude": 50.779046,
+   "longitude": 6.137028
+ },
+ {
+   "namn": "Bird Mural",
+   "latitude": 50.767655,
+   "longitude": 6.096914
+ },
+ {
+   "namn": "Bischöfe Mundolph und Gundolph",
+   "latitude": 50.774851,
+   "longitude": 6.081153
+ },
+ {
+   "namn": "Bitten der Kinder",
+   "latitude": 50.77522,
+   "longitude": 6.102973
+ },
+ {
+   "namn": "Blau Weiß Aachen Burtscheid",
+   "latitude": 50.76117,
+   "longitude": 6.103712
+ },
+ {
+   "namn": "Blaue Blicke Graffiti",
+   "latitude": 50.776236,
+   "longitude": 6.102798
+ },
+ {
+   "namn": "Blaue Burtscheider Brücke",
+   "latitude": 50.766261,
+   "longitude": 6.088047
+ },
+ {
+   "namn": "Blaues Quadrat & Roter Punkt",
+   "latitude": 50.787497,
+   "longitude": 6.046191
+ },
+ {
+   "namn": "Bleiberger Fabrik",
+   "latitude": 50.773875,
+   "longitude": 6.071905
+ },
+ {
+   "namn": "Bless You All",
+   "latitude": 50.769059,
+   "longitude": 6.049204
+ },
+ {
+   "namn": "Bloemendal",
+   "latitude": 50.772867,
+   "longitude": 6.01317
+ },
+ {
+   "namn": "Blue Car",
+   "latitude": 50.777518,
+   "longitude": 6.114209
+ },
+ {
+   "namn": "Blue Man on a Chair",
+   "latitude": 50.775498,
+   "longitude": 6.085928
+ },
+ {
+   "namn": "Blumen im Fenster ",
+   "latitude": 50.769316,
+   "longitude": 6.091149
+ },
+ {
+   "namn": "Blumen",
+   "latitude": 50.770664,
+   "longitude": 6.082989
+ },
+ {
+   "namn": "Blumenbaum-Brunnen",
+   "latitude": 50.776545,
+   "longitude": 6.101548
+ },
+ {
+   "namn": "Blumenkreuz",
+   "latitude": 50.770511,
+   "longitude": 6.048097
+ },
+ {
+   "namn": "Bodenplatte auf dem Domhof",
+   "latitude": 50.774668,
+   "longitude": 6.082983
+ },
+ {
+   "namn": "Bordsteinbarriere",
+   "latitude": 50.777879,
+   "longitude": 6.135997
+ },
+ {
+   "namn": "Brücke im Park",
+   "latitude": 50.780813,
+   "longitude": 6.096168
+ },
+ {
+   "namn": "Brander Hof",
+   "latitude": 50.760502,
+   "longitude": 6.105129
+ },
+ {
+   "namn": "Braune Moppen",
+   "latitude": 50.770343,
+   "longitude": 6.02375
+ },
+ {
+   "namn": "Bristol Siddely Pegasus",
+   "latitude": 50.765071,
+   "longitude": 6.078719
+ },
+ {
+   "namn": "Bronce Maria + Jesus Child",
+   "latitude": 50.784487,
+   "longitude": 6.142544
+ },
+ {
+   "namn": "Bronze Modell des Aachener Dom",
+   "latitude": 50.774563,
+   "longitude": 6.083589
+ },
+ {
+   "namn": "Bronzemodell Elisenbrunnen",
+   "latitude": 50.773836,
+   "longitude": 6.086859
+ },
+ {
+   "namn": "Bronzestatuette",
+   "latitude": 50.76768,
+   "longitude": 6.077208
+ },
+ {
+   "namn": "Brunnen Am Casino ",
+   "latitude": 50.780955,
+   "longitude": 6.091979
+ },
+ {
+   "namn": "Brunnen An Der Frankenburg",
+   "latitude": 50.768288,
+   "longitude": 6.102491
+ },
+ {
+   "namn": "Brunnen Informatikzentrum",
+   "latitude": 50.777983,
+   "longitude": 6.060996
+ },
+ {
+   "namn": "Brunnen Moltkestrasse",
+   "latitude": 50.766193,
+   "longitude": 6.098289
+ },
+ {
+   "namn": "Brunnen Von Benno Werth",
+   "latitude": 50.773426,
+   "longitude": 6.079657
+ },
+ {
+   "namn": "Brunnen Zaun",
+   "latitude": 50.773238,
+   "longitude": 6.02075
+ },
+ {
+   "namn": "Brunnen am Schloß Belverde",
+   "latitude": 50.784659,
+   "longitude": 6.082986
+ },
+ {
+   "namn": "Brunnen im Hinterhof",
+   "latitude": 50.786637,
+   "longitude": 6.046615
+ },
+ {
+   "namn": "Brunnen in der Residenz am Kurpark",
+   "latitude": 50.784085,
+   "longitude": 6.096805
+ },
+ {
+   "namn": "Brunnen mit Erpel",
+   "latitude": 50.775762,
+   "longitude": 6.043118
+ },
+ {
+   "namn": "Brunnen mit Steinsäulen",
+   "latitude": 50.767592,
+   "longitude": 6.076373
+ },
+ {
+   "namn": "Brunnenanlage Benno Werth",
+   "latitude": 50.772368,
+   "longitude": 6.075989
+ },
+ {
+   "namn": "Brunnenanlage Deliusviertel",
+   "latitude": 50.772565,
+   "longitude": 6.075512
+ },
+ {
+   "namn": "Brunnenanlage Elsaßplatz",
+   "latitude": 50.773628,
+   "longitude": 6.115684
+ },
+ {
+   "namn": "Brunnengesicht",
+   "latitude": 50.78158,
+   "longitude": 6.09683
+ },
+ {
+   "namn": "Buchenallee 1807",
+   "latitude": 50.787293,
+   "longitude": 6.082317
+ },
+ {
+   "namn": "Buchenallee",
+   "latitude": 50.788711,
+   "longitude": 6.080168
+ },
+ {
+   "namn": "Buddha ",
+   "latitude": 50.763576,
+   "longitude": 6.079212
+ },
+ {
+   "namn": "Buddha And The Golden Kids ",
+   "latitude": 50.763501,
+   "longitude": 6.06976
+ },
+ {
+   "namn": "Buddhistisches Centrum Aachen",
+   "latitude": 50.769777,
+   "longitude": 6.102395
+ },
+ {
+   "namn": "Burg Frankenberg",
+   "latitude": 50.767817,
+   "longitude": 6.103601
+ },
+ {
+   "namn": "Burg Grünkreuz ",
+   "latitude": 50.769169,
+   "longitude": 6.053442
+ },
+ {
+   "namn": "Burg Seffent",
+   "latitude": 50.789589,
+   "longitude": 6.041158
+ },
+ {
+   "namn": "Burtscheid, Abteitor",
+   "latitude": 50.762342,
+   "longitude": 6.092716
+ },
+ {
+   "namn": "Burtscheid, Kloster",
+   "latitude": 50.765277,
+   "longitude": 6.096673
+ },
+ {
+   "namn": "Burtscheid, WW II Shooter Bunker",
+   "latitude": 50.766328,
+   "longitude": 6.109529
+ },
+ {
+   "namn": "Burtscheider Maibaum-Platz",
+   "latitude": 50.762187,
+   "longitude": 6.09234
+ },
+ {
+   "namn": "Burtscheider Wasserkaskaden",
+   "latitude": 50.762606,
+   "longitude": 6.091916
+ },
+ {
+   "namn": "Bushof Aachen",
+   "latitude": 50.776933,
+   "longitude": 6.089624
+ },
+ {
+   "namn": "CARS- Radiator Springs",
+   "latitude": 50.774301,
+   "longitude": 6.122745
+ },
+ {
+   "namn": "CHIO Am Willy-Brandt-Platz",
+   "latitude": 50.775962,
+   "longitude": 6.0918
+ },
+ {
+   "namn": "Café 18 Wandkunst",
+   "latitude": 50.778865,
+   "longitude": 6.057012
+ },
+ {
+   "namn": "Café Anvers",
+   "latitude": 50.776502,
+   "longitude": 6.081358
+ },
+ {
+   "namn": "Café Einstein",
+   "latitude": 50.77553,
+   "longitude": 6.078356
+ },
+ {
+   "namn": "Cafe & Bar  Zuhause",
+   "latitude": 50.781037,
+   "longitude": 6.087867
+ },
+ {
+   "namn": "Campus Boulevard",
+   "latitude": 50.783823,
+   "longitude": 6.043874
+ },
+ {
+   "namn": "Capitol  ",
+   "latitude": 50.778296,
+   "longitude": 6.087458
+ },
+ {
+   "namn": "Car Fix",
+   "latitude": 50.779724,
+   "longitude": 6.127604
+ },
+ {
+   "namn": "Carl-Sonnenschein-Haus",
+   "latitude": 50.770585,
+   "longitude": 6.079156
+ },
+ {
+   "namn": "Carolus Thermen",
+   "latitude": 50.782948,
+   "longitude": 6.097789
+ },
+ {
+   "namn": "Carpaccio Fassade",
+   "latitude": 50.779984,
+   "longitude": 6.083275
+ },
+ {
+   "namn": "Casa Moro",
+   "latitude": 50.776693,
+   "longitude": 6.085801
+ },
+ {
+   "namn": "Casino Aachen",
+   "latitude": 50.781443,
+   "longitude": 6.09291
+ },
+ {
+   "namn": "Casino Wächter - Ningbo I",
+   "latitude": 50.781605,
+   "longitude": 6.092543
+ },
+ {
+   "namn": "Casino-Wächter II Aachen",
+   "latitude": 50.781301,
+   "longitude": 6.093134
+ },
+ {
+   "namn": "Castle Gate",
+   "latitude": 50.773164,
+   "longitude": 6.013664
+ },
+ {
+   "namn": "Cat Graffiti",
+   "latitude": 50.772704,
+   "longitude": 6.091922
+ },
+ {
+   "namn": "Cat",
+   "latitude": 50.778073,
+   "longitude": 6.079549
+ },
+ {
+   "namn": "Catalpa",
+   "latitude": 50.764235,
+   "longitude": 6.094669
+ },
+ {
+   "namn": "Catch Me if You Can",
+   "latitude": 50.779231,
+   "longitude": 6.058499
+ },
+ {
+   "namn": "Center For Wind Drives",
+   "latitude": 50.78485,
+   "longitude": 6.043678
+ },
+ {
+   "namn": "Cereshoeve",
+   "latitude": 50.768187,
+   "longitude": 6.016739
+ },
+ {
+   "namn": "Charlemagne's Palace Chapel",
+   "latitude": 50.774613,
+   "longitude": 6.084185
+ },
+ {
+   "namn": "Chess Hut",
+   "latitude": 50.773996,
+   "longitude": 6.120651
+ },
+ {
+   "namn": "China Dragon",
+   "latitude": 50.771593,
+   "longitude": 6.024104
+ },
+ {
+   "namn": "Christ Dwelling Ministry e.V.",
+   "latitude": 50.776658,
+   "longitude": 6.122522
+ },
+ {
+   "namn": "Christliche Freikirche",
+   "latitude": 50.782376,
+   "longitude": 6.078339
+ },
+ {
+   "namn": "Christliche Gemeinde am Michaelsberg",
+   "latitude": 50.764477,
+   "longitude": 6.095984
+ },
+ {
+   "namn": "Chronoskop Königsgüter",
+   "latitude": 50.775862,
+   "longitude": 6.08345
+ },
+ {
+   "namn": "Clementine Katzenstein",
+   "latitude": 50.775056,
+   "longitude": 6.090845
+ },
+ {
+   "namn": "Close to the Edge",
+   "latitude": 50.787911,
+   "longitude": 6.06185
+ },
+ {
+   "namn": "Cocktail Queen",
+   "latitude": 50.779069,
+   "longitude": 6.057163
+ },
+ {
+   "namn": "Coco Kopiercenter",
+   "latitude": 50.78069,
+   "longitude": 6.153805
+ },
+ {
+   "namn": "Colorful Fountains",
+   "latitude": 50.768478,
+   "longitude": 6.090426
+ },
+ {
+   "namn": "Comiciade",
+   "latitude": 50.779717,
+   "longitude": 6.101089
+ },
+ {
+   "namn": "Cool Charlemagne",
+   "latitude": 50.770536,
+   "longitude": 6.118431
+ },
+ {
+   "namn": "Coolman Mural",
+   "latitude": 50.781871,
+   "longitude": 6.103846
+ },
+ {
+   "namn": "Cornely Kreuz",
+   "latitude": 50.769943,
+   "longitude": 6.050571
+ },
+ {
+   "namn": "CornerColour",
+   "latitude": 50.76941,
+   "longitude": 6.095466
+ },
+ {
+   "namn": "Couven-Pavillon",
+   "latitude": 50.766111,
+   "longitude": 6.097077
+ },
+ {
+   "namn": "Cow",
+   "latitude": 50.773681,
+   "longitude": 6.084051
+ },
+ {
+   "namn": "Crazy Horse",
+   "latitude": 50.762504,
+   "longitude": 6.090259
+ },
+ {
+   "namn": "Crazy Street Art",
+   "latitude": 50.773106,
+   "longitude": 6.078203
+ },
+ {
+   "namn": "Creepy Cat",
+   "latitude": 50.772064,
+   "longitude": 6.078175
+ },
+ {
+   "namn": "Damen mit Regenschirm",
+   "latitude": 50.777367,
+   "longitude": 6.086371
+ },
+ {
+   "namn": "Danziger Burschenschaftswappen",
+   "latitude": 50.774386,
+   "longitude": 6.063027
+ },
+ {
+   "namn": "Das Goldene Einhorn",
+   "latitude": 50.774269,
+   "longitude": 6.083879
+ },
+ {
+   "namn": "Das Kindertürenpferd",
+   "latitude": 50.782064,
+   "longitude": 6.084404
+ },
+ {
+   "namn": "Das Löwenkopf Fresko",
+   "latitude": 50.770286,
+   "longitude": 6.108853
+ },
+ {
+   "namn": "Das Rockerpaar",
+   "latitude": 50.774244,
+   "longitude": 6.091445
+ },
+ {
+   "namn": "Das Roskappellchen",
+   "latitude": 50.770922,
+   "longitude": 6.077855
+ },
+ {
+   "namn": "Das Türmchen",
+   "latitude": 50.770612,
+   "longitude": 6.023045
+ },
+ {
+   "namn": "Das tapfere Schneiderlein ",
+   "latitude": 50.769648,
+   "longitude": 6.079065
+ },
+ {
+   "namn": "Das weiße Haus",
+   "latitude": 50.771492,
+   "longitude": 6.020785
+ },
+ {
+   "namn": "David Hansemann-Denkmal",
+   "latitude": 50.778917,
+   "longitude": 6.093772
+ },
+ {
+   "namn": "De Marienschrein (1239) in de ",
+   "latitude": 50.774669,
+   "longitude": 6.08391
+ },
+ {
+   "namn": "De Obelisk Vaals",
+   "latitude": 50.773135,
+   "longitude": 6.021285
+ },
+ {
+   "namn": "Dead End",
+   "latitude": 50.778912,
+   "longitude": 6.067807
+ },
+ {
+   "namn": "Den Toten der Heimat 1945",
+   "latitude": 50.779593,
+   "longitude": 6.094747
+ },
+ {
+   "namn": "Denkmal Heinrich II",
+   "latitude": 50.774837,
+   "longitude": 6.094775
+ },
+ {
+   "namn": "Denkmal dem Herren",
+   "latitude": 50.77935,
+   "longitude": 6.095288
+ },
+ {
+   "namn": "Denkmal der Gefallenen des 1. Weltkrieges",
+   "latitude": 50.779075,
+   "longitude": 6.153709
+ },
+ {
+   "namn": "Denkmal des Wehrhaften Schmied",
+   "latitude": 50.774923,
+   "longitude": 6.080612
+ },
+ {
+   "namn": "Denkmalgeschützte Eingangsfront",
+   "latitude": 50.769797,
+   "longitude": 6.103048
+ },
+ {
+   "namn": "Der Backsteinweg",
+   "latitude": 50.773615,
+   "longitude": 6.119223
+ },
+ {
+   "namn": "Der Durchbruch",
+   "latitude": 50.773327,
+   "longitude": 6.080166
+ },
+ {
+   "namn": "Der Fröhliche Hengst",
+   "latitude": 50.772721,
+   "longitude": 6.086493
+ },
+ {
+   "namn": "Der Hirte",
+   "latitude": 50.776177,
+   "longitude": 6.10461
+ },
+ {
+   "namn": "Der Letzte Aus Der Reihe",
+   "latitude": 50.775105,
+   "longitude": 6.091332
+ },
+ {
+   "namn": "Der Mobile Garten",
+   "latitude": 50.783957,
+   "longitude": 6.097846
+ },
+ {
+   "namn": "Der Mohr",
+   "latitude": 50.77884,
+   "longitude": 6.125398
+ },
+ {
+   "namn": "Der Schneider",
+   "latitude": 50.777858,
+   "longitude": 6.083808
+ },
+ {
+   "namn": "Der Schnullerbaum Im Aachener Tierpark",
+   "latitude": 50.763996,
+   "longitude": 6.11439
+ },
+ {
+   "namn": "Der Stenten",
+   "latitude": 50.76307,
+   "longitude": 6.087959
+ },
+ {
+   "namn": "Der Stuhl",
+   "latitude": 50.780831,
+   "longitude": 6.047491
+ },
+ {
+   "namn": "Der Teufel und die Marktfrau",
+   "latitude": 50.784966,
+   "longitude": 6.084505
+ },
+ {
+   "namn": "Der Wächter",
+   "latitude": 50.775492,
+   "longitude": 6.095204
+ },
+ {
+   "namn": "Der Weiße Turm",
+   "latitude": 50.768957,
+   "longitude": 6.059793
+ },
+ {
+   "namn": "Der Weiße Weg",
+   "latitude": 50.790725,
+   "longitude": 6.07237
+ },
+ {
+   "namn": "Der fliegende Adler",
+   "latitude": 50.775448,
+   "longitude": 6.110498
+ },
+ {
+   "namn": "Der goldene Karl",
+   "latitude": 50.774257,
+   "longitude": 6.087978
+ },
+ {
+   "namn": "Der goldene Wal",
+   "latitude": 50.780677,
+   "longitude": 6.065666
+ },
+ {
+   "namn": "Der vollständige Kelch",
+   "latitude": 50.770314,
+   "longitude": 6.018969
+ },
+ {
+   "namn": "Deutsche St. Jakobusgesellschaft ",
+   "latitude": 50.771004,
+   "longitude": 6.075486
+ },
+ {
+   "namn": "Diözesan Bibliothek",
+   "latitude": 50.767563,
+   "longitude": 6.083911
+ },
+ {
+   "namn": "Diamant Kuppel Floriansdorf",
+   "latitude": 50.788337,
+   "longitude": 6.047556
+ },
+ {
+   "namn": "Die 3 Könige",
+   "latitude": 50.776516,
+   "longitude": 6.085236
+ },
+ {
+   "namn": "Die Beatles ",
+   "latitude": 50.779624,
+   "longitude": 6.101678
+ },
+ {
+   "namn": "Die Entdeckung einer neuen Landschaft!",
+   "latitude": 50.780556,
+   "longitude": 6.092482
+ },
+ {
+   "namn": "Die Entdeckung einer neuen Landschaft",
+   "latitude": 50.779778,
+   "longitude": 6.083854
+ },
+ {
+   "namn": "Die Frosch Statue",
+   "latitude": 50.785435,
+   "longitude": 6.087062
+ },
+ {
+   "namn": "Die Halbierten Kelche",
+   "latitude": 50.770309,
+   "longitude": 6.019259
+ },
+ {
+   "namn": "Die Königin",
+   "latitude": 50.773166,
+   "longitude": 6.088071
+ },
+ {
+   "namn": "Die Kinder Unter Dem Mantel",
+   "latitude": 50.780783,
+   "longitude": 6.081054
+ },
+ {
+   "namn": "Die Kreuzreihe",
+   "latitude": 50.770281,
+   "longitude": 6.014988
+ },
+ {
+   "namn": "Die Löwenpforte",
+   "latitude": 50.770995,
+   "longitude": 6.07816
+ },
+ {
+   "namn": "Die Lady mit der Flöte",
+   "latitude": 50.761762,
+   "longitude": 6.095501
+ },
+ {
+   "namn": "Die Leiden Jesu",
+   "latitude": 50.769389,
+   "longitude": 6.051616
+ },
+ {
+   "namn": "Die Leiden Jesu",
+   "latitude": 50.770694,
+   "longitude": 6.051341
+ },
+ {
+   "namn": "Die Oecher Börjerwehr",
+   "latitude": 50.772387,
+   "longitude": 6.112988
+ },
+ {
+   "namn": "Die Säulen des ehemaligen Belvedere",
+   "latitude": 50.785105,
+   "longitude": 6.083455
+ },
+ {
+   "namn": "Die Schere",
+   "latitude": 50.771856,
+   "longitude": 6.076573
+ },
+ {
+   "namn": "Die Sehnsüchte Frau ",
+   "latitude": 50.785407,
+   "longitude": 6.069599
+ },
+ {
+   "namn": "Die Sitzende",
+   "latitude": 50.763963,
+   "longitude": 6.093788
+ },
+ {
+   "namn": "Die Spinnerin",
+   "latitude": 50.769421,
+   "longitude": 6.112553
+ },
+ {
+   "namn": "Die Stehende",
+   "latitude": 50.765088,
+   "longitude": 6.094549
+ },
+ {
+   "namn": "Die Tür ins Nichts",
+   "latitude": 50.769515,
+   "longitude": 6.021292
+ },
+ {
+   "namn": "Die Trauernde",
+   "latitude": 50.77608,
+   "longitude": 6.1056
+ },
+ {
+   "namn": "Die Rettende Hand",
+   "latitude": 50.775832,
+   "longitude": 6.044167
+ },
+ {
+   "namn": "Die drei Glocken",
+   "latitude": 50.77298,
+   "longitude": 6.026387
+ },
+ {
+   "namn": "Die fröhliche Reiterin ",
+   "latitude": 50.765947,
+   "longitude": 6.060587
+ },
+ {
+   "namn": "Die schöne Trauernde",
+   "latitude": 50.771792,
+   "longitude": 6.048576
+ },
+ {
+   "namn": "Die weiße Maria",
+   "latitude": 50.773891,
+   "longitude": 6.013278
+ },
+ {
+   "namn": "Dietrich Bonhoeffer Kirche",
+   "latitude": 50.768482,
+   "longitude": 6.057459
+ },
+ {
+   "namn": "Dings",
+   "latitude": 50.777113,
+   "longitude": 6.10408
+ },
+ {
+   "namn": "Djungel- Mosaik",
+   "latitude": 50.774719,
+   "longitude": 6.120615
+ },
+ {
+   "namn": "Do Some Sports",
+   "latitude": 50.777328,
+   "longitude": 6.069455
+ },
+ {
+   "namn": "Do What You Really Want",
+   "latitude": 50.77807,
+   "longitude": 6.081754
+ },
+ {
+   "namn": "Dog Graffiti",
+   "latitude": 50.769459,
+   "longitude": 6.109885
+ },
+ {
+   "namn": "Dr. Adam Kuckhoff Memorial",
+   "latitude": 50.772911,
+   "longitude": 6.076096
+ },
+ {
+   "namn": "Drachenritter",
+   "latitude": 50.784444,
+   "longitude": 6.089182
+ },
+ {
+   "namn": "Dracula",
+   "latitude": 50.76693,
+   "longitude": 6.078446
+ },
+ {
+   "namn": "Dragons",
+   "latitude": 50.780947,
+   "longitude": 6.153583
+ },
+ {
+   "namn": "Drehrad Mit Rutsche",
+   "latitude": 50.777027,
+   "longitude": 6.09731
+ },
+ {
+   "namn": "Drehrad Schlossparkstrassse",
+   "latitude": 50.798741,
+   "longitude": 6.067642
+ },
+ {
+   "namn": "Drehturm Aachen Belvedere",
+   "latitude": 50.786387,
+   "longitude": 6.080608
+ },
+ {
+   "namn": "Drei Brüder",
+   "latitude": 50.784082,
+   "longitude": 6.141953
+ },
+ {
+   "namn": "Drei Figuren",
+   "latitude": 50.773417,
+   "longitude": 6.091333
+ },
+ {
+   "namn": "Drei Säulen - Kloster St. Alfons",
+   "latitude": 50.770927,
+   "longitude": 6.097354
+ },
+ {
+   "namn": "Dreifaltigkeitskirche",
+   "latitude": 50.768964,
+   "longitude": 6.096805
+ },
+ {
+   "namn": "Drummer Mural",
+   "latitude": 50.771567,
+   "longitude": 6.083433
+ },
+ {
+   "namn": "Dumont's Aachen",
+   "latitude": 50.769262,
+   "longitude": 6.099465
+ },
+ {
+   "namn": "Durchflogener Steinkranz",
+   "latitude": 50.786495,
+   "longitude": 6.142783
+ },
+ {
+   "namn": "ESG Aachen",
+   "latitude": 50.784662,
+   "longitude": 6.079159
+ },
+ {
+   "namn": "Eckfigur",
+   "latitude": 50.773662,
+   "longitude": 6.081524
+ },
+ {
+   "namn": "Eckturm Gneisenaustraße",
+   "latitude": 50.777532,
+   "longitude": 6.111209
+ },
+ {
+   "namn": "Eckturm",
+   "latitude": 50.762539,
+   "longitude": 6.093095
+ },
+ {
+   "namn": "Eilendorf Rathaus",
+   "latitude": 50.781091,
+   "longitude": 6.153398
+ },
+ {
+   "namn": "Eilendorf Statue",
+   "latitude": 50.778704,
+   "longitude": 6.153788
+ },
+ {
+   "namn": "Ein Franziskaner In Aachen ",
+   "latitude": 50.769884,
+   "longitude": 6.082176
+ },
+ {
+   "namn": "Eine Landschaft Der Göttin",
+   "latitude": 50.786456,
+   "longitude": 6.081071
+ },
+ {
+   "namn": "Eingang Floriansdorf",
+   "latitude": 50.788488,
+   "longitude": 6.046748
+ },
+ {
+   "namn": "Eingang Schatzkammer",
+   "latitude": 50.774979,
+   "longitude": 6.082676
+ },
+ {
+   "namn": "Eingang St. Paulus Kerk",
+   "latitude": 50.77019,
+   "longitude": 6.022381
+ },
+ {
+   "namn": "Eingangsportal Westfriedhof",
+   "latitude": 50.769012,
+   "longitude": 6.050035
+ },
+ {
+   "namn": "Eisen Eule",
+   "latitude": 50.789843,
+   "longitude": 6.065515
+ },
+ {
+   "namn": "Eisenhüttenkunde Building",
+   "latitude": 50.78062,
+   "longitude": 6.075144
+ },
+ {
+   "namn": "Eiskeller aus Klinker",
+   "latitude": 50.790046,
+   "longitude": 6.08177
+ },
+ {
+   "namn": "Elisabethhalle",
+   "latitude": 50.773296,
+   "longitude": 6.085544
+ },
+ {
+   "namn": "Elisenbrunnen, Aachen",
+   "latitude": 50.774066,
+   "longitude": 6.086894
+ },
+ {
+   "namn": "Elisengalerie",
+   "latitude": 50.773618,
+   "longitude": 6.088763
+ },
+ {
+   "namn": "Emergency Phone",
+   "latitude": 50.760817,
+   "longitude": 6.104597
+ },
+ {
+   "namn": "Engel Graffiti",
+   "latitude": 50.768516,
+   "longitude": 6.096764
+ },
+ {
+   "namn": "Engel Statue",
+   "latitude": 50.775073,
+   "longitude": 6.107422
+ },
+ {
+   "namn": "Engel am Kloster St. Raphael",
+   "latitude": 50.79185,
+   "longitude": 6.083901
+ },
+ {
+   "namn": "Engel der Familie Gregorius",
+   "latitude": 50.775817,
+   "longitude": 6.107728
+ },
+ {
+   "namn": "Engel mit Opferschale",
+   "latitude": 50.770965,
+   "longitude": 6.077699
+ },
+ {
+   "namn": "Engel und Löwen",
+   "latitude": 50.769863,
+   "longitude": 6.105257
+ },
+ {
+   "namn": "Engel",
+   "latitude": 50.765204,
+   "longitude": 6.07552
+ },
+ {
+   "namn": "Engel",
+   "latitude": 50.768859,
+   "longitude": 6.04967
+ },
+ {
+   "namn": "Engelsfassade",
+   "latitude": 50.768266,
+   "longitude": 6.081335
+ },
+ {
+   "namn": "Engelshaus",
+   "latitude": 50.776275,
+   "longitude": 6.112745
+ },
+ {
+   "namn": "Engelsstützen",
+   "latitude": 50.772066,
+   "longitude": 6.076836
+ },
+ {
+   "namn": "Enjoy The Music Mural Art",
+   "latitude": 50.768861,
+   "longitude": 6.094161
+ },
+ {
+   "namn": "Entdeckung Pferdeland",
+   "latitude": 50.800459,
+   "longitude": 6.08084
+ },
+ {
+   "namn": "Entlang Der Via Regia",
+   "latitude": 50.778583,
+   "longitude": 6.046589
+ },
+ {
+   "namn": "Entlang Der Via Regia",
+   "latitude": 50.789411,
+   "longitude": 6.04073
+ },
+ {
+   "namn": "Erker Mit Engel",
+   "latitude": 50.77061,
+   "longitude": 6.095683
+ },
+ {
+   "namn": "Erker mit Figuren",
+   "latitude": 50.783463,
+   "longitude": 6.090643
+ },
+ {
+   "namn": "Erleuchteter Kämpfer ",
+   "latitude": 50.776672,
+   "longitude": 6.077216
+ },
+ {
+   "namn": "Erzengel Michael",
+   "latitude": 50.773491,
+   "longitude": 6.083326
+ },
+ {
+   "namn": "Eselstatue ",
+   "latitude": 50.762101,
+   "longitude": 6.117362
+ },
+ {
+   "namn": "Eugen Piwokarsky-Haus, Aachen",
+   "latitude": 50.763045,
+   "longitude": 6.080337
+ },
+ {
+   "namn": "Eulen Statue",
+   "latitude": 50.762396,
+   "longitude": 6.115662
+ },
+ {
+   "namn": "Euro Statue",
+   "latitude": 50.771314,
+   "longitude": 6.024589
+ },
+ {
+   "namn": "Eurogress ",
+   "latitude": 50.781548,
+   "longitude": 6.092069
+ },
+ {
+   "namn": "Europaplatz Graffiti",
+   "latitude": 50.780354,
+   "longitude": 6.109129
+ },
+ {
+   "namn": "Ev. Kirche",
+   "latitude": 50.771999,
+   "longitude": 6.03764
+ },
+ {
+   "namn": "Evangelisch-freikirchliche Gemeinde Forst",
+   "latitude": 50.766149,
+   "longitude": 6.134588
+ },
+ {
+   "namn": "Evangelische Auferstehungskirche",
+   "latitude": 50.764533,
+   "longitude": 6.121208
+ },
+ {
+   "namn": "Evolution of Mobil Phone ",
+   "latitude": 50.775398,
+   "longitude": 6.067339
+ },
+ {
+   "namn": "Ewige Rose",
+   "latitude": 50.786177,
+   "longitude": 6.144394
+ },
+ {
+   "namn": "Fünf auf dem Dach",
+   "latitude": 50.762932,
+   "longitude": 6.093741
+ },
+ {
+   "namn": "FH Aachen",
+   "latitude": 50.764598,
+   "longitude": 6.07933
+ },
+ {
+   "namn": "FH Aachen, Luft- und Raumfahrt ",
+   "latitude": 50.764684,
+   "longitude": 6.08013
+ },
+ {
+   "namn": "FH Automobiltechnik",
+   "latitude": 50.768674,
+   "longitude": 6.079226
+ },
+ {
+   "namn": "Facade Détaillée ",
+   "latitude": 50.77017,
+   "longitude": 6.106867
+ },
+ {
+   "namn": "Face Graffiti",
+   "latitude": 50.777955,
+   "longitude": 6.105198
+ },
+ {
+   "namn": "Face Tree Art",
+   "latitude": 50.772062,
+   "longitude": 6.055421
+ },
+ {
+   "namn": "Fachbereich 4 Design",
+   "latitude": 50.768611,
+   "longitude": 6.078841
+ },
+ {
+   "namn": "Fahrstuhlechse",
+   "latitude": 50.769369,
+   "longitude": 6.074089
+ },
+ {
+   "namn": "Falkenstatue ",
+   "latitude": 50.762562,
+   "longitude": 6.116395
+ },
+ {
+   "namn": "Familienwappen",
+   "latitude": 50.76126,
+   "longitude": 6.08937
+ },
+ {
+   "namn": "Farbfernsehen",
+   "latitude": 50.771756,
+   "longitude": 6.07932
+ },
+ {
+   "namn": "Farbklaix",
+   "latitude": 50.769583,
+   "longitude": 6.082745
+ },
+ {
+   "namn": "Fassade Frauenkopf ",
+   "latitude": 50.772889,
+   "longitude": 6.072787
+ },
+ {
+   "namn": "Fassaden Fotokunst",
+   "latitude": 50.777005,
+   "longitude": 6.141769
+ },
+ {
+   "namn": "Fassaden Gesicht ",
+   "latitude": 50.772455,
+   "longitude": 6.072431
+ },
+ {
+   "namn": "Fassaden Vase",
+   "latitude": 50.778203,
+   "longitude": 6.101471
+ },
+ {
+   "namn": "Fassadenengel",
+   "latitude": 50.774477,
+   "longitude": 6.074515
+ },
+ {
+   "namn": "Fassadenfiguren",
+   "latitude": 50.76571,
+   "longitude": 6.091306
+ },
+ {
+   "namn": "Fassadengesicht",
+   "latitude": 50.768212,
+   "longitude": 6.098307
+ },
+ {
+   "namn": "Fassadengesicht",
+   "latitude": 50.768394,
+   "longitude": 6.083234
+ },
+ {
+   "namn": "Fassadenkopf Die Schöne",
+   "latitude": 50.769973,
+   "longitude": 6.080639
+ },
+ {
+   "namn": "Fassadenkopf",
+   "latitude": 50.768571,
+   "longitude": 6.084398
+ },
+ {
+   "namn": "Fassadenkunst der Osthalle",
+   "latitude": 50.774005,
+   "longitude": 6.109155
+ },
+ {
+   "namn": "Fassadenkunst",
+   "latitude": 50.767113,
+   "longitude": 6.081356
+ },
+ {
+   "namn": "Fassadenwald",
+   "latitude": 50.768831,
+   "longitude": 6.075267
+ },
+ {
+   "namn": "Felix der Zeichen Bär",
+   "latitude": 50.779503,
+   "longitude": 6.101306
+ },
+ {
+   "namn": "Felseninsel",
+   "latitude": 50.77046,
+   "longitude": 6.014844
+ },
+ {
+   "namn": "Ferberbaum",
+   "latitude": 50.75991,
+   "longitude": 6.096337
+ },
+ {
+   "namn": "Feuer Ass Mural",
+   "latitude": 50.77923,
+   "longitude": 6.098586
+ },
+ {
+   "namn": "Feuer",
+   "latitude": 50.777696,
+   "longitude": 6.091553
+ },
+ {
+   "namn": "Fiasko",
+   "latitude": 50.776457,
+   "longitude": 6.091952
+ },
+ {
+   "namn": "Figur ",
+   "latitude": 50.772782,
+   "longitude": 6.018237
+ },
+ {
+   "namn": "Figur am Domshop",
+   "latitude": 50.774938,
+   "longitude": 6.082129
+ },
+ {
+   "namn": "Figur",
+   "latitude": 50.77765,
+   "longitude": 6.100062
+ },
+ {
+   "namn": "Fingerabdrücke",
+   "latitude": 50.777107,
+   "longitude": 6.078584
+ },
+ {
+   "namn": "Fischi",
+   "latitude": 50.766224,
+   "longitude": 6.083965
+ },
+ {
+   "namn": "Fischpüddelchen",
+   "latitude": 50.774626,
+   "longitude": 6.08279
+ },
+ {
+   "namn": "Fitness-Park",
+   "latitude": 50.773942,
+   "longitude": 6.117614
+ },
+ {
+   "namn": "Flaggenfigur",
+   "latitude": 50.767381,
+   "longitude": 6.093552
+ },
+ {
+   "namn": "Flammendes Kreuz",
+   "latitude": 50.770907,
+   "longitude": 6.074554
+ },
+ {
+   "namn": "Fliesenkunst",
+   "latitude": 50.779009,
+   "longitude": 6.082316
+ },
+ {
+   "namn": "Flip Mural",
+   "latitude": 50.778076,
+   "longitude": 6.10395
+ },
+ {
+   "namn": "Flugzeug Propeller",
+   "latitude": 50.761415,
+   "longitude": 6.017587
+ },
+ {
+   "namn": "Fontäne im Stadtgarten",
+   "latitude": 50.780887,
+   "longitude": 6.094342
+ },
+ {
+   "namn": "Fontaine hinter dem Klinikum",
+   "latitude": 50.776613,
+   "longitude": 6.041057
+ },
+ {
+   "namn": "Forster Lattenjupp",
+   "latitude": 50.765525,
+   "longitude": 6.125924
+ },
+ {
+   "namn": "Fountain Bloemendal",
+   "latitude": 50.772313,
+   "longitude": 6.012259
+ },
+ {
+   "namn": "Fountains",
+   "latitude": 50.77247,
+   "longitude": 6.012524
+ },
+ {
+   "namn": "Fröbel",
+   "latitude": 50.78113,
+   "longitude": 6.09797
+ },
+ {
+   "namn": "Frankenberger Neumarkt",
+   "latitude": 50.768457,
+   "longitude": 6.106257
+ },
+ {
+   "namn": "Franz Oppenhoff-Denkmal - Mahnmal Gegen Intoleranz",
+   "latitude": 50.769573,
+   "longitude": 6.10211
+ },
+ {
+   "namn": "Franziska Schervier",
+   "latitude": 50.774724,
+   "longitude": 6.07954
+ },
+ {
+   "namn": "Franziskanerkloster",
+   "latitude": 50.77296,
+   "longitude": 6.085134
+ },
+ {
+   "namn": "Franziskuskloster",
+   "latitude": 50.774926,
+   "longitude": 6.078145
+ },
+ {
+   "namn": "Frau Mit Schwein",
+   "latitude": 50.781318,
+   "longitude": 6.10689
+ },
+ {
+   "namn": "Frauenbüste aus Ton",
+   "latitude": 50.778048,
+   "longitude": 6.078469
+ },
+ {
+   "namn": "Frauenbüste",
+   "latitude": 50.778302,
+   "longitude": 6.078792
+ },
+ {
+   "namn": "Fraunhofer IPT",
+   "latitude": 50.784692,
+   "longitude": 6.046605
+ },
+ {
+   "namn": "Fraunhofer Parkhaus",
+   "latitude": 50.784652,
+   "longitude": 6.050231
+ },
+ {
+   "namn": "Free Your Mind ",
+   "latitude": 50.760664,
+   "longitude": 6.090387
+ },
+ {
+   "namn": "Freilichtbühne Kennedypark",
+   "latitude": 50.77377,
+   "longitude": 6.1195
+ },
+ {
+   "namn": "Freimaurer Im Frankenberger Viertel",
+   "latitude": 50.770827,
+   "longitude": 6.110399
+ },
+ {
+   "namn": "Freimaurer",
+   "latitude": 50.780578,
+   "longitude": 6.072844
+ },
+ {
+   "namn": "Friedensbrunnen",
+   "latitude": 50.769979,
+   "longitude": 6.093394
+ },
+ {
+   "namn": "Frittezang",
+   "latitude": 50.774639,
+   "longitude": 6.087623
+ },
+ {
+   "namn": "Fronleichnamskirche",
+   "latitude": 50.774625,
+   "longitude": 6.114726
+ },
+ {
+   "namn": "Froschi",
+   "latitude": 50.768322,
+   "longitude": 6.103828
+ },
+ {
+   "namn": "Froschkönig im Müschpark",
+   "latitude": 50.791043,
+   "longitude": 6.081055
+ },
+ {
+   "namn": "Frozen Haugg",
+   "latitude": 50.773681,
+   "longitude": 6.121808
+ },
+ {
+   "namn": "Fußgängertunnel Hauptbahnhof",
+   "latitude": 50.767545,
+   "longitude": 6.092673
+ },
+ {
+   "namn": "Future Insurance",
+   "latitude": 50.771003,
+   "longitude": 6.087086
+ },
+ {
+   "namn": "Gänsehirte ",
+   "latitude": 50.763859,
+   "longitude": 6.115272
+ },
+ {
+   "namn": "Gärtners Fahrrad",
+   "latitude": 50.782152,
+   "longitude": 6.059854
+ },
+ {
+   "namn": "Garagenkunst Katze",
+   "latitude": 50.774279,
+   "longitude": 6.052197
+ },
+ {
+   "namn": "Garagenkunst Regatta",
+   "latitude": 50.772385,
+   "longitude": 6.05505
+ },
+ {
+   "namn": "Garagenkunst am Franziskaner Klostr ",
+   "latitude": 50.774857,
+   "longitude": 6.077607
+ },
+ {
+   "namn": "Garagenkunst",
+   "latitude": 50.764204,
+   "longitude": 6.093712
+ },
+ {
+   "namn": "Gate 1926",
+   "latitude": 50.769916,
+   "longitude": 6.07059
+ },
+ {
+   "namn": "Gazellengruppe",
+   "latitude": 50.762195,
+   "longitude": 6.115477
+ },
+ {
+   "namn": "Gedenkgarten Müschpark",
+   "latitude": 50.790814,
+   "longitude": 6.083996
+ },
+ {
+   "namn": "Gedenkkranz",
+   "latitude": 50.780362,
+   "longitude": 6.095344
+ },
+ {
+   "namn": "Gedenkkreuz Melatenfriedhof",
+   "latitude": 50.778909,
+   "longitude": 6.047013
+ },
+ {
+   "namn": "Gedenkplatte Davringhausen",
+   "latitude": 50.774885,
+   "longitude": 6.088488
+ },
+ {
+   "namn": "Gedenkstein Carl Wilhelm Vetter",
+   "latitude": 50.780039,
+   "longitude": 6.095282
+ },
+ {
+   "namn": "Gedenkstein am Lousberg ",
+   "latitude": 50.789657,
+   "longitude": 6.079902
+ },
+ {
+   "namn": "Gedenkstein",
+   "latitude": 50.780418,
+   "longitude": 6.091953
+ },
+ {
+   "namn": "Gedenktafel Im Bahnhof",
+   "latitude": 50.767616,
+   "longitude": 6.091428
+ },
+ {
+   "namn": "Gedenktafel Judenhaus",
+   "latitude": 50.763542,
+   "longitude": 6.134785
+ },
+ {
+   "namn": "Gedenktafel am Landesbehördenhaus",
+   "latitude": 50.772054,
+   "longitude": 6.087494
+ },
+ {
+   "namn": "Gelbe Monroe ",
+   "latitude": 50.775667,
+   "longitude": 6.079051
+ },
+ {
+   "namn": "Gelobt Sei Jesus Christus",
+   "latitude": 50.7694,
+   "longitude": 6.051181
+ },
+ {
+   "namn": "Gemeentehuis te Vaals met Monu",
+   "latitude": 50.770261,
+   "longitude": 6.019786
+ },
+ {
+   "namn": "Gemeindehaus Freie Evangelische Kirche Aachen",
+   "latitude": 50.785915,
+   "longitude": 6.072502
+ },
+ {
+   "namn": "Gemeinschaftsgarten HirschGrün",
+   "latitude": 50.772206,
+   "longitude": 6.094094
+ },
+ {
+   "namn": "Genbrunnen",
+   "latitude": 50.760273,
+   "longitude": 6.077696
+ },
+ {
+   "namn": "General A. Macdonald Gedenkstein",
+   "latitude": 50.779781,
+   "longitude": 6.095497
+ },
+ {
+   "namn": "Gerichtsgebäude Aachen",
+   "latitude": 50.773469,
+   "longitude": 6.102952
+ },
+ {
+   "namn": "Germania Fischhallen",
+   "latitude": 50.777151,
+   "longitude": 6.087661
+ },
+ {
+   "namn": "Geschichte der anorganischen Chemie",
+   "latitude": 50.777905,
+   "longitude": 6.072574
+ },
+ {
+   "namn": "Gesichter & Adler",
+   "latitude": 50.761942,
+   "longitude": 6.088981
+ },
+ {
+   "namn": "Gessenich",
+   "latitude": 50.778107,
+   "longitude": 6.084286
+ },
+ {
+   "namn": "Gesundheit Und Verantwortung ",
+   "latitude": 50.76867,
+   "longitude": 6.073641
+ },
+ {
+   "namn": "Gewächshaus Restaurant",
+   "latitude": 50.78127,
+   "longitude": 6.093433
+ },
+ {
+   "namn": "Ghoulmural",
+   "latitude": 50.764348,
+   "longitude": 6.09253
+ },
+ {
+   "namn": "Giant Head Sculpture ",
+   "latitude": 50.781665,
+   "longitude": 6.101523
+ },
+ {
+   "namn": "Ginkgo Biloba 1986 Aachen-Ningbo (China)",
+   "latitude": 50.774538,
+   "longitude": 6.08636
+ },
+ {
+   "namn": "Girl Next Door ",
+   "latitude": 50.76958,
+   "longitude": 6.086564
+ },
+ {
+   "namn": "Gitarrenspielerin",
+   "latitude": 50.774829,
+   "longitude": 6.091504
+ },
+ {
+   "namn": "Gitternetz Kunst",
+   "latitude": 50.781727,
+   "longitude": 6.100311
+ },
+ {
+   "namn": "Glück Auf",
+   "latitude": 50.76389,
+   "longitude": 6.079837
+ },
+ {
+   "namn": "Glamorous Rococo Balcony ",
+   "latitude": 50.772014,
+   "longitude": 6.088745
+ },
+ {
+   "namn": "Glas Tür Kunst",
+   "latitude": 50.780249,
+   "longitude": 6.097439
+ },
+ {
+   "namn": "Glasbläserei Museum",
+   "latitude": 50.769199,
+   "longitude": 6.02168
+ },
+ {
+   "namn": "Glaskäfig",
+   "latitude": 50.795407,
+   "longitude": 6.059648
+ },
+ {
+   "namn": "Glaskunst am Fraunhofer IPT",
+   "latitude": 50.785118,
+   "longitude": 6.046091
+ },
+ {
+   "namn": "Glassäule",
+   "latitude": 50.788056,
+   "longitude": 6.04909
+ },
+ {
+   "namn": "Glastürme hinterm Klinikum",
+   "latitude": 50.777753,
+   "longitude": 6.044124
+ },
+ {
+   "namn": "Glastunnel Informatikzentrum",
+   "latitude": 50.778354,
+   "longitude": 6.059816
+ },
+ {
+   "namn": "Glaszaun",
+   "latitude": 50.791436,
+   "longitude": 6.064416
+ },
+ {
+   "namn": "Glockenturm Des Franzikanerklosters",
+   "latitude": 50.76508,
+   "longitude": 6.096424
+ },
+ {
+   "namn": "Glockenturm Franziskanerinnen",
+   "latitude": 50.772774,
+   "longitude": 6.085118
+ },
+ {
+   "namn": "Gloria Deo",
+   "latitude": 50.773596,
+   "longitude": 6.021487
+ },
+ {
+   "namn": "Gloria in Excelsis Deo",
+   "latitude": 50.764674,
+   "longitude": 6.035554
+ },
+ {
+   "namn": "Golden Carolus",
+   "latitude": 50.767406,
+   "longitude": 6.096075
+ },
+ {
+   "namn": "Golden Madonna ",
+   "latitude": 50.770415,
+   "longitude": 6.075035
+ },
+ {
+   "namn": "Goldene Madonna ",
+   "latitude": 50.770551,
+   "longitude": 6.047695
+ },
+ {
+   "namn": "Goldene Madonna",
+   "latitude": 50.775867,
+   "longitude": 6.086303
+ },
+ {
+   "namn": "Goldene Maria",
+   "latitude": 50.769797,
+   "longitude": 6.052913
+ },
+ {
+   "namn": "Goldener Drache",
+   "latitude": 50.771874,
+   "longitude": 6.021643
+ },
+ {
+   "namn": "Goldlocke",
+   "latitude": 50.76817,
+   "longitude": 6.073274
+ },
+ {
+   "namn": "Goldwappen St Johann",
+   "latitude": 50.763007,
+   "longitude": 6.093199
+ },
+ {
+   "namn": "Good old Telephone ",
+   "latitude": 50.787573,
+   "longitude": 6.066915
+ },
+ {
+   "namn": "Gorillas",
+   "latitude": 50.763968,
+   "longitude": 6.114027
+ },
+ {
+   "namn": "Gott ist der Löwe",
+   "latitude": 50.776233,
+   "longitude": 6.085295
+ },
+ {
+   "namn": "Gründerzeitfassade",
+   "latitude": 50.780378,
+   "longitude": 6.089296
+ },
+ {
+   "namn": "Gründungsgeschenk OG Tech",
+   "latitude": 50.777054,
+   "longitude": 6.079294
+ },
+ {
+   "namn": "Grüner Turm",
+   "latitude": 50.769781,
+   "longitude": 6.06989
+ },
+ {
+   "namn": "Grünmetropole Europaplatz",
+   "latitude": 50.781026,
+   "longitude": 6.108209
+ },
+ {
+   "namn": "Grabeskirche St. Josef",
+   "latitude": 50.774453,
+   "longitude": 6.10767
+ },
+ {
+   "namn": "Grabmal Canonirus D. Wilhelm Smits",
+   "latitude": 50.776021,
+   "longitude": 6.105093
+ },
+ {
+   "namn": "Grabmal Van Wesel",
+   "latitude": 50.775898,
+   "longitude": 6.103761
+ },
+ {
+   "namn": "Grabsäule",
+   "latitude": 50.775026,
+   "longitude": 6.106008
+ },
+ {
+   "namn": "Grabstätte Alexianerbrüder",
+   "latitude": 50.769629,
+   "longitude": 6.052721
+ },
+ {
+   "namn": "Grabstätten  Gedenktafel Lousberg",
+   "latitude": 50.78462,
+   "longitude": 6.084391
+ },
+ {
+   "namn": "Graffiti Am Gleis 8",
+   "latitude": 50.769448,
+   "longitude": 6.086322
+ },
+ {
+   "namn": "Graffiti Cambio Car Sharing",
+   "latitude": 50.767569,
+   "longitude": 6.088015
+ },
+ {
+   "namn": "Graffiti Kunst Am Pontwall",
+   "latitude": 50.781683,
+   "longitude": 6.077555
+ },
+ {
+   "namn": "Graffiti Taverna Data",
+   "latitude": 50.772945,
+   "longitude": 6.074246
+ },
+ {
+   "namn": "Graffiti Urwald im Frankenberger Viertel",
+   "latitude": 50.767254,
+   "longitude": 6.109665
+ },
+ {
+   "namn": "Graffiti, Karte von Aachen ",
+   "latitude": 50.775853,
+   "longitude": 6.095068
+ },
+ {
+   "namn": "Granusturm des Rathauses in Aachen",
+   "latitude": 50.775954,
+   "longitude": 6.08433
+ },
+ {
+   "namn": "Grashaus",
+   "latitude": 50.774417,
+   "longitude": 6.082797
+ },
+ {
+   "namn": "Greek Gods Aeneas And Cymide ",
+   "latitude": 50.770076,
+   "longitude": 6.109207
+ },
+ {
+   "namn": "GrensRouten von Clermontplein",
+   "latitude": 50.770823,
+   "longitude": 6.019629
+ },
+ {
+   "namn": "GrensStelten ",
+   "latitude": 50.762645,
+   "longitude": 6.018534
+ },
+ {
+   "namn": "Grenzübergang Aachen",
+   "latitude": 50.77088,
+   "longitude": 6.026065
+ },
+ {
+   "namn": "Griechische Gemeinde",
+   "latitude": 50.77789,
+   "longitude": 6.097797
+ },
+ {
+   "namn": "Grillfläche",
+   "latitude": 50.77372,
+   "longitude": 6.049998
+ },
+ {
+   "namn": "Groß Aachener",
+   "latitude": 50.784579,
+   "longitude": 6.073255
+ },
+ {
+   "namn": "Großer Spielplatz West Park",
+   "latitude": 50.772606,
+   "longitude": 6.0703
+ },
+ {
+   "namn": "Grundstein ",
+   "latitude": 50.769649,
+   "longitude": 6.083023
+ },
+ {
+   "namn": "Gut Beulardstein",
+   "latitude": 50.800939,
+   "longitude": 6.067368
+ },
+ {
+   "namn": "Gut Kalkofen",
+   "latitude": 50.783746,
+   "longitude": 6.116232
+ },
+ {
+   "namn": "Gut Melaten",
+   "latitude": 50.779098,
+   "longitude": 6.04651
+ },
+ {
+   "namn": "Hühnerdieb",
+   "latitude": 50.775812,
+   "longitude": 6.084674
+ },
+ {
+   "namn": "Hütte auf dem Lousberg ",
+   "latitude": 50.789491,
+   "longitude": 6.074419
+ },
+ {
+   "namn": "Hüttenarbeiter",
+   "latitude": 50.77667,
+   "longitude": 6.131123
+ },
+ {
+   "namn": "HIA",
+   "latitude": 50.775973,
+   "longitude": 6.047887
+ },
+ {
+   "namn": "Hairy Lions",
+   "latitude": 50.774426,
+   "longitude": 6.075932
+ },
+ {
+   "namn": "Halbgeschmolzene Rohrkunst",
+   "latitude": 50.781638,
+   "longitude": 6.10093
+ },
+ {
+   "namn": "Hammer",
+   "latitude": 50.772412,
+   "longitude": 6.120045
+ },
+ {
+   "namn": "Handwerker",
+   "latitude": 50.777696,
+   "longitude": 6.110805
+ },
+ {
+   "namn": "Handwerksmonument",
+   "latitude": 50.773216,
+   "longitude": 6.093248
+ },
+ {
+   "namn": "Hangeweiher Laube ",
+   "latitude": 50.760634,
+   "longitude": 6.073609
+ },
+ {
+   "namn": "Hangeweiher Pforte",
+   "latitude": 50.761524,
+   "longitude": 6.073314
+ },
+ {
+   "namn": "Hansemanns Engel",
+   "latitude": 50.778026,
+   "longitude": 6.094981
+ },
+ {
+   "namn": "Happy Family",
+   "latitude": 50.773884,
+   "longitude": 6.091301
+ },
+ {
+   "namn": "Happy Tucan",
+   "latitude": 50.772403,
+   "longitude": 6.058504
+ },
+ {
+   "namn": "Haribo Graffiti",
+   "latitude": 50.760298,
+   "longitude": 6.093605
+ },
+ {
+   "namn": "Hau Rein Mural",
+   "latitude": 50.765699,
+   "longitude": 6.093325
+ },
+ {
+   "namn": "Hauptgebäude RWTH Aachen",
+   "latitude": 50.777616,
+   "longitude": 6.077995
+ },
+ {
+   "namn": "Haus Der Evangelischen Kirche",
+   "latitude": 50.773218,
+   "longitude": 6.081785
+ },
+ {
+   "namn": "Haus Fernschild ",
+   "latitude": 50.768554,
+   "longitude": 6.081337
+ },
+ {
+   "namn": "Haus Königshügel",
+   "latitude": 50.776527,
+   "longitude": 6.068293
+ },
+ {
+   "namn": "Haus Löwenstein",
+   "latitude": 50.776585,
+   "longitude": 6.083658
+ },
+ {
+   "namn": "Haus der Kleingärtner",
+   "latitude": 50.76232,
+   "longitude": 6.076692
+ },
+ {
+   "namn": "Haus des Hörens",
+   "latitude": 50.763487,
+   "longitude": 6.093032
+ },
+ {
+   "namn": "Haus mit Säulen",
+   "latitude": 50.763321,
+   "longitude": 6.091915
+ },
+ {
+   "namn": "Heilig Kreuz Kirche",
+   "latitude": 50.780353,
+   "longitude": 6.080401
+ },
+ {
+   "namn": "Heilige Maria",
+   "latitude": 50.769884,
+   "longitude": 6.050883
+ },
+ {
+   "namn": "Heiliger Andreas am Kreuz bei St. Andreas",
+   "latitude": 50.79026,
+   "longitude": 6.08924
+ },
+ {
+   "namn": "Heiliger Jesus",
+   "latitude": 50.771759,
+   "longitude": 6.050469
+ },
+ {
+   "namn": "Herausragende Wandfigur",
+   "latitude": 50.774769,
+   "longitude": 6.082647
+ },
+ {
+   "namn": "Hermann Heusch",
+   "latitude": 50.773646,
+   "longitude": 6.080715
+ },
+ {
+   "namn": "Herrschersitz Skulpturen",
+   "latitude": 50.773291,
+   "longitude": 6.083378
+ },
+ {
+   "namn": "Herwart Opitz Büste",
+   "latitude": 50.783254,
+   "longitude": 6.047638
+ },
+ {
+   "namn": "Herz Jesu Kirche",
+   "latitude": 50.767242,
+   "longitude": 6.108867
+ },
+ {
+   "namn": "Hexenberg",
+   "latitude": 50.776643,
+   "longitude": 6.065551
+ },
+ {
+   "namn": "Hier Bin Ich",
+   "latitude": 50.775298,
+   "longitude": 6.107253
+ },
+ {
+   "namn": "Himmelshaus",
+   "latitude": 50.768271,
+   "longitude": 6.017545
+ },
+ {
+   "namn": "Hirsch Center Aachen",
+   "latitude": 50.778616,
+   "longitude": 6.121674
+ },
+ {
+   "namn": "Historic Balcony",
+   "latitude": 50.769872,
+   "longitude": 6.103512
+ },
+ {
+   "namn": "Historic Building ",
+   "latitude": 50.77106,
+   "longitude": 6.095051
+ },
+ {
+   "namn": "Historic Building In Frankenberger Viertel ",
+   "latitude": 50.772268,
+   "longitude": 6.100301
+ },
+ {
+   "namn": "Historic Building Viktoriastraße",
+   "latitude": 50.773161,
+   "longitude": 6.107003
+ },
+ {
+   "namn": "Historic Factory Tower",
+   "latitude": 50.771286,
+   "longitude": 6.105816
+ },
+ {
+   "namn": "Historical Building",
+   "latitude": 50.78007,
+   "longitude": 6.101018
+ },
+ {
+   "namn": "Historical Jugendstil Building",
+   "latitude": 50.769422,
+   "longitude": 6.100053
+ },
+ {
+   "namn": "Historische Fassade",
+   "latitude": 50.769956,
+   "longitude": 6.094428
+ },
+ {
+   "namn": "Historische Fassade",
+   "latitude": 50.781005,
+   "longitude": 6.082001
+ },
+ {
+   "namn": "Historische Gleichstrommaschine",
+   "latitude": 50.778442,
+   "longitude": 6.075185
+ },
+ {
+   "namn": "Historische Lore",
+   "latitude": 50.779305,
+   "longitude": 6.078742
+ },
+ {
+   "namn": "Historische Rahe-Mühle",
+   "latitude": 50.798189,
+   "longitude": 6.070553
+ },
+ {
+   "namn": "Historische Seifenfabrik Laurensberg",
+   "latitude": 50.797686,
+   "longitude": 6.061506
+ },
+ {
+   "namn": "Historischer Epischer Springbrunnen 20. Jh.",
+   "latitude": 50.774108,
+   "longitude": 6.087325
+ },
+ {
+   "namn": "Historisches Gebäude Benediktinerstraße 36",
+   "latitude": 50.761826,
+   "longitude": 6.089655
+ },
+ {
+   "namn": "Hl. Camillus",
+   "latitude": 50.775165,
+   "longitude": 6.009622
+ },
+ {
+   "namn": "Hl. Drei Könige auf Gras",
+   "latitude": 50.770227,
+   "longitude": 6.079867
+ },
+ {
+   "namn": "Hof Mit Römischen Säulen",
+   "latitude": 50.775441,
+   "longitude": 6.084947
+ },
+ {
+   "namn": "Holzkopf mit Hut",
+   "latitude": 50.778396,
+   "longitude": 6.091411
+ },
+ {
+   "namn": "Horse Gate",
+   "latitude": 50.772794,
+   "longitude": 6.111385
+ },
+ {
+   "namn": "Horse With No Name ",
+   "latitude": 50.800221,
+   "longitude": 6.071778
+ },
+ {
+   "namn": "Hostel Aachen",
+   "latitude": 50.770804,
+   "longitude": 6.073713
+ },
+ {
+   "namn": "Hotel Domicil",
+   "latitude": 50.767355,
+   "longitude": 6.07297
+ },
+ {
+   "namn": "Hotel Granus",
+   "latitude": 50.779396,
+   "longitude": 6.098424
+ },
+ {
+   "namn": "Hotmannspief",
+   "latitude": 50.778336,
+   "longitude": 6.088641
+ },
+ {
+   "namn": "Hubertusbrunnen",
+   "latitude": 50.769171,
+   "longitude": 6.077997
+ },
+ {
+   "namn": "HumboldtHaus",
+   "latitude": 50.77797,
+   "longitude": 6.082124
+ },
+ {
+   "namn": "I like to moove it, moove it",
+   "latitude": 50.766976,
+   "longitude": 6.095442
+ },
+ {
+   "namn": "I'm Number Five",
+   "latitude": 50.781597,
+   "longitude": 6.079965
+ },
+ {
+   "namn": "IENT",
+   "latitude": 50.776326,
+   "longitude": 6.069435
+ },
+ {
+   "namn": "IHF",
+   "latitude": 50.77641,
+   "longitude": 6.06887
+ },
+ {
+   "namn": "IHK Art",
+   "latitude": 50.771814,
+   "longitude": 6.088692
+ },
+ {
+   "namn": "IKV Climbing Structures",
+   "latitude": 50.787369,
+   "longitude": 6.049675
+ },
+ {
+   "namn": "IT Center RWTH",
+   "latitude": 50.781219,
+   "longitude": 6.065675
+ },
+ {
+   "namn": "ITA- Institute of Textile Technology",
+   "latitude": 50.783514,
+   "longitude": 6.050019
+ },
+ {
+   "namn": "IWM RWTH Aachen",
+   "latitude": 50.777767,
+   "longitude": 6.081675
+ },
+ {
+   "namn": "Idylle ",
+   "latitude": 50.769816,
+   "longitude": 6.072006
+ },
+ {
+   "namn": "Ihren Toten zum Gedenken ",
+   "latitude": 50.783984,
+   "longitude": 6.077764
+ },
+ {
+   "namn": "Illuminatus",
+   "latitude": 50.78556,
+   "longitude": 6.14346
+ },
+ {
+   "namn": "Im Alten Zollhaus",
+   "latitude": 50.767117,
+   "longitude": 6.08695
+ },
+ {
+   "namn": "Im Dialog",
+   "latitude": 50.761944,
+   "longitude": 6.076388
+ },
+ {
+   "namn": "Imeh Und Petra",
+   "latitude": 50.77706,
+   "longitude": 6.061532
+ },
+ {
+   "namn": "In Arte Voluptas",
+   "latitude": 50.773307,
+   "longitude": 6.071654
+ },
+ {
+   "namn": "In Deo Spes Mea 1790",
+   "latitude": 50.762979,
+   "longitude": 6.092459
+ },
+ {
+   "namn": "Infopoint Camping Aachen",
+   "latitude": 50.761244,
+   "longitude": 6.1028
+ },
+ {
+   "namn": "Informatik 4 - RWTH Aachen - Key",
+   "latitude": 50.778676,
+   "longitude": 6.060804
+ },
+ {
+   "namn": "Informatik-Zentrum RWTH",
+   "latitude": 50.779497,
+   "longitude": 6.058903
+ },
+ {
+   "namn": "Infotafel Feuchtbiotop",
+   "latitude": 50.796855,
+   "longitude": 6.069596
+ },
+ {
+   "namn": "Infotafel Gartendenkmal Müschpark",
+   "latitude": 50.788883,
+   "longitude": 6.079664
+ },
+ {
+   "namn": "Infotafel Kulturlandschaft",
+   "latitude": 50.7892,
+   "longitude": 6.078074
+ },
+ {
+   "namn": "Infotafel Soers",
+   "latitude": 50.797166,
+   "longitude": 6.066059
+ },
+ {
+   "namn": "Infotafel am Lousberg",
+   "latitude": 50.78637,
+   "longitude": 6.079705
+ },
+ {
+   "namn": "Infotafel der Handwerkskammer Aachen",
+   "latitude": 50.782678,
+   "longitude": 6.131084
+ },
+ {
+   "namn": "Infotafel zum weißen Weg",
+   "latitude": 50.798189,
+   "longitude": 6.065821
+ },
+ {
+   "namn": "Inschrift",
+   "latitude": 50.763687,
+   "longitude": 6.09456
+ },
+ {
+   "namn": "Institut für Anglistik, Amerikanistik und Romanistik",
+   "latitude": 50.776698,
+   "longitude": 6.078752
+ },
+ {
+   "namn": "Institut für Elektrische Maschinen",
+   "latitude": 50.7782,
+   "longitude": 6.075177
+ },
+ {
+   "namn": "Institut für Schienentechnik",
+   "latitude": 50.78097,
+   "longitude": 6.067629
+ },
+ {
+   "namn": "Jakobsdenkmal",
+   "latitude": 50.770769,
+   "longitude": 6.075127
+ },
+ {
+   "namn": "Jakobshof",
+   "latitude": 50.769998,
+   "longitude": 6.078134
+ },
+ {
+   "namn": "Jakobskirche",
+   "latitude": 50.770657,
+   "longitude": 6.075481
+ },
+ {
+   "namn": "Jasmin-Garten",
+   "latitude": 50.769542,
+   "longitude": 6.0617
+ },
+ {
+   "namn": "Jesu Kreuz",
+   "latitude": 50.774845,
+   "longitude": 6.107555
+ },
+ {
+   "namn": "Jesus Über Allem",
+   "latitude": 50.770139,
+   "longitude": 6.05133
+ },
+ {
+   "namn": "Jesus Am Busch",
+   "latitude": 50.770812,
+   "longitude": 6.049948
+ },
+ {
+   "namn": "Jesus Am Kreuz",
+   "latitude": 50.770073,
+   "longitude": 6.051867
+ },
+ {
+   "namn": "Jesus Am Kreuz",
+   "latitude": 50.770475,
+   "longitude": 6.050777
+ },
+ {
+   "namn": "Jesus Am Kreuz",
+   "latitude": 50.770889,
+   "longitude": 6.051384
+ },
+ {
+   "namn": "Jesus Am Kreuz",
+   "latitude": 50.771404,
+   "longitude": 6.050602
+ },
+ {
+   "namn": "Jesus Am Kreuz",
+   "latitude": 50.77918,
+   "longitude": 6.153033
+ },
+ {
+   "namn": "Jesus Am Kreuz",
+   "latitude": 50.791199,
+   "longitude": 6.039715
+ },
+ {
+   "namn": "Jesus An Der Kreuzung",
+   "latitude": 50.799163,
+   "longitude": 6.053833
+ },
+ {
+   "namn": "Jesus Bearing Cross",
+   "latitude": 50.784639,
+   "longitude": 6.086149
+ },
+ {
+   "namn": "Jesus Cross",
+   "latitude": 50.774484,
+   "longitude": 6.108214
+ },
+ {
+   "namn": "Jesus Der Heiler",
+   "latitude": 50.7707,
+   "longitude": 6.051649
+ },
+ {
+   "namn": "Jesus INRI",
+   "latitude": 50.774946,
+   "longitude": 6.106987
+ },
+ {
+   "namn": "Jesus Kreuz",
+   "latitude": 50.791188,
+   "longitude": 6.081662
+ },
+ {
+   "namn": "Jesus Mit Lamm",
+   "latitude": 50.770579,
+   "longitude": 6.048711
+ },
+ {
+   "namn": "Jesus am Kreuz",
+   "latitude": 50.767596,
+   "longitude": 6.010909
+ },
+ {
+   "namn": "Jesus am Kreuz",
+   "latitude": 50.778791,
+   "longitude": 6.038608
+ },
+ {
+   "namn": "Jesus am Kreuze",
+   "latitude": 50.784256,
+   "longitude": 6.086218
+ },
+ {
+   "namn": "Jesus am eisernen Kreuz",
+   "latitude": 50.787614,
+   "longitude": 6.024252
+ },
+ {
+   "namn": "Jesus an der Talstraße",
+   "latitude": 50.777617,
+   "longitude": 6.102971
+ },
+ {
+   "namn": "Jesus at Heilig Kreuz",
+   "latitude": 50.780779,
+   "longitude": 6.080583
+ },
+ {
+   "namn": "Jesus das Lamm Gottes ",
+   "latitude": 50.775051,
+   "longitude": 6.094916
+ },
+ {
+   "namn": "Jesus in the Cross",
+   "latitude": 50.767684,
+   "longitude": 6.015811
+ },
+ {
+   "namn": "Jesus on the Cross",
+   "latitude": 50.775065,
+   "longitude": 6.094598
+ },
+ {
+   "namn": "Jesuskreuz",
+   "latitude": 50.80093,
+   "longitude": 6.053907
+ },
+ {
+   "namn": "Jet Fan",
+   "latitude": 50.778374,
+   "longitude": 6.077731
+ },
+ {
+   "namn": "Jewish Cemetery",
+   "latitude": 50.76666,
+   "longitude": 6.072386
+ },
+ {
+   "namn": "Joh. Jos. Couven Wespienhaus 1737",
+   "latitude": 50.77659,
+   "longitude": 6.081007
+ },
+ {
+   "namn": "John F. Kennedy",
+   "latitude": 50.773727,
+   "longitude": 6.117349
+ },
+ {
+   "namn": "Johnny  Walker",
+   "latitude": 50.789638,
+   "longitude": 6.07659
+ },
+ {
+   "namn": "Judenhaus Königstraße",
+   "latitude": 50.775799,
+   "longitude": 6.077277
+ },
+ {
+   "namn": "Jungfrau Maria Am Eck ",
+   "latitude": 50.775724,
+   "longitude": 6.082133
+ },
+ {
+   "namn": "Jup Van De Balken",
+   "latitude": 50.764012,
+   "longitude": 6.094729
+ },
+ {
+   "namn": "Jupp van der Balken",
+   "latitude": 50.762686,
+   "longitude": 6.092882
+ },
+ {
+   "namn": "Justitia",
+   "latitude": 50.773761,
+   "longitude": 6.098783
+ },
+ {
+   "namn": "Justizzentrum",
+   "latitude": 50.774276,
+   "longitude": 6.104489
+ },
+ {
+   "namn": "Kármán Parkhaus der RWTH",
+   "latitude": 50.776135,
+   "longitude": 6.079908
+ },
+ {
+   "namn": "König Kopf",
+   "latitude": 50.785037,
+   "longitude": 6.047274
+ },
+ {
+   "namn": "Königsbrücken",
+   "latitude": 50.775385,
+   "longitude": 6.074924
+ },
+ {
+   "namn": "KünstlerMuseum",
+   "latitude": 50.78237,
+   "longitude": 6.084298
+ },
+ {
+   "namn": "K.D.St.V. Kaiserpfalz Aachen",
+   "latitude": 50.775845,
+   "longitude": 6.065871
+ },
+ {
+   "namn": "K2 Wand Kunst",
+   "latitude": 50.783597,
+   "longitude": 6.052612
+ },
+ {
+   "namn": "KAB Graffiti",
+   "latitude": 50.801426,
+   "longitude": 6.051223
+ },
+ {
+   "namn": "Kaiser Karl Graffiti",
+   "latitude": 50.77271,
+   "longitude": 6.095495
+ },
+ {
+   "namn": "Kaiser Karl",
+   "latitude": 50.777328,
+   "longitude": 6.096941
+ },
+ {
+   "namn": "Kaiser Karls Gymnasium",
+   "latitude": 50.777112,
+   "longitude": 6.083088
+ },
+ {
+   "namn": "Kaiser-Friedrich-Denkmal",
+   "latitude": 50.77546,
+   "longitude": 6.095491
+ },
+ {
+   "namn": "Kaiser-Karls-Gymnasium ",
+   "latitude": 50.777,
+   "longitude": 6.081734
+ },
+ {
+   "namn": "Kamel Graffiti ",
+   "latitude": 50.764262,
+   "longitude": 6.091591
+ },
+ {
+   "namn": "Kantenkreis",
+   "latitude": 50.78542,
+   "longitude": 6.140671
+ },
+ {
+   "namn": "Kapelle Westfriedhof I",
+   "latitude": 50.76842,
+   "longitude": 6.050251
+ },
+ {
+   "namn": "Kapelle am Missio-Hauptgebäude, Aachen",
+   "latitude": 50.76162,
+   "longitude": 6.076542
+ },
+ {
+   "namn": "Kapuziner Karree",
+   "latitude": 50.772048,
+   "longitude": 6.085571
+ },
+ {
+   "namn": "Karl der Große Graffiti",
+   "latitude": 50.784006,
+   "longitude": 6.090603
+ },
+ {
+   "namn": "Karl der Kleine Ganz Gross",
+   "latitude": 50.779511,
+   "longitude": 6.100909
+ },
+ {
+   "namn": "Karl im Stenten",
+   "latitude": 50.763465,
+   "longitude": 6.086983
+ },
+ {
+   "namn": "Karlsbrunnen",
+   "latitude": 50.776385,
+   "longitude": 6.083716
+ },
+ {
+   "namn": "Karlsgarten",
+   "latitude": 50.779563,
+   "longitude": 6.046266
+ },
+ {
+   "namn": "Karlshofbrunnen",
+   "latitude": 50.777061,
+   "longitude": 6.083916
+ },
+ {
+   "namn": "Karmeliterhöfe",
+   "latitude": 50.768934,
+   "longitude": 6.084032
+ },
+ {
+   "namn": "Kasinostraße",
+   "latitude": 50.766287,
+   "longitude": 6.090816
+ },
+ {
+   "namn": "Kath. Pfarrgemeinde Heilig Geist",
+   "latitude": 50.764612,
+   "longitude": 6.074789
+ },
+ {
+   "namn": "Katzenbrunnen",
+   "latitude": 50.785862,
+   "longitude": 6.095677
+ },
+ {
+   "namn": "Kaufmann",
+   "latitude": 50.778092,
+   "longitude": 6.110668
+ },
+ {
+   "namn": "Kehrmännchen",
+   "latitude": 50.776204,
+   "longitude": 6.080552
+ },
+ {
+   "namn": "Kelch",
+   "latitude": 50.769557,
+   "longitude": 6.05065
+ },
+ {
+   "namn": "Kennedy Park Mural",
+   "latitude": 50.773147,
+   "longitude": 6.117734
+ },
+ {
+   "namn": "Kerk Vaals ",
+   "latitude": 50.770361,
+   "longitude": 6.022648
+ },
+ {
+   "namn": "Kettenreaktion",
+   "latitude": 50.778317,
+   "longitude": 6.104408
+ },
+ {
+   "namn": "Kind Mit Gans",
+   "latitude": 50.782368,
+   "longitude": 6.105614
+ },
+ {
+   "namn": "Kind Mit Mann",
+   "latitude": 50.781149,
+   "longitude": 6.106622
+ },
+ {
+   "namn": "Kind Mit Schwein",
+   "latitude": 50.782214,
+   "longitude": 6.105293
+ },
+ {
+   "namn": "Kind Mit Weinrebe",
+   "latitude": 50.778988,
+   "longitude": 6.103923
+ },
+ {
+   "namn": "Kind Mural",
+   "latitude": 50.780727,
+   "longitude": 6.101434
+ },
+ {
+   "namn": "Kind mit Fisch",
+   "latitude": 50.778737,
+   "longitude": 6.104242
+ },
+ {
+   "namn": "Kind mit Fisch",
+   "latitude": 50.782542,
+   "longitude": 6.105255
+ },
+ {
+   "namn": "Kind mit Schaf",
+   "latitude": 50.777796,
+   "longitude": 6.100717
+ },
+ {
+   "namn": "Kinder 2",
+   "latitude": 50.796922,
+   "longitude": 6.060821
+ },
+ {
+   "namn": "Kinder Hand in Hand",
+   "latitude": 50.764581,
+   "longitude": 6.095448
+ },
+ {
+   "namn": "Kinder Park ",
+   "latitude": 50.782305,
+   "longitude": 6.073999
+ },
+ {
+   "namn": "Kinder malen Kinder ",
+   "latitude": 50.766649,
+   "longitude": 6.071142
+ },
+ {
+   "namn": "Kinder",
+   "latitude": 50.77576,
+   "longitude": 6.113057
+ },
+ {
+   "namn": "Kindergemälde",
+   "latitude": 50.777582,
+   "longitude": 6.099461
+ },
+ {
+   "namn": "Kindertraum",
+   "latitude": 50.786477,
+   "longitude": 6.098152
+ },
+ {
+   "namn": "King Normi",
+   "latitude": 50.769629,
+   "longitude": 6.095079
+ },
+ {
+   "namn": "Kiosk La Cabana",
+   "latitude": 50.781909,
+   "longitude": 6.098249
+ },
+ {
+   "namn": "Kippen im riesigen Aschenbecher",
+   "latitude": 50.781074,
+   "longitude": 6.101547
+ },
+ {
+   "namn": "Kirche Der Zwei Religionen",
+   "latitude": 50.769268,
+   "longitude": 6.021139
+ },
+ {
+   "namn": "Kirche St. Adalbert",
+   "latitude": 50.774898,
+   "longitude": 6.095173
+ },
+ {
+   "namn": "Kirche St. Marien",
+   "latitude": 50.769809,
+   "longitude": 6.088966
+ },
+ {
+   "namn": "Kirche Westfriedhof",
+   "latitude": 50.769574,
+   "longitude": 6.052048
+ },
+ {
+   "namn": "Kirche",
+   "latitude": 50.760545,
+   "longitude": 6.064354
+ },
+ {
+   "namn": "Klang Tast Skulptur",
+   "latitude": 50.77288,
+   "longitude": 6.079031
+ },
+ {
+   "namn": "Kleine Fontäne",
+   "latitude": 50.780952,
+   "longitude": 6.095919
+ },
+ {
+   "namn": "Kleiner Brunnen",
+   "latitude": 50.78751,
+   "longitude": 6.081722
+ },
+ {
+   "namn": "Kleines Brunnengesicht",
+   "latitude": 50.780829,
+   "longitude": 6.093292
+ },
+ {
+   "namn": "Kleines Haus, Aachen",
+   "latitude": 50.761098,
+   "longitude": 6.077205
+ },
+ {
+   "namn": "Kleines Ornament,Burtscheid",
+   "latitude": 50.764014,
+   "longitude": 6.094066
+ },
+ {
+   "namn": "Klenkes Denkmal",
+   "latitude": 50.774865,
+   "longitude": 6.087743
+ },
+ {
+   "namn": "Klettergarten",
+   "latitude": 50.766691,
+   "longitude": 6.080182
+ },
+ {
+   "namn": "Klettern macht Spaß ",
+   "latitude": 50.766801,
+   "longitude": 6.075237
+ },
+ {
+   "namn": "Kletterpark Stadtgarten",
+   "latitude": 50.780354,
+   "longitude": 6.094063
+ },
+ {
+   "namn": "Kletterturm mit Flugzeug",
+   "latitude": 50.79065,
+   "longitude": 6.08904
+ },
+ {
+   "namn": "Kloster St. Alfons",
+   "latitude": 50.77062,
+   "longitude": 6.096898
+ },
+ {
+   "namn": "Kloster St. Josef",
+   "latitude": 50.783049,
+   "longitude": 6.079598
+ },
+ {
+   "namn": "Koi-Teich",
+   "latitude": 50.791357,
+   "longitude": 6.087205
+ },
+ {
+   "namn": "Kongreßdenkmal",
+   "latitude": 50.781725,
+   "longitude": 6.097591
+ },
+ {
+   "namn": "Koperhof",
+   "latitude": 50.769961,
+   "longitude": 6.019722
+ },
+ {
+   "namn": "Koperhof",
+   "latitude": 50.769962,
+   "longitude": 6.019236
+ },
+ {
+   "namn": "Kreislauf des Geldes",
+   "latitude": 50.774454,
+   "longitude": 6.085337
+ },
+ {
+   "namn": "Kreuz Fitzeberg",
+   "latitude": 50.801645,
+   "longitude": 6.052555
+ },
+ {
+   "namn": "Kreuz Mit Blätterhöhle",
+   "latitude": 50.770447,
+   "longitude": 6.048505
+ },
+ {
+   "namn": "Kreuz Unter Der Kastanie",
+   "latitude": 50.800583,
+   "longitude": 6.049371
+ },
+ {
+   "namn": "Kreuz Zwischen Den Säulen",
+   "latitude": 50.770475,
+   "longitude": 6.051266
+ },
+ {
+   "namn": "Kreuz am Baum",
+   "latitude": 50.800036,
+   "longitude": 6.056441
+ },
+ {
+   "namn": "Kreuz am Martin-Luther-Haus",
+   "latitude": 50.773303,
+   "longitude": 6.094396
+ },
+ {
+   "namn": "Kreuz von Heese",
+   "latitude": 50.774978,
+   "longitude": 6.108027
+ },
+ {
+   "namn": "Kreuzigungsgruppe",
+   "latitude": 50.772498,
+   "longitude": 6.08981
+ },
+ {
+   "namn": "Kreuzskulptur Friedenskirche",
+   "latitude": 50.783845,
+   "longitude": 6.09864
+ },
+ {
+   "namn": "Kreuzweg II. Station",
+   "latitude": 50.776503,
+   "longitude": 6.105614
+ },
+ {
+   "namn": "Kreuzweg VIII. Station",
+   "latitude": 50.77634,
+   "longitude": 6.106178
+ },
+ {
+   "namn": "Kreuzweg X. Station",
+   "latitude": 50.775804,
+   "longitude": 6.10674
+ },
+ {
+   "namn": "Kreuzweg XI. Station ",
+   "latitude": 50.775527,
+   "longitude": 6.106993
+ },
+ {
+   "namn": "Krieger-Gedenktafel",
+   "latitude": 50.784251,
+   "longitude": 6.09897
+ },
+ {
+   "namn": "Kristal Church",
+   "latitude": 50.766278,
+   "longitude": 6.060233
+ },
+ {
+   "namn": "Kristallnachtdenkmal",
+   "latitude": 50.776288,
+   "longitude": 6.092693
+ },
+ {
+   "namn": "Kuckucksnest",
+   "latitude": 50.773039,
+   "longitude": 6.073914
+ },
+ {
+   "namn": "Kugelbrunnen Aachen",
+   "latitude": 50.775349,
+   "longitude": 6.091886
+ },
+ {
+   "namn": "Kultiviertes Schweine Mural",
+   "latitude": 50.789986,
+   "longitude": 6.0714
+ },
+ {
+   "namn": "Kunst",
+   "latitude": 50.781786,
+   "longitude": 6.100632
+ },
+ {
+   "namn": "Kunst",
+   "latitude": 50.800767,
+   "longitude": 6.055997
+ },
+ {
+   "namn": "Kunsthandlung Schoenen",
+   "latitude": 50.770144,
+   "longitude": 6.095595
+ },
+ {
+   "namn": "Kunstobjekt Wand",
+   "latitude": 50.79007,
+   "longitude": 6.051676
+ },
+ {
+   "namn": "Kunststoffskulptur IKV",
+   "latitude": 50.787318,
+   "longitude": 6.048896
+ },
+ {
+   "namn": "Kunstwerk der Deutschen Bank",
+   "latitude": 50.774593,
+   "longitude": 6.087262
+ },
+ {
+   "namn": "Kuppels Des AMO's",
+   "latitude": 50.780478,
+   "longitude": 6.049607
+ },
+ {
+   "namn": "Kurpark Aachen",
+   "latitude": 50.781012,
+   "longitude": 6.093163
+ },
+ {
+   "namn": "Kurpark Graffiti, Burtscheid",
+   "latitude": 50.765515,
+   "longitude": 6.095991
+ },
+ {
+   "namn": "Kurpark Terrassen",
+   "latitude": 50.765379,
+   "longitude": 6.095279
+ },
+ {
+   "namn": "Kurparkterassen-Brunnen",
+   "latitude": 50.764964,
+   "longitude": 6.095197
+ },
+ {
+   "namn": "Löwe und Stier",
+   "latitude": 50.776855,
+   "longitude": 6.112554
+ },
+ {
+   "namn": "Löwenbalkon",
+   "latitude": 50.762336,
+   "longitude": 6.089409
+ },
+ {
+   "namn": "Löwenbalkon",
+   "latitude": 50.769085,
+   "longitude": 6.100881
+ },
+ {
+   "namn": "Löwenbalkon",
+   "latitude": 50.77292,
+   "longitude": 6.077133
+ },
+ {
+   "namn": "Löwenbretzel",
+   "latitude": 50.771505,
+   "longitude": 6.076097
+ },
+ {
+   "namn": "Löwenkopf Brunnen",
+   "latitude": 50.797677,
+   "longitude": 6.06273
+ },
+ {
+   "namn": "Löwenornament, Burtscheid",
+   "latitude": 50.763604,
+   "longitude": 6.09341
+ },
+ {
+   "namn": "Löwenwappen",
+   "latitude": 50.78198,
+   "longitude": 6.078533
+ },
+ {
+   "namn": "Lüftungsdom",
+   "latitude": 50.777358,
+   "longitude": 6.048047
+ },
+ {
+   "namn": "Lüftungshäuschen",
+   "latitude": 50.777905,
+   "longitude": 6.042351
+ },
+ {
+   "namn": "L'homme Qui Observe ",
+   "latitude": 50.765874,
+   "longitude": 6.082217
+ },
+ {
+   "namn": "L__rzeichen",
+   "latitude": 50.773751,
+   "longitude": 6.106825
+ },
+ {
+   "namn": "La Becasse",
+   "latitude": 50.770241,
+   "longitude": 6.069276
+ },
+ {
+   "namn": "Lama Mural",
+   "latitude": 50.780898,
+   "longitude": 6.108539
+ },
+ {
+   "namn": "Lambertz Kunst Pferd",
+   "latitude": 50.788444,
+   "longitude": 6.064548
+ },
+ {
+   "namn": "Land Amtsgericht",
+   "latitude": 50.774311,
+   "longitude": 6.103718
+ },
+ {
+   "namn": "Landschafts Mural",
+   "latitude": 50.772294,
+   "longitude": 6.095592
+ },
+ {
+   "namn": "Lang lebe der König",
+   "latitude": 50.777167,
+   "longitude": 6.102341
+ },
+ {
+   "namn": "Langer Turm",
+   "latitude": 50.775905,
+   "longitude": 6.07267
+ },
+ {
+   "namn": "Laufende Kinder (Running Kids)",
+   "latitude": 50.774307,
+   "longitude": 6.108896
+ },
+ {
+   "namn": "Lederbrunnen",
+   "latitude": 50.774981,
+   "longitude": 6.089846
+ },
+ {
+   "namn": "Lesende, Burtscheid",
+   "latitude": 50.763303,
+   "longitude": 6.09389
+ },
+ {
+   "namn": "Let's Dance, Mural",
+   "latitude": 50.774446,
+   "longitude": 6.090929
+ },
+ {
+   "namn": "Leuchtender Jesus",
+   "latitude": 50.770526,
+   "longitude": 6.052311
+ },
+ {
+   "namn": "Leuchtturm Ruhestätte",
+   "latitude": 50.775543,
+   "longitude": 6.106114
+ },
+ {
+   "namn": "Library",
+   "latitude": 50.774892,
+   "longitude": 6.013776
+ },
+ {
+   "namn": "Liebevolle Wandbesprühung",
+   "latitude": 50.77839,
+   "longitude": 6.058065
+ },
+ {
+   "namn": "Lighthouse Christliches Zentrum",
+   "latitude": 50.772539,
+   "longitude": 6.108387
+ },
+ {
+   "namn": "Lindenplatz",
+   "latitude": 50.775408,
+   "longitude": 6.078468
+ },
+ {
+   "namn": "Lindt Goldhase",
+   "latitude": 50.784606,
+   "longitude": 6.067892
+ },
+ {
+   "namn": "Lindt Schokoladenpferd",
+   "latitude": 50.784969,
+   "longitude": 6.066562
+ },
+ {
+   "namn": "Linie 12 Wandkunst",
+   "latitude": 50.767747,
+   "longitude": 6.074211
+ },
+ {
+   "namn": "Lion Face Muriel",
+   "latitude": 50.788048,
+   "longitude": 6.072331
+ },
+ {
+   "namn": "Lochner Denkmal",
+   "latitude": 50.779905,
+   "longitude": 6.094834
+ },
+ {
+   "namn": "Lochner-Tor",
+   "latitude": 50.774682,
+   "longitude": 6.075825
+ },
+ {
+   "namn": "Lokomotive auf dem Republikplatz",
+   "latitude": 50.781127,
+   "longitude": 6.071964
+ },
+ {
+   "namn": "LolaParoli",
+   "latitude": 50.76998,
+   "longitude": 6.099234
+ },
+ {
+   "namn": "Lousberg 220m üNN Markierung",
+   "latitude": 50.786835,
+   "longitude": 6.082898
+ },
+ {
+   "namn": "Lousberg 235m ÜNN Makierung",
+   "latitude": 50.784867,
+   "longitude": 6.082395
+ },
+ {
+   "namn": "Lousbergterassen",
+   "latitude": 50.789393,
+   "longitude": 6.077348
+ },
+ {
+   "namn": "LuFo Ballerina Clown",
+   "latitude": 50.781064,
+   "longitude": 6.100914
+ },
+ {
+   "namn": "LuFo Blue Worm Statue",
+   "latitude": 50.781312,
+   "longitude": 6.100884
+ },
+ {
+   "namn": "Lucifer-Fassadenkopf",
+   "latitude": 50.7673,
+   "longitude": 6.078294
+ },
+ {
+   "namn": "Ludwig Forum",
+   "latitude": 50.781271,
+   "longitude": 6.102666
+ },
+ {
+   "namn": "Ludwigs zweite Frau",
+   "latitude": 50.780958,
+   "longitude": 6.098998
+ },
+ {
+   "namn": "Ludwigsallee Backsteinturm",
+   "latitude": 50.782539,
+   "longitude": 6.079835
+ },
+ {
+   "namn": "Luftschacht Ost",
+   "latitude": 50.790555,
+   "longitude": 6.063521
+ },
+ {
+   "namn": "Luisenbad",
+   "latitude": 50.768664,
+   "longitude": 6.101593
+ },
+ {
+   "namn": "Luisenhospital Aachen",
+   "latitude": 50.768254,
+   "longitude": 6.076839
+ },
+ {
+   "namn": "Mädchen auf der Mauer",
+   "latitude": 50.77081,
+   "longitude": 6.091383
+ },
+ {
+   "namn": "Mädchenplastik von Helmut Schepp",
+   "latitude": 50.762859,
+   "longitude": 6.092099
+ },
+ {
+   "namn": "Märchengemälde",
+   "latitude": 50.776089,
+   "longitude": 6.097317
+ },
+ {
+   "namn": "Mörgens",
+   "latitude": 50.771206,
+   "longitude": 6.081224
+ },
+ {
+   "namn": "Maastrichter Hof",
+   "latitude": 50.783223,
+   "longitude": 6.076007
+ },
+ {
+   "namn": "Machine Wzl Aditec ",
+   "latitude": 50.782956,
+   "longitude": 6.046426
+ },
+ {
+   "namn": "Madonna an der Normaluhr",
+   "latitude": 50.7688,
+   "longitude": 6.092736
+ },
+ {
+   "namn": "Madonna mit Jesuskind",
+   "latitude": 50.763402,
+   "longitude": 6.128577
+ },
+ {
+   "namn": "Mahnmal Des Lebens",
+   "latitude": 50.766173,
+   "longitude": 6.076474
+ },
+ {
+   "namn": "Malkunst",
+   "latitude": 50.785845,
+   "longitude": 6.072045
+ },
+ {
+   "namn": "Mann mit Axt",
+   "latitude": 50.785115,
+   "longitude": 6.076286
+ },
+ {
+   "namn": "Mann mit Zylinder",
+   "latitude": 50.777997,
+   "longitude": 6.110399
+ },
+ {
+   "namn": "Mannshohes Cola Mural",
+   "latitude": 50.77585,
+   "longitude": 6.11166
+ },
+ {
+   "namn": "Maoi-Sculpture",
+   "latitude": 50.774251,
+   "longitude": 6.012225
+ },
+ {
+   "namn": "Mari - Textile Art",
+   "latitude": 50.770914,
+   "longitude": 6.07872
+ },
+ {
+   "namn": "Maria Magdalena Statue",
+   "latitude": 50.770229,
+   "longitude": 6.089668
+ },
+ {
+   "namn": "Maria Shrine",
+   "latitude": 50.772018,
+   "longitude": 6.011811
+ },
+ {
+   "namn": "Maria Skulptur",
+   "latitude": 50.784296,
+   "longitude": 6.142791
+ },
+ {
+   "namn": "Maria Statue",
+   "latitude": 50.772513,
+   "longitude": 6.013789
+ },
+ {
+   "namn": "Maria Und Jesus",
+   "latitude": 50.774739,
+   "longitude": 6.08063
+ },
+ {
+   "namn": "Maria die Heilige",
+   "latitude": 50.770306,
+   "longitude": 6.051476
+ },
+ {
+   "namn": "Maria in der Mauer",
+   "latitude": 50.770784,
+   "longitude": 6.020402
+ },
+ {
+   "namn": "Maria in der Wand",
+   "latitude": 50.769473,
+   "longitude": 6.078258
+ },
+ {
+   "namn": "Marienhospital Alter Haupteingang",
+   "latitude": 50.76238,
+   "longitude": 6.093826
+ },
+ {
+   "namn": "Marienstatue An Hausecke",
+   "latitude": 50.767591,
+   "longitude": 6.098683
+ },
+ {
+   "namn": "Marienturm",
+   "latitude": 50.782274,
+   "longitude": 6.082131
+ },
+ {
+   "namn": "Marschiertor",
+   "latitude": 50.768145,
+   "longitude": 6.086929
+ },
+ {
+   "namn": "Marterpfahl Campus Melaten Cross",
+   "latitude": 50.775551,
+   "longitude": 6.04839
+ },
+ {
+   "namn": "Marterpfahl",
+   "latitude": 50.768218,
+   "longitude": 6.103486
+ },
+ {
+   "namn": "Martin Luther King ",
+   "latitude": 50.7855,
+   "longitude": 6.114585
+ },
+ {
+   "namn": "Martin Luther Skateplatz",
+   "latitude": 50.785204,
+   "longitude": 6.115036
+ },
+ {
+   "namn": "Maschbau Rwth",
+   "latitude": 50.777728,
+   "longitude": 6.080157
+ },
+ {
+   "namn": "Maschine",
+   "latitude": 50.784903,
+   "longitude": 6.129672
+ },
+ {
+   "namn": "Maschinenbau FH Aachen",
+   "latitude": 50.763901,
+   "longitude": 6.080433
+ },
+ {
+   "namn": "Maschinenhaus der alten Weberei",
+   "latitude": 50.799036,
+   "longitude": 6.072908
+ },
+ {
+   "namn": "Maske (Mask)",
+   "latitude": 50.774925,
+   "longitude": 6.084117
+ },
+ {
+   "namn": "Maths Mural",
+   "latitude": 50.779081,
+   "longitude": 6.07986
+ },
+ {
+   "namn": "Matthiashof",
+   "latitude": 50.770823,
+   "longitude": 6.084096
+ },
+ {
+   "namn": "Max Schmid-Burgk",
+   "latitude": 50.778984,
+   "longitude": 6.068575
+ },
+ {
+   "namn": "Medusa",
+   "latitude": 50.777069,
+   "longitude": 6.06096
+ },
+ {
+   "namn": "Mein Freund der Schuster",
+   "latitude": 50.771079,
+   "longitude": 6.084974
+ },
+ {
+   "namn": "Mein Karl - Charlemagne",
+   "latitude": 50.778993,
+   "longitude": 6.099021
+ },
+ {
+   "namn": "Mein Karl FH Aachen",
+   "latitude": 50.764213,
+   "longitude": 6.080797
+ },
+ {
+   "namn": "Mein Karl Kaufhof",
+   "latitude": 50.774887,
+   "longitude": 6.088797
+ },
+ {
+   "namn": "Mein Karl Sparkasse",
+   "latitude": 50.76311,
+   "longitude": 6.092002
+ },
+ {
+   "namn": "Meisenfrei",
+   "latitude": 50.767511,
+   "longitude": 6.081473
+ },
+ {
+   "namn": "Memoriam Garten Aachen",
+   "latitude": 50.785129,
+   "longitude": 6.141738
+ },
+ {
+   "namn": "Mensa Vita",
+   "latitude": 50.778497,
+   "longitude": 6.04806
+ },
+ {
+   "namn": "Menschen im Gespräch",
+   "latitude": 50.778455,
+   "longitude": 6.079683
+ },
+ {
+   "namn": "Metal Art",
+   "latitude": 50.780573,
+   "longitude": 6.048004
+ },
+ {
+   "namn": "Metal Circles",
+   "latitude": 50.776196,
+   "longitude": 6.084922
+ },
+ {
+   "namn": "Metall Kreuz",
+   "latitude": 50.785478,
+   "longitude": 6.143068
+ },
+ {
+   "namn": "Metall Rakete Kinderspielplatz",
+   "latitude": 50.777791,
+   "longitude": 6.085718
+ },
+ {
+   "namn": "Metallbaumstumpf",
+   "latitude": 50.777404,
+   "longitude": 6.076343
+ },
+ {
+   "namn": "Metallbiotop",
+   "latitude": 50.770755,
+   "longitude": 6.092028
+ },
+ {
+   "namn": "Metallnadel",
+   "latitude": 50.773398,
+   "longitude": 6.119682
+ },
+ {
+   "namn": "Metallskelett",
+   "latitude": 50.789515,
+   "longitude": 6.06283
+ },
+ {
+   "namn": "Metallskulptur",
+   "latitude": 50.77887,
+   "longitude": 6.088809
+ },
+ {
+   "namn": "Metallvogel",
+   "latitude": 50.784978,
+   "longitude": 6.152141
+ },
+ {
+   "namn": "Mickey Mouse",
+   "latitude": 50.769515,
+   "longitude": 6.036778
+ },
+ {
+   "namn": "Minigolfplatz",
+   "latitude": 50.781473,
+   "longitude": 6.095708
+ },
+ {
+   "namn": "Misereor Mural",
+   "latitude": 50.766946,
+   "longitude": 6.083457
+ },
+ {
+   "namn": "Missio, Aachen",
+   "latitude": 50.761744,
+   "longitude": 6.076079
+ },
+ {
+   "namn": "Mister Eight, Mural",
+   "latitude": 50.774791,
+   "longitude": 6.091927
+ },
+ {
+   "namn": "Mitterbron",
+   "latitude": 50.771525,
+   "longitude": 6.015891
+ },
+ {
+   "namn": "Modern Art",
+   "latitude": 50.779695,
+   "longitude": 6.084364
+ },
+ {
+   "namn": "Moderne Kunst Tür",
+   "latitude": 50.780217,
+   "longitude": 6.088034
+ },
+ {
+   "namn": "Moderne Menschen",
+   "latitude": 50.783676,
+   "longitude": 6.108366
+ },
+ {
+   "namn": "Monalisa",
+   "latitude": 50.771792,
+   "longitude": 6.040297
+ },
+ {
+   "namn": "Monumentaler Hexenhut",
+   "latitude": 50.766742,
+   "longitude": 6.105513
+ },
+ {
+   "namn": "Moralerik",
+   "latitude": 50.770465,
+   "longitude": 6.057207
+ },
+ {
+   "namn": "Mosaik - Gemeinsam Sind Wir Stark",
+   "latitude": 50.768192,
+   "longitude": 6.107297
+ },
+ {
+   "namn": "Mosaik Josefshaus",
+   "latitude": 50.77357,
+   "longitude": 6.108396
+ },
+ {
+   "namn": "Mosaik",
+   "latitude": 50.777722,
+   "longitude": 6.114818
+ },
+ {
+   "namn": "Mosaikkunst",
+   "latitude": 50.765232,
+   "longitude": 6.088871
+ },
+ {
+   "namn": "Mural Woman",
+   "latitude": 50.764747,
+   "longitude": 6.09432
+ },
+ {
+   "namn": "Muschelbrunnen im Kurgarten",
+   "latitude": 50.782036,
+   "longitude": 6.093882
+ },
+ {
+   "namn": "Muschelornamente ",
+   "latitude": 50.765004,
+   "longitude": 6.07568
+ },
+ {
+   "namn": "Museum De Kopermolen",
+   "latitude": 50.770095,
+   "longitude": 6.019503
+ },
+ {
+   "namn": "Music Sculpture",
+   "latitude": 50.791416,
+   "longitude": 6.065645
+ },
+ {
+   "namn": "Musikmuschel",
+   "latitude": 50.781334,
+   "longitude": 6.09415
+ },
+ {
+   "namn": "Musikschule Aachen",
+   "latitude": 50.779598,
+   "longitude": 6.102788
+ },
+ {
+   "namn": "Nördliches Torhaus",
+   "latitude": 50.762311,
+   "longitude": 6.076252
+ },
+ {
+   "namn": "Nachfragen Entdecken Glauben",
+   "latitude": 50.766161,
+   "longitude": 6.082577
+ },
+ {
+   "namn": "Nachtwächter ",
+   "latitude": 50.789843,
+   "longitude": 6.090095
+ },
+ {
+   "namn": "Naherholung im Pferdelandpark",
+   "latitude": 50.783175,
+   "longitude": 6.083061
+ },
+ {
+   "namn": "Naturraum Lousbergpark und Müschpark",
+   "latitude": 50.788557,
+   "longitude": 6.079009
+ },
+ {
+   "namn": "Naturschutzgebiet Seffent/Wilkensberg",
+   "latitude": 50.782064,
+   "longitude": 6.041104
+ },
+ {
+   "namn": "Naturschutzgebiet Seffent: Sieben Quellen",
+   "latitude": 50.787608,
+   "longitude": 6.039946
+ },
+ {
+   "namn": "Neuapostolische Kirche",
+   "latitude": 50.76352,
+   "longitude": 6.065513
+ },
+ {
+   "namn": "Neuapostolische Kirche",
+   "latitude": 50.784335,
+   "longitude": 6.154265
+ },
+ {
+   "namn": "Neuapostolische Kirchgemeinde",
+   "latitude": 50.774316,
+   "longitude": 6.110607
+ },
+ {
+   "namn": "Neuer Aachener Kunstverein",
+   "latitude": 50.781343,
+   "longitude": 6.09637
+ },
+ {
+   "namn": "Neuer Sohn",
+   "latitude": 50.770042,
+   "longitude": 6.079868
+ },
+ {
+   "namn": "New Tree Art",
+   "latitude": 50.779123,
+   "longitude": 6.078103
+ },
+ {
+   "namn": "No Risk No Fun Mural",
+   "latitude": 50.760738,
+   "longitude": 6.091703
+ },
+ {
+   "namn": "Normaluhr",
+   "latitude": 50.768625,
+   "longitude": 6.094787
+ },
+ {
+   "namn": "Oase Dreizehn",
+   "latitude": 50.776129,
+   "longitude": 6.057258
+ },
+ {
+   "namn": "Obelisk am Lousberg",
+   "latitude": 50.78559,
+   "longitude": 6.08264
+ },
+ {
+   "namn": "Ocean",
+   "latitude": 50.780798,
+   "longitude": 6.079501
+ },
+ {
+   "namn": "Oche in Farbe",
+   "latitude": 50.767403,
+   "longitude": 6.095026
+ },
+ {
+   "namn": "Oecher Prent",
+   "latitude": 50.77594,
+   "longitude": 6.085498
+ },
+ {
+   "namn": "Offene Bibliothek Burtscheid",
+   "latitude": 50.762867,
+   "longitude": 6.092156
+ },
+ {
+   "namn": "Old RWTH Gate (1793)",
+   "latitude": 50.777081,
+   "longitude": 6.079838
+ },
+ {
+   "namn": "Old Roman Gate",
+   "latitude": 50.780953,
+   "longitude": 6.076933
+ },
+ {
+   "namn": "Old Tree Art",
+   "latitude": 50.77943,
+   "longitude": 6.077967
+ },
+ {
+   "namn": "Only the Beatle May Park",
+   "latitude": 50.777808,
+   "longitude": 6.067829
+ },
+ {
+   "namn": "Oorlogsslachtoffers 1940 - 1945",
+   "latitude": 50.770509,
+   "longitude": 6.019722
+ },
+ {
+   "namn": "Openair Bibliothek",
+   "latitude": 50.783716,
+   "longitude": 6.098122
+ },
+ {
+   "namn": "Ora Et Labora",
+   "latitude": 50.788277,
+   "longitude": 6.049161
+ },
+ {
+   "namn": "Ornament Piano Diel",
+   "latitude": 50.768113,
+   "longitude": 6.087866
+ },
+ {
+   "namn": "Ornament Von 1784",
+   "latitude": 50.775607,
+   "longitude": 6.081325
+ },
+ {
+   "namn": "Ornament",
+   "latitude": 50.762567,
+   "longitude": 6.092392
+ },
+ {
+   "namn": "Ornament",
+   "latitude": 50.774566,
+   "longitude": 6.104222
+ },
+ {
+   "namn": "Ornament, Burtscheid",
+   "latitude": 50.763738,
+   "longitude": 6.093625
+ },
+ {
+   "namn": "Ort der Stille",
+   "latitude": 50.774915,
+   "longitude": 6.095814
+ },
+ {
+   "namn": "Ostfriedhof - Grabstätte Familie Johr",
+   "latitude": 50.776381,
+   "longitude": 6.10795
+ },
+ {
+   "namn": "Ostfriedhof Eingang",
+   "latitude": 50.774622,
+   "longitude": 6.106456
+ },
+ {
+   "namn": "Ostfriedhof, Büste des Spennra",
+   "latitude": 50.775646,
+   "longitude": 6.109164
+ },
+ {
+   "namn": "Ostfriedhof, Grab OB Contzen",
+   "latitude": 50.776268,
+   "longitude": 6.104887
+ },
+ {
+   "namn": "Ostfriedhof, Grab des von Guai",
+   "latitude": 50.775794,
+   "longitude": 6.105283
+ },
+ {
+   "namn": "Ostfriedhof, Grabstätte der Familie Carl Schreiber",
+   "latitude": 50.775942,
+   "longitude": 6.106197
+ },
+ {
+   "namn": "Ostfriedhof, Kreuzigungsgruppe",
+   "latitude": 50.774843,
+   "longitude": 6.1053
+ },
+ {
+   "namn": "Ostfriedhof, Marmorstatue",
+   "latitude": 50.776719,
+   "longitude": 6.109023
+ },
+ {
+   "namn": "Ostfriedhof, Mausoleum",
+   "latitude": 50.774772,
+   "longitude": 6.10684
+ },
+ {
+   "namn": "Ostfriedhof, Ruhestätte Ehlen",
+   "latitude": 50.775588,
+   "longitude": 6.105014
+ },
+ {
+   "namn": "Ostfriedhof, Waldfrau",
+   "latitude": 50.774882,
+   "longitude": 6.106539
+ },
+ {
+   "namn": "Ostfriedhof, trauernder Engel",
+   "latitude": 50.776036,
+   "longitude": 6.106599
+ },
+ {
+   "namn": "Osthalle",
+   "latitude": 50.774503,
+   "longitude": 6.109306
+ },
+ {
+   "namn": "Outdoor Fitness Vaals",
+   "latitude": 50.771586,
+   "longitude": 6.013318
+ },
+ {
+   "namn": "Owl Statue ",
+   "latitude": 50.791992,
+   "longitude": 6.082262
+ },
+ {
+   "namn": "Pac Man",
+   "latitude": 50.775273,
+   "longitude": 6.081404
+ },
+ {
+   "namn": "Parkhaus Amtsgericht",
+   "latitude": 50.774294,
+   "longitude": 6.105007
+ },
+ {
+   "namn": "Parkmurmeln",
+   "latitude": 50.77447,
+   "longitude": 6.119397
+ },
+ {
+   "namn": "Paubach Kanal",
+   "latitude": 50.774592,
+   "longitude": 6.081842
+ },
+ {
+   "namn": "Paulaner Biergarten",
+   "latitude": 50.765415,
+   "longitude": 6.095097
+ },
+ {
+   "namn": "Paulustor",
+   "latitude": 50.774036,
+   "longitude": 6.079093
+ },
+ {
+   "namn": "Pavillon Steppenberg",
+   "latitude": 50.768412,
+   "longitude": 6.039908
+ },
+ {
+   "namn": "Pavillon",
+   "latitude": 50.784867,
+   "longitude": 6.141709
+ },
+ {
+   "namn": "Pegasus Statue in Aachen",
+   "latitude": 50.791259,
+   "longitude": 6.064979
+ },
+ {
+   "namn": "Penn-Soldat",
+   "latitude": 50.768261,
+   "longitude": 6.086917
+ },
+ {
+   "namn": "Peter Joseph Lenne Büste",
+   "latitude": 50.78073,
+   "longitude": 6.091812
+ },
+ {
+   "namn": "Pfaffenturm",
+   "latitude": 50.773252,
+   "longitude": 6.072789
+ },
+ {
+   "namn": "Pfalzkapelle des Aachener Doms",
+   "latitude": 50.774622,
+   "longitude": 6.084685
+ },
+ {
+   "namn": "Pfarrgemeinde St. Konrad",
+   "latitude": 50.76876,
+   "longitude": 6.027577
+ },
+ {
+   "namn": "Pfarrheim Sankt Paul",
+   "latitude": 50.7749,
+   "longitude": 6.079772
+ },
+ {
+   "namn": "Pfarrheim St. Johann",
+   "latitude": 50.761055,
+   "longitude": 6.096565
+ },
+ {
+   "namn": "Pfarrkirche St. Michael, Burts",
+   "latitude": 50.763696,
+   "longitude": 6.094243
+ },
+ {
+   "namn": "Pfeifenstudio Jurewicz",
+   "latitude": 50.768924,
+   "longitude": 6.106125
+ },
+ {
+   "namn": "Pferd GRÜN Software AG",
+   "latitude": 50.773278,
+   "longitude": 6.101984
+ },
+ {
+   "namn": "Pferd Im Zoo",
+   "latitude": 50.762264,
+   "longitude": 6.116617
+ },
+ {
+   "namn": "Pferd am Kaiserplatz",
+   "latitude": 50.77565,
+   "longitude": 6.094945
+ },
+ {
+   "namn": "Pferd auf dem Dach ",
+   "latitude": 50.785123,
+   "longitude": 6.099707
+ },
+ {
+   "namn": "Pferd durch die Wand",
+   "latitude": 50.777081,
+   "longitude": 6.101732
+ },
+ {
+   "namn": "Pferd fährt Auto",
+   "latitude": 50.768028,
+   "longitude": 6.129004
+ },
+ {
+   "namn": "Pferde Anno 1892",
+   "latitude": 50.77152,
+   "longitude": 6.107351
+ },
+ {
+   "namn": "Pferdestatue am weißen Weg",
+   "latitude": 50.800206,
+   "longitude": 6.08068
+ },
+ {
+   "namn": "Pforte zum Bischof-Hemmerle-Haus",
+   "latitude": 50.768094,
+   "longitude": 6.084816
+ },
+ {
+   "namn": "Pforte, Mutter mit Tochter ",
+   "latitude": 50.767083,
+   "longitude": 6.074937
+ },
+ {
+   "namn": "Philippionsweg",
+   "latitude": 50.760056,
+   "longitude": 6.050816
+ },
+ {
+   "namn": "Phoenix von Helmuth Schepp",
+   "latitude": 50.777591,
+   "longitude": 6.076705
+ },
+ {
+   "namn": "Physik ",
+   "latitude": 50.777702,
+   "longitude": 6.075889
+ },
+ {
+   "namn": "Pingu Mural",
+   "latitude": 50.763121,
+   "longitude": 6.087024
+ },
+ {
+   "namn": "Pink Fantasm",
+   "latitude": 50.776244,
+   "longitude": 6.093274
+ },
+ {
+   "namn": "Pink Panther",
+   "latitude": 50.764984,
+   "longitude": 6.080483
+ },
+ {
+   "namn": "Pipe Breakthrough ",
+   "latitude": 50.775104,
+   "longitude": 6.0724
+ },
+ {
+   "namn": "Playground Jägerstraße",
+   "latitude": 50.766245,
+   "longitude": 6.093524
+ },
+ {
+   "namn": "Playground",
+   "latitude": 50.763367,
+   "longitude": 6.108088
+ },
+ {
+   "namn": "Polonia",
+   "latitude": 50.779858,
+   "longitude": 6.078206
+ },
+ {
+   "namn": "Pommestüte",
+   "latitude": 50.778296,
+   "longitude": 6.129706
+ },
+ {
+   "namn": "Ponttor",
+   "latitude": 50.781595,
+   "longitude": 6.078227
+ },
+ {
+   "namn": "Powerpuff Girl Mural",
+   "latitude": 50.764489,
+   "longitude": 6.122811
+ },
+ {
+   "namn": "Praying",
+   "latitude": 50.786452,
+   "longitude": 6.139873
+ },
+ {
+   "namn": "Presenting The 10 Gebote",
+   "latitude": 50.775908,
+   "longitude": 6.104559
+ },
+ {
+   "namn": "Prickartz Brunnen",
+   "latitude": 50.779152,
+   "longitude": 6.124685
+ },
+ {
+   "namn": "Prilblumen-Mann",
+   "latitude": 50.773609,
+   "longitude": 6.072557
+ },
+ {
+   "namn": "Prunk im Osten",
+   "latitude": 50.773527,
+   "longitude": 6.110125
+ },
+ {
+   "namn": "Pumptrack",
+   "latitude": 50.766937,
+   "longitude": 6.060957
+ },
+ {
+   "namn": "Puppenbrunnen",
+   "latitude": 50.775042,
+   "longitude": 6.084511
+ },
+ {
+   "namn": "Puppenhaus",
+   "latitude": 50.772798,
+   "longitude": 6.079344
+ },
+ {
+   "namn": "Pure Elise ",
+   "latitude": 50.773872,
+   "longitude": 6.08826
+ },
+ {
+   "namn": "Puzzle",
+   "latitude": 50.781772,
+   "longitude": 6.098792
+ },
+ {
+   "namn": "Queen Victoria",
+   "latitude": 50.765573,
+   "longitude": 6.066577
+ },
+ {
+   "namn": "Queens Pub",
+   "latitude": 50.772358,
+   "longitude": 6.08018
+ },
+ {
+   "namn": "Quell der Gesundheit",
+   "latitude": 50.782964,
+   "longitude": 6.097383
+ },
+ {
+   "namn": "Quellenhof",
+   "latitude": 50.781368,
+   "longitude": 6.090602
+ },
+ {
+   "namn": "Quirinusbad Am Domhof",
+   "latitude": 50.77502,
+   "longitude": 6.085073
+ },
+ {
+   "namn": "Röhrenbrunnen",
+   "latitude": 50.777313,
+   "longitude": 6.088676
+ },
+ {
+   "namn": "Röhrenkunst",
+   "latitude": 50.771896,
+   "longitude": 6.087935
+ },
+ {
+   "namn": "Römischer Sarkophag",
+   "latitude": 50.762918,
+   "longitude": 6.115417
+ },
+ {
+   "namn": "RESPEKT",
+   "latitude": 50.768535,
+   "longitude": 6.096076
+ },
+ {
+   "namn": "RWTH Informatikzentrum E3",
+   "latitude": 50.779081,
+   "longitude": 6.060151
+ },
+ {
+   "namn": "RWTH Institut Für Wasserbau",
+   "latitude": 50.778341,
+   "longitude": 6.064252
+ },
+ {
+   "namn": "RWTH Parkhaus",
+   "latitude": 50.778035,
+   "longitude": 6.073652
+ },
+ {
+   "namn": "RWTH Philosophietür",
+   "latitude": 50.777155,
+   "longitude": 6.080421
+ },
+ {
+   "namn": "RWTH",
+   "latitude": 50.778805,
+   "longitude": 6.072359
+ },
+ {
+   "namn": "RWTH-Bibliothek",
+   "latitude": 50.778726,
+   "longitude": 6.079841
+ },
+ {
+   "namn": "Ra God of the Sun",
+   "latitude": 50.767627,
+   "longitude": 6.095497
+ },
+ {
+   "namn": "Raadhuis, wit interieur",
+   "latitude": 50.776031,
+   "longitude": 6.083806
+ },
+ {
+   "namn": "Raphaelshöfe ",
+   "latitude": 50.791874,
+   "longitude": 6.082917
+ },
+ {
+   "namn": "Rastplatz für die Windstille",
+   "latitude": 50.781321,
+   "longitude": 6.101423
+ },
+ {
+   "namn": "Rathaus Für Blinde",
+   "latitude": 50.776542,
+   "longitude": 6.083984
+ },
+ {
+   "namn": "Rathaus Laurensberg",
+   "latitude": 50.797958,
+   "longitude": 6.060421
+ },
+ {
+   "namn": "Rathausplatz Aachen",
+   "latitude": 50.776196,
+   "longitude": 6.083826
+ },
+ {
+   "namn": "Rechen- und Kommunikationszentrum",
+   "latitude": 50.778386,
+   "longitude": 6.048816
+ },
+ {
+   "namn": "Rechenzentrum RWTH",
+   "latitude": 50.781524,
+   "longitude": 6.065371
+ },
+ {
+   "namn": "Red Jesus",
+   "latitude": 50.76759,
+   "longitude": 6.055377
+ },
+ {
+   "namn": "Rehmplatz",
+   "latitude": 50.777085,
+   "longitude": 6.097645
+ },
+ {
+   "namn": "Reiherstatue",
+   "latitude": 50.762215,
+   "longitude": 6.116141
+ },
+ {
+   "namn": "Reiterringkampf",
+   "latitude": 50.775912,
+   "longitude": 6.082081
+ },
+ {
+   "namn": "Restaurant Makis",
+   "latitude": 50.770109,
+   "longitude": 6.074822
+ },
+ {
+   "namn": "Ringe aus Ton ",
+   "latitude": 50.776722,
+   "longitude": 6.069449
+ },
+ {
+   "namn": "Ritter Giebel",
+   "latitude": 50.774327,
+   "longitude": 6.083434
+ },
+ {
+   "namn": "Rocking Student Statue",
+   "latitude": 50.777564,
+   "longitude": 6.06808
+ },
+ {
+   "namn": "Rogowski-Gebäude",
+   "latitude": 50.777927,
+   "longitude": 6.076294
+ },
+ {
+   "namn": "Romanelli Brunnen",
+   "latitude": 50.763698,
+   "longitude": 6.077426
+ },
+ {
+   "namn": "Ronald McDonald Haus",
+   "latitude": 50.769508,
+   "longitude": 6.041743
+ },
+ {
+   "namn": "Rosco Graffiti",
+   "latitude": 50.768802,
+   "longitude": 6.091964
+ },
+ {
+   "namn": "Rosen Graffiti ",
+   "latitude": 50.767236,
+   "longitude": 6.096996
+ },
+ {
+   "namn": "Rosenquelle Burtscheid",
+   "latitude": 50.764809,
+   "longitude": 6.094991
+ },
+ {
+   "namn": "Rotwild Im Aachener Tierpark",
+   "latitude": 50.76161,
+   "longitude": 6.117363
+ },
+ {
+   "namn": "Roundabout Statue",
+   "latitude": 50.772454,
+   "longitude": 6.020255
+ },
+ {
+   "namn": "Ruhestätte Der Schwestern vom Heiligen Franziskus",
+   "latitude": 50.784794,
+   "longitude": 6.141159
+ },
+ {
+   "namn": "Säule Stadtgarten",
+   "latitude": 50.78064,
+   "longitude": 6.094837
+ },
+ {
+   "namn": "Säule Talstraße",
+   "latitude": 50.778434,
+   "longitude": 6.103369
+ },
+ {
+   "namn": "Säule Westriedhof",
+   "latitude": 50.770097,
+   "longitude": 6.050321
+ },
+ {
+   "namn": "Säulen Jesus",
+   "latitude": 50.770694,
+   "longitude": 6.05105
+ },
+ {
+   "namn": "Säulengrab",
+   "latitude": 50.768651,
+   "longitude": 6.049894
+ },
+ {
+   "namn": "S 180",
+   "latitude": 50.77047,
+   "longitude": 6.057563
+ },
+ {
+   "namn": "STAWAG Art",
+   "latitude": 50.763278,
+   "longitude": 6.072461
+ },
+ {
+   "namn": "STAWAG Umspannwerk Rothe Erde",
+   "latitude": 50.777015,
+   "longitude": 6.131759
+ },
+ {
+   "namn": "Salvatorberg Texttafel",
+   "latitude": 50.785299,
+   "longitude": 6.087365
+ },
+ {
+   "namn": "Salvatorkirche Aachen",
+   "latitude": 50.784141,
+   "longitude": 6.085503
+ },
+ {
+   "namn": "Salve Haus",
+   "latitude": 50.770328,
+   "longitude": 6.065908
+ },
+ {
+   "namn": "Sandkaulpark",
+   "latitude": 50.779956,
+   "longitude": 6.088585
+ },
+ {
+   "namn": "Sandstein Findling",
+   "latitude": 50.768965,
+   "longitude": 6.036525
+ },
+ {
+   "namn": "Sankt Sebastian",
+   "latitude": 50.781797,
+   "longitude": 6.061021
+ },
+ {
+   "namn": "Sankt Sebastinus Bogenschützen",
+   "latitude": 50.787779,
+   "longitude": 6.038516
+ },
+ {
+   "namn": "Sau Kunst",
+   "latitude": 50.781487,
+   "longitude": 6.101197
+ },
+ {
+   "namn": "Schöner Aachener Altbau-Balkon",
+   "latitude": 50.769166,
+   "longitude": 6.108232
+ },
+ {
+   "namn": "Schönes Altes Haus",
+   "latitude": 50.768646,
+   "longitude": 6.082026
+ },
+ {
+   "namn": "Schönes Haus am JoKi Platz",
+   "latitude": 50.774557,
+   "longitude": 6.108732
+ },
+ {
+   "namn": "Schützenbruderschaft St. Laurentius",
+   "latitude": 50.79814,
+   "longitude": 6.058417
+ },
+ {
+   "namn": "Schafe",
+   "latitude": 50.768252,
+   "longitude": 6.040072
+ },
+ {
+   "namn": "Schanzartefakt",
+   "latitude": 50.769026,
+   "longitude": 6.07388
+ },
+ {
+   "namn": "Schattenkunst Flamingo",
+   "latitude": 50.77484,
+   "longitude": 6.074822
+ },
+ {
+   "namn": "Schemenhafte Maria Mit Jesuskind",
+   "latitude": 50.770235,
+   "longitude": 6.049125
+ },
+ {
+   "namn": "Schick in Gelb",
+   "latitude": 50.772549,
+   "longitude": 6.112496
+ },
+ {
+   "namn": "Schiefe Kletterburg",
+   "latitude": 50.759972,
+   "longitude": 6.10583
+ },
+ {
+   "namn": "Schienenstück",
+   "latitude": 50.779647,
+   "longitude": 6.073141
+ },
+ {
+   "namn": "Schiller",
+   "latitude": 50.762444,
+   "longitude": 6.080056
+ },
+ {
+   "namn": "Schlägel und Eisen",
+   "latitude": 50.776946,
+   "longitude": 6.067201
+ },
+ {
+   "namn": "Schlüsselloch Steinhart",
+   "latitude": 50.768736,
+   "longitude": 6.081092
+ },
+ {
+   "namn": "Schlangenkopf",
+   "latitude": 50.773238,
+   "longitude": 6.101544
+ },
+ {
+   "namn": "Schlangi",
+   "latitude": 50.768138,
+   "longitude": 6.104016
+ },
+ {
+   "namn": "Schlauchkunst",
+   "latitude": 50.779441,
+   "longitude": 6.077588
+ },
+ {
+   "namn": "Schlenter",
+   "latitude": 50.773634,
+   "longitude": 6.09728
+ },
+ {
+   "namn": "Schloss Rahe",
+   "latitude": 50.797388,
+   "longitude": 6.068616
+ },
+ {
+   "namn": "Schmelzpunkt Ring",
+   "latitude": 50.773979,
+   "longitude": 6.078938
+ },
+ {
+   "namn": "Schmetterling",
+   "latitude": 50.76982,
+   "longitude": 6.091596
+ },
+ {
+   "namn": "Schmetterling",
+   "latitude": 50.77813,
+   "longitude": 6.104956
+ },
+ {
+   "namn": "Schmitz-Laschet",
+   "latitude": 50.775135,
+   "longitude": 6.109395
+ },
+ {
+   "namn": "Schneeberg",
+   "latitude": 50.771175,
+   "longitude": 6.040506
+ },
+ {
+   "namn": "Schneiderwind",
+   "latitude": 50.775465,
+   "longitude": 6.084364
+ },
+ {
+   "namn": "Schulze Und Schultze Graffiti",
+   "latitude": 50.773418,
+   "longitude": 6.121494
+ },
+ {
+   "namn": "Schutzheilige in Fassade",
+   "latitude": 50.784209,
+   "longitude": 6.149063
+ },
+ {
+   "namn": "Schwarzer Kelch Mit Tuch",
+   "latitude": 50.768335,
+   "longitude": 6.049619
+ },
+ {
+   "namn": "Schwestern vom armen Kinde Jesus",
+   "latitude": 50.783957,
+   "longitude": 6.142274
+ },
+ {
+   "namn": "Schwimmhalle Süd Aachen",
+   "latitude": 50.760664,
+   "longitude": 6.088031
+ },
+ {
+   "namn": "Señor Schnu Mural",
+   "latitude": 50.761213,
+   "longitude": 6.093846
+ },
+ {
+   "namn": "Secret Door with Cross",
+   "latitude": 50.766856,
+   "longitude": 6.084366
+ },
+ {
+   "namn": "Seepferdchen Mural",
+   "latitude": 50.760892,
+   "longitude": 6.092495
+ },
+ {
+   "namn": "Seepferdchenbrunnen",
+   "latitude": 50.760839,
+   "longitude": 6.093067
+ },
+ {
+   "namn": "Seffenter Turm",
+   "latitude": 50.789895,
+   "longitude": 6.041394
+ },
+ {
+   "namn": "Seilbaum",
+   "latitude": 50.790805,
+   "longitude": 6.064987
+ },
+ {
+   "namn": "Selbstentlader",
+   "latitude": 50.785351,
+   "longitude": 6.110337
+ },
+ {
+   "namn": "Service Art",
+   "latitude": 50.77519,
+   "longitude": 6.123383
+ },
+ {
+   "namn": "Shapers Pyramid",
+   "latitude": 50.783949,
+   "longitude": 6.115533
+ },
+ {
+   "namn": "Siegel Karl Des Großen",
+   "latitude": 50.776814,
+   "longitude": 6.0835
+ },
+ {
+   "namn": "Silberne Rutsche Silver-Ride",
+   "latitude": 50.764942,
+   "longitude": 6.131552
+ },
+ {
+   "namn": "Silver Horse",
+   "latitude": 50.791323,
+   "longitude": 6.080789
+ },
+ {
+   "namn": "Simpson @ Normaluhr ",
+   "latitude": 50.767934,
+   "longitude": 6.094534
+ },
+ {
+   "namn": "Sitzende Kinder, Burtscheid",
+   "latitude": 50.761319,
+   "longitude": 6.092812
+ },
+ {
+   "namn": "Sitzendes Mädchen - Doemjrof",
+   "latitude": 50.773489,
+   "longitude": 6.080419
+ },
+ {
+   "namn": "Skater Park",
+   "latitude": 50.761507,
+   "longitude": 6.104128
+ },
+ {
+   "namn": "Skaterplatz Im Kennedypark ",
+   "latitude": 50.773408,
+   "longitude": 6.11886
+ },
+ {
+   "namn": "Skull Graffiti",
+   "latitude": 50.778324,
+   "longitude": 6.104792
+ },
+ {
+   "namn": "Skulptur Abstrakter Pflanzen",
+   "latitude": 50.781102,
+   "longitude": 6.153792
+ },
+ {
+   "namn": "Skulptur Einer Betenden Frau",
+   "latitude": 50.775658,
+   "longitude": 6.109541
+ },
+ {
+   "namn": "Skyline Aachen",
+   "latitude": 50.771237,
+   "longitude": 6.092889
+ },
+ {
+   "namn": "Skyscraper",
+   "latitude": 50.771716,
+   "longitude": 6.077686
+ },
+ {
+   "namn": "Slip 'n Slide",
+   "latitude": 50.759909,
+   "longitude": 6.095779
+ },
+ {
+   "namn": "Smeedijzeren Omlijsting Waterput",
+   "latitude": 50.77083,
+   "longitude": 6.021631
+ },
+ {
+   "namn": "Smoke with RUS",
+   "latitude": 50.771672,
+   "longitude": 6.071808
+ },
+ {
+   "namn": "Soldatenkopf",
+   "latitude": 50.759954,
+   "longitude": 6.092499
+ },
+ {
+   "namn": "Soli Deo Gloria",
+   "latitude": 50.773305,
+   "longitude": 6.081006
+ },
+ {
+   "namn": "Sonnenstele in Gold ",
+   "latitude": 50.794661,
+   "longitude": 6.057611
+ },
+ {
+   "namn": "Sonnenuhr",
+   "latitude": 50.778937,
+   "longitude": 6.080927
+ },
+ {
+   "namn": "Sowjetische Ruhestätte",
+   "latitude": 50.771879,
+   "longitude": 6.049579
+ },
+ {
+   "namn": "Space Invader Window",
+   "latitude": 50.76599,
+   "longitude": 6.090919
+ },
+ {
+   "namn": "Spacy und Sparky",
+   "latitude": 50.779869,
+   "longitude": 6.101601
+ },
+ {
+   "namn": "Spero Inuidiam",
+   "latitude": 50.769979,
+   "longitude": 6.01864
+ },
+ {
+   "namn": "Sphere Creature",
+   "latitude": 50.781194,
+   "longitude": 6.101152
+ }
+]
 	/*{"namn": "", "latitude": , "longitude": },*/
 ];
