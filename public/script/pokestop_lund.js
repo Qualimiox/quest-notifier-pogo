@@ -5865,6 +5865,5 @@ var pokestop = [ //Source: https://www.pokemongomap.info/
    "latitude": 50.781194,
    "longitude": 6.101152
  }
-]
 	/*{"namn": "", "latitude": , "longitude": },*/
 ];
