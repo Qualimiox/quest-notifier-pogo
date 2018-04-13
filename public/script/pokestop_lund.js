@@ -1,5 +1,4 @@
 var pokestop = [ //Source: https://www.pokemongomap.info/
-[
  {
    "namn": "Ägyptische Symbolik",
    "latitude": 50.775473,
