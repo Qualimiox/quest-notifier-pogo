@@ -185,8 +185,8 @@ function additems(){
 		wrapper.appendChild(tr);
 	var questwrapper = hittaid('quests');
 		questwrapper.setAttribute('onchange', 'addnumber(this);')
-		startoption('Välj quest');
-		addquest('Alla')
+		startoption('Welche Quest?');
+		addquest('Alle')
 	var typquest = hittaid('typquest');
 	for (var i = 0; i < questgroups.length; i++){
 		var label = document.createElement('div');
@@ -207,7 +207,7 @@ function markquestgroup(element){
 function addquest(group){
 	var questwrapper = hittaid('quests');
 	var questtoprint = [];
-	if(group == 'Alla'){
+	if(group == 'Alle'){
 		for (var i = 0; i < quests.length; i++){
 			questtoprint.push({"data": quests[i], "index": i});
 		};
@@ -219,7 +219,7 @@ function addquest(group){
 		};
 	};
 	removechilds(questwrapper);
-	startoption('Välj quest');
+	startoption('Welche Quest?');
 	for (var i = 0; i < questtoprint.length; i++){
 		var option = document.createElement('option');
 			option.setAttribute('value', questtoprint[i].data.namn);

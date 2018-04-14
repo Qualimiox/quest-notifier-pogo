@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PoGoQuest</title>
+	<title>PokeKarte Quests</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta content="yes" name="apple-mobile-web-app-capable" />
@@ -10,10 +10,10 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<link rel="manifest" href="manifest.json">
 	
-	<meta property="og:title" content="PoGoQuest - Lund" />
-	<meta property="og:url" content="https://www.pogoquest.tk" />
+	<meta property="og:title" content="PokeKarte Quests" />
+	<meta property="og:url" content="https://www.pokekarte.de" />
 	<meta property="og:type" content="website" />
-	<meta property="og:description" content="Listar användares registreringar var quests kan hittas i Lund (med omnejd) och Staffanstorp."/>
+	<meta property="og:description" content="Übersicht aller verfügbaren Quests in Aachen"/>
 	<meta property="og:image" content="img/ico/icon.jpg" />
 
 	<link rel="shortcut icon" href="img/ico/icon.ico" />
@@ -32,7 +32,7 @@
 </head>
 <body onload="load();">
 	<div id="error" style="display: none;">
-		<i class="fas fa-frown"></i> Kopplingen till server försvann
+		<i class="fas fa-frown"></i> Die Verbindung zum Server wurde unterbrochen.
 	</div>
 	<div id="meny" class="menyright">
 		<i class="fas fa-arrow-circle-left" onclick="angra();"></i>
@@ -41,76 +41,75 @@
 		<i class="fas fa-cog" onclick="hideall('setting');"></i>
 		<i class="fas fa-plus-circle" id="addbutton" onclick="hideall('add');"></i>
 	</div>
-	<h1>PoGoQuest</h1>
+	<h1>PokeKarte Quests</h1>
 	<div id="questions" style="display: none">
-		<h3>Ikonbeskrivning</h3>
-			<p><i class="fas fa-arrow-circle-left"></i> = Tillbaka</p>
-			<p><i class="fas fa-question-circle"></i> = Denna sidan</p>
-			<p><i class="fas fa-info-circle"></i> = Information om projektet</p>
-			<p><i class="fas fa-cog"></i> = Inställningar</p>
-			<p><i class="fas fa-plus-circle"></i> = Registrera en quest</p>
-			<p><i class="fas fa-crosshairs"></i> = Hittar närmaste pokestop utifrån GPS</p>
-		<h3>Inställningar</h3>
-			<p>Möjlighet att välja vilka quest som ska visas eller döljas, för att lättare hitta de quest man är ute efter.</p>
-			<p>Plan är att här ska man så småning om kunna begränsa städer m.m. i nuläget finns Lund och Staffanstorp.</p>
-		<h3>Registrera</h3>
-			<p>För att kunna registrera en quest du fått från ett pokestop behöver du veta: 1. Namn på Pokéstop, 2. Item man får när quest är avklarat, 3. Vad det är för Quest, 4. Ev. antal gånger questet måste göras.</p>
-		<h3>Vanliga frågor</h3>
-			<p>Varför är sidan tom?<br/>- Klockan 00:00 rensas servern, eftersom quest i Pokémon GO ändras vart dygn enligt nuvarande fältstudier som genomförts.</p>
-			<p>Varför finns inte alla Pokéstop med Quests listade?<br/>- Sidan bygger på att användarna (t.ex. du) registrerar quest du får från Pokéstop.</p>
-			<p>Vad händer med min GPS information?<br/>- Ingenting utanför din telefon, GPS infon används enbart för att sortera listan, så du får Pokéstop som är närmast dig, högst upp.</p>
-			<p>Kan jag starta liknande i min stad?<br/>- Ja! Antingen om du hör av dig till mig så kan vi se ifall jag kan integrera din stad i nuvarande projekt, alt. kan du ta ner projektet från GitHub (Se information), detta kräver förkunskap i Node js, Socket.io och javascript.</p>
-			<p>Jag hittar inte Pokéstoppet!?<br/>- Troligen har den inte registrerats på www.PokemonGoMap.info. Kontakta mig via Facebook där jag är med i alla större grupperna så lägger jag mer än gärna till Pokéstoppet i listan.</p>
+		<h3>Erklärung der Symbole</h3>
+			<p><i class="fas fa-arrow-circle-left"></i> = Zurück</p>
+			<p><i class="fas fa-question-circle"></i> = Diese Seite</p>
+			<p><i class="fas fa-info-circle"></i> = Informationen zum Projekt</p>
+			<p><i class="fas fa-cog"></i> = Einstellungen</p>
+			<p><i class="fas fa-plus-circle"></i> = Quest einreichen</p>
+			<p><i class="fas fa-crosshairs"></i> = Standort für den nächsten Pokéstop verwenden</p>
+		<h3>Einstellungen</h3>
+			<p>Die Seite ermöglicht das Filtern der Quests, damit ihr die finden könnt, nach denen ihr gerade sucht.</p>
+		<h3>Einreichung</h3>
+			<p>Damit ihr eine Quest einreichen könnt, brauchen wir diese Informationen: 1. Name des Pokéstops 2. Die Belohnung der Quest 3. Den Quest-Typ 4. Wie oft die Quest ausgeführt werden muss.</p>
+		<h3>Häufige Fragen</h3>
+			<p>Warum ist die Seite leer?<br/>- Jeden Tag um 0:00 verändern sich die Quests und deshalb wird die Seite zurückgesetzt. Seitdem hat noch niemand eine Quest eingereicht.</p>
+			<p>Warum werden nicht alle Quests aufgelistet?<br/>- Es gibt aktuell keine Map, daher können nur die Quests angezeigt werden, die ein Spieler eingereicht hat.</p>
+			<p>Warum fragt die Seite nach meinem Standort?<br/>- Der Standort wird benutzt, um die Liste der Stops nach deiner Distanz zu ihnen sortieren zu können. Die Standortdaten bleiben auf deinem Handy und werden nicht an den Server übermittelt.  </p>
+			<p>Kann ich etwas ähnliches für meine Stadt erstellen?<br/>- Ja! Du kannst den Code von Github herunterladen (siehe Informationen). Es sind ein wenig Kenntnisse von Node.js Socket.io und javascript nötig.</p>
+			<p>Ich kann den Pokéstop nicht finden?<br/>- Die Daten wurden aus der Ingress Intel-Map importiert. Dabei wurden allerdings nur die Pokéstops in der des Zentrums von Aachen berücksichtigt. Du kannst dich bei uns über Discord melden, wenn die Pokéstops in deiner Nähe hinzugefügt werden sollen.</p>
 	</div>
 	<div id="information" style="display: none">
-		<h3>Vad är detta?</h3>
-			<p>Detta är ett projekt som bygger på communityt som spelar Pokémon Go. För att detta ska fungera, kräver det att alla användare engagerar sig och registrerar vilka quest de får från Pokéstop. Tillsammans kan vi hjälpas åt att hitta de quest som vi personligen behöver och som genererar bäst belöningar!</p>
-		<h3>Under huven</h3>
-			<p>Denna sida bygger inte på något "Spoofande" och använder sig enbart av inskickad användar information.</p>
-			<p>Pokéstopnamn och lokalisation är tagna från <a href="https://www.pokemongomap.info">pokemongomap.info</a> som är en sida där personer kan registrera Gym och Stop.</p>
-			<p>Sidan bygger på npm, Node js och "Socket.io". Det innebär att allt är styrt av webb kod. Tekniken "Socket.io" används mycket i meddelande applikationer, vilket innebär att läggs information till av en användare, läggs det automatiskt till på alla andra användare som har sidan öppen, detta gör att användare inte behöver uppdatera sidan för att få senaste informationen.</p>
-		<h3>Bra att veta</h3>
-			<p>Databasen innehåller i nuläget ca 400 st Pokéstop, risken finns att just det pokestop du ska registrera inte hittas. Antingen är den inte tillaggd på <a href="https://www.pokemongomap.info">pokemongomap.info</a> eller så har jag missat den. Hittar du ett Pokéstop som fattas kan du nå mig via de större Pokémon Go grupperna på Facebook (Mattias Lidbeck).</p>
-			<p>Sidan är öppen för vem som helst att lägga till Quester, vilket även öppnar upp risken för att någon skulle få för sig att "Trolla" eller på annat sätt förstöra upplevelsen för oss andra, dock är det ett aktivt val i projektet att inte implementera inloggning eller liknande. Vi får se ifall detta kommer att bli ett framtida problem.</p>
+		<h3>Was ist diese Seite?</h3>
+			<p>Wir versuchen hier eine Liste aller an diesem Tag erhältlichen Quests in Aachen zu erstellen. Dafür ist die Mitarbeit der Community nötig.</p>
+		<h3>Wie funktioniert das?</h3>
+			<p>Es gibt aktuell keine verfügbare Map auf Bot-Basis, daher wurden alle Infos hier von Nutzern eingereicht.</p>
+			<p>Die Pokéstops wurden aus der Ingress Intel-Map exportiert, daher sind ein paar Stops dabei, die es gar nicht gibt. Außerdem wurden nur die Pokéstops in der Nähe des Zentrums von Aachen importiert.</a> som är en sida där personer kan registrera Gym och Stop.</p>
+			<p>Die Seite basiert auf npm, node und "socket.io", ist also eine reine Web-App. "Socket.io" wird gerne in Kommunikations-Diensten verwendet, damit sind Informationen die von einem Nutzer eingereicht werden automatisch für alle Anderen ohne erneutes Laden der Seite sichtbar.</p>
+		<h3>Gut zu wissen</h3>
+			<p>Die Datenbank umfasst aktuell ca. 7500 Pokéstops im Stadtgebiet von Aachen, wobei manche dabei nur in Ingress vorhanden sind und keine echten Pokéstops sind. Falls Pokéstops fehlen, könnt ihr uns über Discord erreichen, damit wir sie hinzufügen. </p>
+			<p>Da alle Quests von Nutzern eingereicht werden, kann die Korrektheit der Informationen natürlich nicht garantiert werden, Trolle könnten theoretisch falsche Quests einreichen. Wir verlassen uns aber auf die Community, dass alle die Seite im guten Sinne benutzen.</p>
 		<h3>GPS</h3>
-			<p>För att du som användare ska få bästa möjliga upplevelsen behöver du godkänna att sidan hämtar din GPS från telefonen. OBS! Din GPS information stannar på din enhet, inget som sidan skickar vidare till server eller andra platser.</p>
-		<h3>Mål i projektet</h3>
-			<p>Det ska vara så enkellt som möjligt att göra registreringar.</p>
-			<p>Projektet ska jobba för öppen data och så småning om kommer data erbjudas i så många format det går (js, json, jsonp, lines m.m.), så att externa utvecklare ska kunna använda sig av informationen.</p>
-			<p>Denna hemsida och projekt kommer förbli utan reklam, all kod kan hittas på GitHub (<a href="https://github.com/teddykladdkak/quest-notifier-pogo">https://github.com/teddykladdkak/quest-notifier-pogo</a>) och är fri att använda av vem som helst. OBS projektet är fortfarande ostabilt pga det är så nytt, viktigt att upptadera kod i produktion kontinuerligt då jag nästan dagligen gör förändringar.</p>
+			<p>Damit die Seite läuft wie gewünscht, müsst ihr den Zugriff auf euren Standort erlauben. Die Standort-Informationen bleiben dabei auf dem Gerät und werden nicht an der Server übermittelt.</p>
+		<h3>Ziele des Projekts</h3>
+			<p>Es soll so einfach wie möglich sein, neue Quests einzureichen.</p>
+			<p>Die Daten der Quests sollen in Zukunft in möglichst vielen Formaten angeboten werden(js, json, jsonp, lines m.m.), damit externe Entwickler die Daten für andere Zwecke nutzen können.</p>
+			<p>Wir (Das PokeKarte-Team) haben nur die Pokéstops in Aachen eingefügt und die Texte übersetzt, ursprünglich programmiert wurde die Seite von  Mattias Lidbeck. Der gesamte Code lässt sich auf Github finden (<a href="https://github.com/teddykladdkak/quest-notifier-pogo">https://github.com/teddykladdkak/quest-notifier-pogo</a>) und kann von jedem verwendet werden. Hinweis von ihm: Beachtet dabei bitte, dass das Projekt noch jung und instabil ist, updatet euren Code regelmäßig, da ich fast täglich Änderungen vornehme..</p>
 	</div>
 	<div id="setting" style="display: none;">
-		<h3>Text Storlek</h3>
+		<h3>Textgröße</h3>
 		<input type="range" min="0" max="6" value="3" id="textstorlek" class="prettyrange" onchange="changetext(this);">
-		<h3>Ikon Storlek</h3>
+		<h3>Ikongröße</h3>
 		<input type="range" min="0" max="6" value="3" id="ikonstorlek" class="prettyrange" onchange="changeikon(this);">
-		<h3>Visa/Dölj Items</h3>
+		<h3>Items Anzeigen/Ausblenden</h3>
 		<div id="itemsettings"></div>
 	</div>
 	<div id="add" style="display: none;">
-		<p>1. Välj Pokéstop</p>
+		<p>1. Pokéstop auswählen</p>
 		<div id="wrapperpokestopnamn">
-			<input type="text" onkeyup="searchstop(this, event)" onchange="searchstop(this)" id="pokestopnamn" placeholder="Pokestopets namn"><i class="fas fa-crosshairs" onclick="updateFindPokestopLocation()" id="closeststop"></i>
+			<input type="text" onkeyup="searchstop(this, event)" onchange="searchstop(this)" id="pokestopnamn" placeholder="Name des Pokéstop"><i class="fas fa-crosshairs" onclick="updateFindPokestopLocation()" id="closeststop"></i>
 		</div>
 		<table class="popupalt">
 			<tbody id="alternativ"></tbody>
 		</table>
-		<p>2. Välj vilket item man får</p>
+		<p>2. Wähle die Belohnung der Quest</p>
 		<table id="items">
 			<tbody></tbody>
 		</table>
-		<p>3. Välj vilken quest det är</p>
+		<p>3. Wähle den Typ der Quest</p>
 		<div id="typquest"></div>
 		<select id="quests" disabled="disabled"></select>
-		<p>3,5. Ev antal gånger det måste genomföras</p>
+		<p>Wie oft muss die Quest ausgeführt werden?</p>
 		<input type="number" id="num" onkeyup="checknum(this);" onchange="checknum(this);" disabled="disabled">
 		<table id="buttons">
 			<tr>
 				<td>
-					<button onclick="angra();">Ångra</button>
+					<button onclick="angra();">Zurücksetzen</button>
 				</td>
 				<td>
-					<button disabled="disabled" id="regbutton" onclick="registrera();">Registrera</button>
+					<button disabled="disabled" id="regbutton" onclick="registrera();">Einreichen</button>
 				</td>
 			</tr>
 		</table>
