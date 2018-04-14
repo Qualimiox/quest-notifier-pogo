@@ -131,7 +131,7 @@ function closeststop(element){
 		var resultat = [];
 		for (var i = pokestop.length - 1; i >= 0; i--) {
 			var distance = Math.round(getDistanceFromLatLonInKm(pokestop[i].latitude,pokestop[i].longitude) * 10000);
-			resultat.push(pad(distance, 15) + '|||' + pokestop[i].namn);
+			resultat.push(pad(distance, 15)  + '|||' + pokestop[i].namn);
 		};
 		resultat.sort();
 		hittaid('pokestopnamn').value = resultat[0].split('|||')[1];
@@ -357,7 +357,7 @@ function addexample(pokestopobj, itemnamn, itemplats, questvalue, questantal, gi
 						var kmtext = document.createTextNode(' X');
 						tr.setAttribute('data-km', 'X');
 					}else{
-						var kmtext = document.createTextNode(' ' + (givenkm / 10));
+						var kmtext = document.createTextNode(' ' + (givenkm / 10)+ 'km');
 						tr.setAttribute('data-km', givenkm);
 					};
 					kmp.appendChild(kmtext);
