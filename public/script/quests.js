@@ -26,8 +26,8 @@ var quests = [
 	{"group": "Fangen", "namn": "Fange ein Pokémon.", "number": false},
 	{"group": "Fangen", "namn": "Fange {?} Ditto.", "number": true},
 	{"group": "Fangen", "namn": "Fange ein Ditto.", "number": false},
-	{"group": "Fangen", "namn": "Fange {?} Oddish oder Myrapla.", "number": true},
-	{"group": "Fangen", "namn": "Fange ein Myrapla oder Knofense.", "number": false},
+	{"group": "Fangen", "namn": "Fange {?} Myrapla oder Knofensa.", "number": true},
+	{"group": "Fangen", "namn": "Fange ein Myrapla oder Knofensa.", "number": false},
 	{"group": "Fangen", "namn": "Fange {?} Swablu.", "number": true},
 	{"group": "Fangen", "namn": "Fange ein Swablu.", "number": false},
 	{"group": "Fangen", "namn": "Fange {?} Taubsi oder Kramurx.", "number": true},
@@ -74,7 +74,7 @@ var quests = [
 	{"group": "Fangen", "namn": "Fange ein Pokemon vom Typ Wasser.", "number": false},
 	{"group": "Fangen", "namn": "Fange {?} Pokémon vom Typ Pflanze, Feuer oder Boden.", "number": true},
 	{"group": "Fangen", "namn": "Fange ein Pokémon vom Typ Pflanze, Feuer oder Boden.", "number": false},
-	{"group": "Fangen", "namn": "Fange {?] Pokémon mit Wetterverstärkung.", "number": true},
+	{"group": "Fangen", "namn": "Fange {?} Pokémon mit Wetterverstärkung.", "number": true},
 	{"group": "Fangen", "namn": "Fange ein Pokémon mit Wetterverstärkung.", "number": false},
 	{"group": "Entwickeln", "namn": "Entwickle ein Pokémon.", "number": false},
 	{"group": "Entwickeln", "namn": "Entwickle {?} Pokémon.", "number": true},
@@ -122,7 +122,7 @@ var quests = [
 ];
 var secretpokm = [
 	{"sok": "Fange ein Pokemon vom Typ Drache.", "pkm": [147]},
-	{"sok": "Fange 3 Myrapla oder Knofense.", "pkm": [114]},
+	{"sok": "Fange 3 Myrapla oder Knofensa.", "pkm": [114]},
 	{"sok": "Fange 3 Taubsi oder Kramurx.", "pkm": [23]},
 	{"sok": "Fange 3 Geckarbor oder Hydropi.", "pkm": [255]},
 	{"sok": "Fange 3 Mauzi oder Eneco.", "pkm": [58]},
